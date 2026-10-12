@@ -207,7 +207,7 @@ Costs are estimated in KZT at an assumed rate of 500 KZT per USD; actual prices 
 # 8. Schedule
 
 | Phase | Period | Duration | Milestone |
-|------------------------------------|------------------|-----------|-------------------------------------------|
+|------------------------------|---------------|-------------|-------------------------------------|
 | 1. Topic approval, literature review, analogues | Sep – Oct 2026 | 7 weeks | LW1, PW3, PW4 completed |
 | 2. Methodology and instruments | Oct – Nov 2026 | 4 weeks | PW5; instruments pilot-tested |
 | 3. Interviews and focus group 1 | Nov 2026 | 3 weeks | Requirements and task catalogue |
