@@ -1,41 +1,39 @@
-# Appendix A. Interview guide (advisors, teachers, academic office)
+# Appendix A. Interview guide (developers, IT staff, administrative staff, students)
 
 Duration 40–45 minutes. Before starting: introduce the study, explain confidentiality, obtain signed consent and permission to record.
 
 **Block 1. Background (5 min)**
 
-1. What is your role, and how long have you worked with first- or second-year students?
-2. How many students/groups do you currently supervise or teach?
+1. What is your role, and how long have you been in it?
+2. Have you used AI assistants (ChatGPT, Claude, Copilot, etc.) in your work or study? For what?
 
-**Block 2. Current practice (10 min)**
+**Block 2. Current work and typical requests (10 min)**
 
-3. How do you currently find out that a student is having academic difficulties?
-4. Which systems (Platonus, Moodle, Excel, messengers) do you use for this, and how often?
-5. Describe the last case when you helped a struggling student. When did you notice the problem and what did you do?
-6. How much time per week do you spend monitoring students' progress?
+3. Which questions or requests do you answer or make most often?
+4. Which documents and systems do you need to answer them?
+5. Describe the last request that took a long time. Why did it take long?
+6. (Developers) How do you currently connect external APIs or databases to an LLM?
 
-**Block 3. Early signals and information needs (10 min)**
+**Block 3. Tasks for an AI assistant (10 min)**
 
-7. Which signals usually appear first: missed classes, low current-control scores, missing assignments, something else?
-8. At which week of the semester is it already too late to help?
-9. What information would you like to see about a student to act earlier?
-10. How would you prefer to receive alerts (dashboard, e-mail, Telegram, weekly report)?
+7. Which tasks would you delegate to an AI assistant first?
+8. Which actions may it perform automatically, and which require your approval?
+9. Which tools would it need (calendar, timetable, ticketing, database, e-mail)?
+10. In which languages must it work (Kazakh, Russian, English)?
 
-**Block 4. Trust in automatic predictions (10 min)**
+**Block 4. Trust and control (10 min)**
 
-11. How would you react if a system marked a student as "at risk"?
-12. What would make you trust such a prediction? What would make you ignore it?
-13. Would an explanation (e.g. "missed 4 of the last 6 classes; current-control average 42/100") change your decision?
-14. What actions should follow an alert, and who should be responsible?
+11. What makes you trust an answer — sources, explanations, consistency?
+12. How should the assistant behave when it is not sure?
+13. How would you like to see what the agent did (log of steps, tool calls)?
+14. (Developers) What would make connecting a new tool easy for you?
 
-**Block 5. Privacy and ethics (5–8 min)**
+**Block 5. Risks (5–8 min)**
 
-15. Which student data should be used, and which should not?
-16. Should students see their own risk level? Why or why not?
-17. What risks do you see (stigmatisation, errors, misuse)?
+15. What could go wrong if the assistant has access to tools?
+16. Which data must never be accessible to it?
+17. What would make you stop using it?
 
 **Closing**
 
 18. Is there anything important that we have not discussed?
-
-Thank the participant, explain next steps and how the results will be shared.

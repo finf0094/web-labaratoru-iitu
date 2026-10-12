@@ -80,6 +80,9 @@ def main():
             if name in ("Body Text", "First Paragraph"):
                 pf.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
                 pf.first_line_indent = Cm(1.25)
+            if name == "Compact":  # used in table cells and tight lists: no indent
+                pf.alignment = WD_ALIGN_PARAGRAPH.LEFT
+                pf.first_line_indent = Cm(0)
 
     sizes = {"Title": 16, "Subtitle": 14, "Heading 1": 14, "Heading 2": 13,
              "Heading 3": 12, "Heading 4": 12}

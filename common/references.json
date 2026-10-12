@@ -1,0 +1,3697 @@
+[
+ {
+  "id": "alammar2024",
+  "type": "book",
+  "author": [
+   {
+    "family": "Alammar",
+    "given": "Jay"
+   },
+   {
+    "family": "Grootendorst",
+    "given": "Maarten"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2024
+    ]
+   ]
+  },
+  "title": "Hands-on large language models: Language understanding and generation",
+  "publisher": "O'Reilly Media",
+  "publisher-place": "Sebastopol, CA"
+ },
+ {
+  "id": "anthropic2024mcp",
+  "type": "webpage",
+  "author": [
+   {
+    "literal": "Anthropic"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2024,
+     11,
+     25
+    ]
+   ]
+  },
+  "title": "Introducing the Model Context Protocol",
+  "container-title": "Anthropic News",
+  "URL": "https://www.anthropic.com/news/model-context-protocol",
+  "accessed": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     12
+    ]
+   ]
+  }
+ },
+ {
+  "id": "anthropic2025aaif",
+  "type": "webpage",
+  "author": [
+   {
+    "literal": "Anthropic"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2025,
+     12,
+     9
+    ]
+   ]
+  },
+  "title": "Donating the Model Context Protocol and establishing the Agentic AI Foundation",
+  "container-title": "Anthropic News",
+  "URL": "https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation",
+  "accessed": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     12
+    ]
+   ]
+  }
+ },
+ {
+  "id": "anthropic_agentsdk",
+  "type": "webpage",
+  "author": [
+   {
+    "literal": "Anthropic"
+   }
+  ],
+  "title": "Agent SDK overview",
+  "container-title": "Claude Developer Platform documentation",
+  "URL": "https://platform.claude.com/docs/en/agent-sdk/overview",
+  "accessed": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     12
+    ]
+   ]
+  }
+ },
+ {
+  "id": "asai2024",
+  "type": "paper-conference",
+  "author": [
+   {
+    "family": "Asai",
+    "given": "Akari"
+   },
+   {
+    "family": "Wu",
+    "given": "Zeqiu"
+   },
+   {
+    "family": "Wang",
+    "given": "Yizhong"
+   },
+   {
+    "family": "Sil",
+    "given": "Avirup"
+   },
+   {
+    "family": "Hajishirzi",
+    "given": "Hannaneh"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2024
+    ]
+   ]
+  },
+  "title": "Self-RAG: Learning to retrieve, generate, and critique through self-reflection",
+  "container-title": "The Twelfth International Conference on Learning Representations (ICLR 2024)",
+  "URL": "https://arxiv.org/abs/2310.11511"
+ },
+ {
+  "id": "asai2025phd",
+  "type": "thesis",
+  "author": [
+   {
+    "family": "Asai",
+    "given": "Akari"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2025
+    ]
+   ]
+  },
+  "title": "Beyond scaling: Frontiers of retrieval-augmented LMs",
+  "genre": "Doctoral dissertation",
+  "publisher": "University of Washington",
+  "publisher-place": "Seattle, WA",
+  "URL": "https://digital.lib.washington.edu/researchworks/items/03118b25-1127-48f9-94b4-8e481016146c"
+ },
+ {
+  "id": "astanatimes2025alemllm",
+  "type": "article-newspaper",
+  "author": [
+   {
+    "literal": "The Astana Times"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2025,
+     8,
+     8
+    ]
+   ]
+  },
+  "title": "AlemLLM Kazakh language model now publicly available",
+  "container-title": "The Astana Times",
+  "URL": "https://astanatimes.com/2025/08/alemllm-kazakh-language-model-now-publicly-available/"
+ },
+ {
+  "id": "bhat2025patent",
+  "type": "patent",
+  "author": [
+   {
+    "family": "Bhat",
+    "given": "Ganesh Prasad"
+   },
+   {
+    "family": "Goldman",
+    "given": "Joshua"
+   },
+   {
+    "family": "Karthikeyan",
+    "given": "Ramee S."
+   },
+   {
+    "family": "Ng",
+    "given": "Wei Jie"
+   },
+   {
+    "family": "Sankaran",
+    "given": "Subramanian"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2025,
+     7,
+     29
+    ]
+   ]
+  },
+  "submitted": {
+   "date-parts": [
+    [
+     2025,
+     4,
+     22
+    ]
+   ]
+  },
+  "title": "Using a multi-model architecture for retrieval-augmented generation (RAG)",
+  "number": "No. 12,373,441",
+  "authority": "U.S.",
+  "URL": "https://patents.google.com/patent/US12373441B1/en"
+ },
+ {
+  "id": "birbayeva2026",
+  "type": "article-newspaper",
+  "author": [
+   {
+    "family": "Birbayeva",
+    "given": "Ayana"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2026,
+     8,
+     27
+    ]
+   ]
+  },
+  "title": "Kazakhstan makes 50 government services available through eGov GPT",
+  "container-title": "The Astana Times",
+  "URL": "https://astanatimes.com/2026/08/kazakhstan-makes-50-government-services-available-through-egov-gpt/"
+ },
+ {
+  "id": "braun2006",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Braun",
+    "given": "Virginia"
+   },
+   {
+    "family": "Clarke",
+    "given": "Victoria"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2006
+    ]
+   ]
+  },
+  "title": "Using thematic analysis in psychology",
+  "container-title": "Qualitative Research in Psychology",
+  "volume": "3",
+  "issue": "2",
+  "page": "77-101",
+  "DOI": "10.1191/1478088706qp063oa"
+ },
+ {
+  "id": "brooke1996",
+  "type": "chapter",
+  "author": [
+   {
+    "family": "Brooke",
+    "given": "John"
+   }
+  ],
+  "editor": [
+   {
+    "family": "Jordan",
+    "given": "Patrick W."
+   },
+   {
+    "family": "Thomas",
+    "given": "B."
+   },
+   {
+    "family": "Weerdmeester",
+    "given": "Bernard A."
+   },
+   {
+    "family": "McClelland",
+    "given": "Ian L."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1996
+    ]
+   ]
+  },
+  "title": "SUS: A \"quick and dirty\" usability scale",
+  "container-title": "Usability evaluation in industry",
+  "page": "189-194",
+  "publisher": "Taylor & Francis",
+  "publisher-place": "London"
+ },
+ {
+  "id": "brown2020",
+  "type": "paper-conference",
+  "author": [
+   {
+    "family": "Brown",
+    "given": "Tom B."
+   },
+   {
+    "family": "Mann",
+    "given": "Benjamin"
+   },
+   {
+    "family": "Ryder",
+    "given": "Nick"
+   },
+   {
+    "family": "Subbiah",
+    "given": "Melanie"
+   },
+   {
+    "family": "Kaplan",
+    "given": "Jared"
+   },
+   {
+    "family": "Dhariwal",
+    "given": "Prafulla"
+   },
+   {
+    "family": "Neelakantan",
+    "given": "Arvind"
+   },
+   {
+    "family": "Shyam",
+    "given": "Pranav"
+   },
+   {
+    "family": "Sastry",
+    "given": "Girish"
+   },
+   {
+    "family": "Askell",
+    "given": "Amanda"
+   },
+   {
+    "literal": "others"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2020
+    ]
+   ]
+  },
+  "title": "Language models are few-shot learners",
+  "container-title": "Advances in Neural Information Processing Systems 33 (NeurIPS 2020)",
+  "page": "1877-1901",
+  "publisher": "Curran Associates"
+ },
+ {
+  "id": "chen2018phd",
+  "type": "thesis",
+  "author": [
+   {
+    "family": "Chen",
+    "given": "Danqi"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2018
+    ]
+   ]
+  },
+  "title": "Neural reading comprehension and beyond",
+  "genre": "Doctoral dissertation",
+  "publisher": "Stanford University",
+  "publisher-place": "Stanford, CA",
+  "URL": "https://purl.stanford.edu/gd576xb1833"
+ },
+ {
+  "id": "cochran1977",
+  "type": "book",
+  "author": [
+   {
+    "family": "Cochran",
+    "given": "William G."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1977
+    ]
+   ]
+  },
+  "title": "Sampling techniques",
+  "edition": "3",
+  "publisher": "John Wiley & Sons",
+  "publisher-place": "New York"
+ },
+ {
+  "id": "creswell2018",
+  "type": "book",
+  "author": [
+   {
+    "family": "Creswell",
+    "given": "John W."
+   },
+   {
+    "family": "Plano Clark",
+    "given": "Vicki L."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2018
+    ]
+   ]
+  },
+  "title": "Designing and conducting mixed methods research",
+  "edition": "3",
+  "publisher": "SAGE",
+  "publisher-place": "Thousand Oaks, CA"
+ },
+ {
+  "id": "creswell2018rd",
+  "type": "book",
+  "author": [
+   {
+    "family": "Creswell",
+    "given": "John W."
+   },
+   {
+    "family": "Creswell",
+    "given": "J. David"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2018
+    ]
+   ]
+  },
+  "title": "Research design: Qualitative, quantitative, and mixed methods approaches",
+  "edition": "5",
+  "publisher": "SAGE",
+  "publisher-place": "Thousand Oaks, CA",
+  "ISBN": "978-1-5063-8670-6"
+ },
+ {
+  "id": "davis1989",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Davis",
+    "given": "Fred D."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1989
+    ]
+   ]
+  },
+  "title": "Perceived usefulness, perceived ease of use, and user acceptance of information technology",
+  "container-title": "MIS Quarterly",
+  "volume": "13",
+  "issue": "3",
+  "page": "319-340",
+  "DOI": "10.2307/249008"
+ },
+ {
+  "id": "dify2025mcp",
+  "type": "webpage",
+  "author": [
+   {
+    "literal": "Dify"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2025,
+     7,
+     10
+    ]
+   ]
+  },
+  "title": "Dify v1.6.0: Built-in two-way MCP support",
+  "container-title": "Dify Blog",
+  "URL": "https://dify.ai/blog/v1-6-0-built-in-two-way-mcp-support",
+  "accessed": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     12
+    ]
+   ]
+  }
+ },
+ {
+  "id": "dify_license",
+  "type": "webpage",
+  "author": [
+   {
+    "literal": "Dify"
+   }
+  ],
+  "title": "Open source license",
+  "container-title": "Dify documentation",
+  "URL": "https://docs.dify.ai/policies/open-source",
+  "accessed": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     12
+    ]
+   ]
+  }
+ },
+ {
+  "id": "dify_pricing",
+  "type": "webpage",
+  "author": [
+   {
+    "literal": "Dify"
+   }
+  ],
+  "title": "Pricing",
+  "container-title": "Dify",
+  "URL": "https://dify.ai/pricing",
+  "accessed": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     12
+    ]
+   ]
+  }
+ },
+ {
+  "id": "edge2024",
+  "type": "article",
+  "author": [
+   {
+    "family": "Edge",
+    "given": "Darren"
+   },
+   {
+    "family": "Trinh",
+    "given": "Ha"
+   },
+   {
+    "family": "Cheng",
+    "given": "Newman"
+   },
+   {
+    "family": "Bradley",
+    "given": "Joshua"
+   },
+   {
+    "family": "Chao",
+    "given": "Alex"
+   },
+   {
+    "family": "Mody",
+    "given": "Apurva"
+   },
+   {
+    "family": "Truitt",
+    "given": "Steven"
+   },
+   {
+    "family": "Metropolitansky",
+    "given": "Dasha"
+   },
+   {
+    "family": "Ness",
+    "given": "Robert Osazuwa"
+   },
+   {
+    "family": "Larson",
+    "given": "Jonathan"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2024
+    ]
+   ]
+  },
+  "title": "From local to global: A graph RAG approach to query-focused summarization",
+  "number": "arXiv:2404.16130",
+  "publisher": "arXiv",
+  "URL": "https://arxiv.org/abs/2404.16130"
+ },
+ {
+  "id": "eleti2026patent",
+  "type": "patent",
+  "author": [
+   {
+    "family": "Eleti",
+    "given": "Athyuttam"
+   },
+   {
+    "family": "Harris",
+    "given": "Jeffrey"
+   },
+   {
+    "family": "Kilpatrick",
+    "given": "Logan",
+    "suffix": "III"
+   },
+   {
+    "family": "Mishchenko",
+    "given": "Andrey"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2026,
+     5,
+     12
+    ]
+   ]
+  },
+  "submitted": {
+   "date-parts": [
+    [
+     2025,
+     2,
+     27
+    ]
+   ]
+  },
+  "title": "Systems and methods for generating and executing function calls using machine learning",
+  "number": "No. 12,625,732",
+  "authority": "U.S.",
+  "URL": "https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/12625732"
+ },
+ {
+  "id": "es2024",
+  "type": "paper-conference",
+  "author": [
+   {
+    "family": "Es",
+    "given": "Shahul"
+   },
+   {
+    "family": "James",
+    "given": "Jithin"
+   },
+   {
+    "family": "Espinosa Anke",
+    "given": "Luis"
+   },
+   {
+    "family": "Schockaert",
+    "given": "Steven"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2024
+    ]
+   ]
+  },
+  "title": "RAGAs: Automated evaluation of retrieval augmented generation",
+  "container-title": "Proceedings of the 18th Conference of the European Chapter of the Association for Computational Linguistics: System Demonstrations",
+  "page": "150-158",
+  "DOI": "10.18653/v1/2024.eacl-demo.16",
+  "publisher": "Association for Computational Linguistics"
+ },
+ {
+  "id": "fan2024",
+  "type": "paper-conference",
+  "author": [
+   {
+    "family": "Fan",
+    "given": "Wenqi"
+   },
+   {
+    "family": "Ding",
+    "given": "Yujuan"
+   },
+   {
+    "family": "Ning",
+    "given": "Liangbo"
+   },
+   {
+    "family": "Wang",
+    "given": "Shijie"
+   },
+   {
+    "family": "Li",
+    "given": "Hengyun"
+   },
+   {
+    "family": "Yin",
+    "given": "Dawei"
+   },
+   {
+    "family": "Chua",
+    "given": "Tat-Seng"
+   },
+   {
+    "family": "Li",
+    "given": "Qing"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2024
+    ]
+   ]
+  },
+  "title": "A survey on RAG meeting LLMs: Towards retrieval-augmented large language models",
+  "container-title": "Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD '24)",
+  "page": "6491-6501",
+  "DOI": "10.1145/3637528.3671470",
+  "publisher": "ACM",
+  "publisher-place": "New York, NY"
+ },
+ {
+  "id": "faonte2025patent",
+  "type": "patent",
+  "author": [
+   {
+    "family": "Faonte",
+    "given": "Giovanni"
+   },
+   {
+    "family": "Srinarasi",
+    "given": "Shreya Chandrashekar"
+   },
+   {
+    "family": "Azhagappan",
+    "given": "Mithun"
+   },
+   {
+    "family": "Gupta",
+    "given": "Dinesh"
+   },
+   {
+    "family": "Churchman",
+    "given": "Christopher M."
+   },
+   {
+    "family": "Mauban",
+    "given": "Cheska Adrianne"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2025,
+     6,
+     3
+    ]
+   ]
+  },
+  "submitted": {
+   "date-parts": [
+    [
+     2025,
+     1,
+     9
+    ]
+   ]
+  },
+  "title": "Hybrid language model architecture for API orchestration including chain of thought",
+  "number": "No. 12,321,794",
+  "authority": "U.S.",
+  "URL": "https://patents.google.com/patent/US12321794"
+ },
+ {
+  "id": "faul2007",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Faul",
+    "given": "Franz"
+   },
+   {
+    "family": "Erdfelder",
+    "given": "Edgar"
+   },
+   {
+    "family": "Lang",
+    "given": "Albert-Georg"
+   },
+   {
+    "family": "Buchner",
+    "given": "Axel"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2007
+    ]
+   ]
+  },
+  "title": "G*Power 3: A flexible statistical power analysis program for the social, behavioral, and biomedical sciences",
+  "container-title": "Behavior Research Methods",
+  "volume": "39",
+  "issue": "2",
+  "page": "175-191",
+  "DOI": "10.3758/BF03193146"
+ },
+ {
+  "id": "gao2023",
+  "type": "article",
+  "author": [
+   {
+    "family": "Gao",
+    "given": "Yunfan"
+   },
+   {
+    "family": "Xiong",
+    "given": "Yun"
+   },
+   {
+    "family": "Gao",
+    "given": "Xinyu"
+   },
+   {
+    "family": "Jia",
+    "given": "Kangxiang"
+   },
+   {
+    "family": "Pan",
+    "given": "Jinliu"
+   },
+   {
+    "family": "Bi",
+    "given": "Yuxi"
+   },
+   {
+    "family": "Dai",
+    "given": "Yi"
+   },
+   {
+    "family": "Sun",
+    "given": "Jiawei"
+   },
+   {
+    "family": "Wang",
+    "given": "Meng"
+   },
+   {
+    "family": "Wang",
+    "given": "Haofen"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2023
+    ]
+   ]
+  },
+  "title": "Retrieval-augmented generation for large language models: A survey",
+  "number": "arXiv:2312.10997",
+  "publisher": "arXiv",
+  "URL": "https://arxiv.org/abs/2312.10997"
+ },
+ {
+  "id": "goodfellow2016",
+  "type": "book",
+  "author": [
+   {
+    "family": "Goodfellow",
+    "given": "Ian"
+   },
+   {
+    "family": "Bengio",
+    "given": "Yoshua"
+   },
+   {
+    "family": "Courville",
+    "given": "Aaron"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2016
+    ]
+   ]
+  },
+  "title": "Deep learning",
+  "publisher": "MIT Press",
+  "publisher-place": "Cambridge, MA"
+ },
+ {
+  "id": "greshake2023",
+  "type": "paper-conference",
+  "author": [
+   {
+    "family": "Greshake",
+    "given": "Kai"
+   },
+   {
+    "family": "Abdelnabi",
+    "given": "Sahar"
+   },
+   {
+    "family": "Mishra",
+    "given": "Shailesh"
+   },
+   {
+    "family": "Endres",
+    "given": "Christoph"
+   },
+   {
+    "family": "Holz",
+    "given": "Thorsten"
+   },
+   {
+    "family": "Fritz",
+    "given": "Mario"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2023
+    ]
+   ]
+  },
+  "title": "Not what you've signed up for: Compromising real-world LLM-integrated applications with indirect prompt injection",
+  "container-title": "Proceedings of the 16th ACM Workshop on Artificial Intelligence and Security (AISec '23)",
+  "page": "79-90",
+  "DOI": "10.1145/3605764.3623985",
+  "publisher": "ACM",
+  "publisher-place": "New York, NY"
+ },
+ {
+  "id": "guest2006",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Guest",
+    "given": "Greg"
+   },
+   {
+    "family": "Bunce",
+    "given": "Arwen"
+   },
+   {
+    "family": "Johnson",
+    "given": "Laura"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2006
+    ]
+   ]
+  },
+  "title": "How many interviews are enough? An experiment with data saturation and variability",
+  "container-title": "Field Methods",
+  "volume": "18",
+  "issue": "1",
+  "page": "59-82",
+  "DOI": "10.1177/1525822X05279903"
+ },
+ {
+  "id": "hevner2004",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Hevner",
+    "given": "Alan R."
+   },
+   {
+    "family": "March",
+    "given": "Salvatore T."
+   },
+   {
+    "family": "Park",
+    "given": "Jinsoo"
+   },
+   {
+    "family": "Ram",
+    "given": "Sudha"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2004
+    ]
+   ]
+  },
+  "title": "Design science in information systems research",
+  "container-title": "MIS Quarterly",
+  "volume": "28",
+  "issue": "1",
+  "page": "75-105",
+  "DOI": "10.2307/25148625"
+ },
+ {
+  "id": "hf_kazllm",
+  "type": "webpage",
+  "author": [
+   {
+    "literal": "ISSAI"
+   }
+  ],
+  "title": "LLama-3.1-KazLLM-1.0-70B (model card)",
+  "container-title": "Hugging Face",
+  "URL": "https://huggingface.co/issai/LLama-3.1-KazLLM-1.0-70B",
+  "accessed": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     12
+    ]
+   ]
+  }
+ },
+ {
+  "id": "hou2026",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Hou",
+    "given": "Xinyi"
+   },
+   {
+    "family": "Zhao",
+    "given": "Yanjie"
+   },
+   {
+    "family": "Wang",
+    "given": "Shenao"
+   },
+   {
+    "family": "Wang",
+    "given": "Haoyu"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "title": "Model Context Protocol (MCP): Landscape, security threats, and future research directions",
+  "container-title": "ACM Transactions on Software Engineering and Methodology",
+  "volume": "35",
+  "issue": "10",
+  "DOI": "10.1145/3796519",
+  "number": "302"
+ },
+ {
+  "id": "huyen2025",
+  "type": "book",
+  "author": [
+   {
+    "family": "Huyen",
+    "given": "Chip"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2025
+    ]
+   ]
+  },
+  "title": "AI engineering: Building applications with foundation models",
+  "publisher": "O'Reilly Media",
+  "publisher-place": "Sebastopol, CA"
+ },
+ {
+  "id": "iso22989",
+  "type": "standard",
+  "author": [
+   {
+    "literal": "International Organization for Standardization"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2022
+    ]
+   ]
+  },
+  "title": "Information technology — Artificial intelligence — Artificial intelligence concepts and terminology",
+  "number": "ISO/IEC 22989:2022",
+  "publisher": "ISO",
+  "publisher-place": "Geneva",
+  "URL": "https://www.iso.org/standard/74296.html"
+ },
+ {
+  "id": "iso23053",
+  "type": "standard",
+  "author": [
+   {
+    "literal": "International Organization for Standardization"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2022
+    ]
+   ]
+  },
+  "title": "Framework for artificial intelligence (AI) systems using machine learning (ML)",
+  "number": "ISO/IEC 23053:2022",
+  "publisher": "ISO",
+  "publisher-place": "Geneva",
+  "URL": "https://www.iso.org/standard/74438.html"
+ },
+ {
+  "id": "iso23894",
+  "type": "standard",
+  "author": [
+   {
+    "literal": "International Organization for Standardization"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2023
+    ]
+   ]
+  },
+  "title": "Information technology — Artificial intelligence — Guidance on risk management",
+  "number": "ISO/IEC 23894:2023",
+  "publisher": "ISO",
+  "publisher-place": "Geneva",
+  "URL": "https://www.iso.org/standard/77304.html"
+ },
+ {
+  "id": "iso42001",
+  "type": "standard",
+  "author": [
+   {
+    "literal": "International Organization for Standardization"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2023
+    ]
+   ]
+  },
+  "title": "Information technology — Artificial intelligence — Management system",
+  "number": "ISO/IEC 42001:2023",
+  "publisher": "ISO",
+  "publisher-place": "Geneva",
+  "URL": "https://www.iso.org/standard/81230.html"
+ },
+ {
+  "id": "iso5338",
+  "type": "standard",
+  "author": [
+   {
+    "literal": "International Organization for Standardization"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2023
+    ]
+   ]
+  },
+  "title": "Information technology — Artificial intelligence — AI system life cycle processes",
+  "number": "ISO/IEC 5338:2023",
+  "publisher": "ISO",
+  "publisher-place": "Geneva",
+  "URL": "https://www.iso.org/standard/81118.html"
+ },
+ {
+  "id": "issai2024kazllm",
+  "type": "webpage",
+  "author": [
+   {
+    "literal": "Institute of Smart Systems and Artificial Intelligence (ISSAI)"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2024,
+     12,
+     10
+    ]
+   ]
+  },
+  "title": "Official release of the ISSAI KAZ-LLM: Open-source model is available",
+  "container-title": "ISSAI, Nazarbayev University",
+  "URL": "https://issai.nu.edu.kz/2024/12/10/official-release-of-the-issai-kaz-llm-open-source-model-is-available/",
+  "accessed": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     12
+    ]
+   ]
+  }
+ },
+ {
+  "id": "issai2025oylan",
+  "type": "webpage",
+  "author": [
+   {
+    "literal": "Institute of Smart Systems and Artificial Intelligence (ISSAI)"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2025,
+     12,
+     10
+    ]
+   ]
+  },
+  "title": "ISSAI Momentum showcases Kazakhstan's homegrown AI innovations",
+  "container-title": "ISSAI, Nazarbayev University",
+  "URL": "https://issai.nu.edu.kz/2025/12/10/issai-momentum-showcases-kazakhstans-homegrown-ai-innovations/",
+  "accessed": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     12
+    ]
+   ]
+  }
+ },
+ {
+  "id": "jimenez2024",
+  "type": "paper-conference",
+  "author": [
+   {
+    "family": "Jimenez",
+    "given": "Carlos E."
+   },
+   {
+    "family": "Yang",
+    "given": "John"
+   },
+   {
+    "family": "Wettig",
+    "given": "Alexander"
+   },
+   {
+    "family": "Yao",
+    "given": "Shunyu"
+   },
+   {
+    "family": "Pei",
+    "given": "Kexin"
+   },
+   {
+    "family": "Press",
+    "given": "Ofir"
+   },
+   {
+    "family": "Narasimhan",
+    "given": "Karthik R."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2024
+    ]
+   ]
+  },
+  "title": "SWE-bench: Can language models resolve real-world GitHub issues?",
+  "container-title": "The Twelfth International Conference on Learning Representations (ICLR 2024)",
+  "URL": "https://arxiv.org/abs/2310.06770"
+ },
+ {
+  "id": "johnson2021",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Johnson",
+    "given": "Jeff"
+   },
+   {
+    "family": "Douze",
+    "given": "Matthijs"
+   },
+   {
+    "family": "Jégou",
+    "given": "Hervé"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2021
+    ]
+   ]
+  },
+  "title": "Billion-scale similarity search with GPUs",
+  "container-title": "IEEE Transactions on Big Data",
+  "volume": "7",
+  "issue": "3",
+  "page": "535-547",
+  "DOI": "10.1109/TBDATA.2019.2921572"
+ },
+ {
+  "id": "karpukhin2020",
+  "type": "paper-conference",
+  "author": [
+   {
+    "family": "Karpukhin",
+    "given": "Vladimir"
+   },
+   {
+    "family": "Oguz",
+    "given": "Barlas"
+   },
+   {
+    "family": "Min",
+    "given": "Sewon"
+   },
+   {
+    "family": "Lewis",
+    "given": "Patrick"
+   },
+   {
+    "family": "Wu",
+    "given": "Ledell"
+   },
+   {
+    "family": "Edunov",
+    "given": "Sergey"
+   },
+   {
+    "family": "Chen",
+    "given": "Danqi"
+   },
+   {
+    "family": "Yih",
+    "given": "Wen-tau"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2020
+    ]
+   ]
+  },
+  "title": "Dense passage retrieval for open-domain question answering",
+  "container-title": "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+  "page": "6769-6781",
+  "DOI": "10.18653/v1/2020.emnlp-main.550",
+  "publisher": "Association for Computational Linguistics"
+ },
+ {
+  "id": "kz2013pdlaw",
+  "type": "legislation",
+  "title": "Law of the Republic of Kazakhstan No. 94-V \"On Personal Data and Their Protection\"",
+  "issued": {
+   "date-parts": [
+    [
+     2013,
+     5,
+     21
+    ]
+   ]
+  },
+  "container-title": "Adilet: Legal information system of regulatory legal acts of the Republic of Kazakhstan",
+  "URL": "https://adilet.zan.kz/rus/docs/Z1300000094",
+  "accessed": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     12
+    ]
+   ]
+  }
+ },
+ {
+  "id": "kz2024aiconcept",
+  "type": "legislation",
+  "title": "Resolution of the Government of the Republic of Kazakhstan No. 592 \"On approval of the Concept for the development of artificial intelligence for 2024–2029\"",
+  "issued": {
+   "date-parts": [
+    [
+     2024,
+     7,
+     24
+    ]
+   ]
+  },
+  "container-title": "Adilet: Legal information system of regulatory legal acts of the Republic of Kazakhstan",
+  "URL": "https://adilet.zan.kz/rus/docs/P2400000592",
+  "accessed": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     12
+    ]
+   ]
+  }
+ },
+ {
+  "id": "kz2025ailaw",
+  "type": "legislation",
+  "title": "Law of the Republic of Kazakhstan No. 230-VIII \"On Artificial Intelligence\"",
+  "issued": {
+   "date-parts": [
+    [
+     2025,
+     11,
+     17
+    ]
+   ]
+  },
+  "container-title": "Adilet: Legal information system of regulatory legal acts of the Republic of Kazakhstan",
+  "URL": "https://adilet.zan.kz/eng/docs/Z2500000230",
+  "accessed": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     12
+    ]
+   ]
+  }
+ },
+ {
+  "id": "langchain2025lg1",
+  "type": "webpage",
+  "author": [
+   {
+    "literal": "LangChain"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2025,
+     10,
+     22
+    ]
+   ]
+  },
+  "title": "LangChain and LangGraph 1.0",
+  "container-title": "LangChain Blog",
+  "URL": "https://www.langchain.com/blog/langchain-langgraph-1dot0",
+  "accessed": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     12
+    ]
+   ]
+  }
+ },
+ {
+  "id": "langchain_mcpadapters",
+  "type": "webpage",
+  "author": [
+   {
+    "literal": "LangChain"
+   }
+  ],
+  "title": "langchain-mcp-adapters",
+  "container-title": "GitHub",
+  "URL": "https://github.com/langchain-ai/langchain-mcp-adapters",
+  "accessed": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     12
+    ]
+   ]
+  }
+ },
+ {
+  "id": "langsmith",
+  "type": "webpage",
+  "author": [
+   {
+    "literal": "LangChain"
+   }
+  ],
+  "title": "LangSmith: Observability, evaluation and deployment for agents",
+  "container-title": "LangChain",
+  "URL": "https://www.langchain.com/langsmith",
+  "accessed": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     12
+    ]
+   ]
+  }
+ },
+ {
+  "id": "lee2021patent",
+  "type": "patent",
+  "author": [
+   {
+    "family": "Lee",
+    "given": "Kenton Chiu Tsun"
+   },
+   {
+    "family": "Gu",
+    "given": "Kelvin"
+   },
+   {
+    "family": "Tung",
+    "given": "Zora"
+   },
+   {
+    "family": "Pasupat",
+    "given": "Panupong"
+   },
+   {
+    "family": "Chang",
+    "given": "Ming-Wei"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2021,
+     5,
+     11
+    ]
+   ]
+  },
+  "submitted": {
+   "date-parts": [
+    [
+     2020,
+     5,
+     20
+    ]
+   ]
+  },
+  "title": "Retrieval-augmented language model pre-training and fine-tuning",
+  "number": "No. 11,003,865",
+  "authority": "U.S.",
+  "URL": "https://patents.google.com/patent/US11003865B1/en"
+ },
+ {
+  "id": "lewis2020",
+  "type": "paper-conference",
+  "author": [
+   {
+    "family": "Lewis",
+    "given": "Patrick"
+   },
+   {
+    "family": "Perez",
+    "given": "Ethan"
+   },
+   {
+    "family": "Piktus",
+    "given": "Aleksandra"
+   },
+   {
+    "family": "Petroni",
+    "given": "Fabio"
+   },
+   {
+    "family": "Karpukhin",
+    "given": "Vladimir"
+   },
+   {
+    "family": "Goyal",
+    "given": "Naman"
+   },
+   {
+    "family": "Küttler",
+    "given": "Heinrich"
+   },
+   {
+    "family": "Lewis",
+    "given": "Mike"
+   },
+   {
+    "family": "Yih",
+    "given": "Wen-tau"
+   },
+   {
+    "family": "Rocktäschel",
+    "given": "Tim"
+   },
+   {
+    "family": "Riedel",
+    "given": "Sebastian"
+   },
+   {
+    "family": "Kiela",
+    "given": "Douwe"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2020
+    ]
+   ]
+  },
+  "title": "Retrieval-augmented generation for knowledge-intensive NLP tasks",
+  "container-title": "Advances in Neural Information Processing Systems 33 (NeurIPS 2020)",
+  "page": "9459-9474",
+  "publisher": "Curran Associates",
+  "URL": "https://proceedings.neurips.cc/paper/2020/hash/6b493230205f780e1bc26945df7481e5-Abstract.html"
+ },
+ {
+  "id": "lewis2022phd",
+  "type": "thesis",
+  "author": [
+   {
+    "family": "Lewis",
+    "given": "Patrick Simon Hampden"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2022
+    ]
+   ]
+  },
+  "title": "Improving neural question answering with retrieval and generation",
+  "genre": "Doctoral dissertation",
+  "publisher": "University College London",
+  "publisher-place": "London, UK",
+  "URL": "https://discovery.ucl.ac.uk/id/eprint/10151750/"
+ },
+ {
+  "id": "lf2025aaif",
+  "type": "webpage",
+  "author": [
+   {
+    "literal": "The Linux Foundation"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2025,
+     12,
+     9
+    ]
+   ]
+  },
+  "title": "Linux Foundation announces the formation of the Agentic AI Foundation",
+  "container-title": "The Linux Foundation",
+  "URL": "https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-Agentic-ai-foundation",
+  "accessed": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     12
+    ]
+   ]
+  }
+ },
+ {
+  "id": "liu2024agentbench",
+  "type": "paper-conference",
+  "author": [
+   {
+    "family": "Liu",
+    "given": "Xiao"
+   },
+   {
+    "family": "Yu",
+    "given": "Hao"
+   },
+   {
+    "family": "Zhang",
+    "given": "Hanchen"
+   },
+   {
+    "family": "Xu",
+    "given": "Yifan"
+   },
+   {
+    "family": "Lei",
+    "given": "Xuanyu"
+   },
+   {
+    "family": "Lai",
+    "given": "Hanyu"
+   },
+   {
+    "family": "Gu",
+    "given": "Yu"
+   },
+   {
+    "family": "Ding",
+    "given": "Hangliang"
+   },
+   {
+    "family": "Men",
+    "given": "Kaiwen"
+   },
+   {
+    "family": "Yang",
+    "given": "Kejuan"
+   },
+   {
+    "literal": "others"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2024
+    ]
+   ]
+  },
+  "title": "AgentBench: Evaluating LLMs as agents",
+  "container-title": "The Twelfth International Conference on Learning Representations (ICLR 2024)",
+  "URL": "https://arxiv.org/abs/2308.03688"
+ },
+ {
+  "id": "liu2024lost",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Liu",
+    "given": "Nelson F."
+   },
+   {
+    "family": "Lin",
+    "given": "Kevin"
+   },
+   {
+    "family": "Hewitt",
+    "given": "John"
+   },
+   {
+    "family": "Paranjape",
+    "given": "Ashwin"
+   },
+   {
+    "family": "Bevilacqua",
+    "given": "Michele"
+   },
+   {
+    "family": "Petroni",
+    "given": "Fabio"
+   },
+   {
+    "family": "Liang",
+    "given": "Percy"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2024
+    ]
+   ]
+  },
+  "title": "Lost in the middle: How language models use long contexts",
+  "container-title": "Transactions of the Association for Computational Linguistics",
+  "volume": "12",
+  "page": "157-173",
+  "DOI": "10.1162/tacl_a_00638"
+ },
+ {
+  "id": "luo2025",
+  "type": "article",
+  "author": [
+   {
+    "family": "Luo",
+    "given": "Ziyang"
+   },
+   {
+    "family": "Shen",
+    "given": "Zhiqi"
+   },
+   {
+    "family": "Yang",
+    "given": "Wenzhuo"
+   },
+   {
+    "family": "Zhao",
+    "given": "Zirui"
+   },
+   {
+    "family": "Jwalapuram",
+    "given": "Prathyusha"
+   },
+   {
+    "family": "Saha",
+    "given": "Amrita"
+   },
+   {
+    "family": "Sahoo",
+    "given": "Doyen"
+   },
+   {
+    "family": "Savarese",
+    "given": "Silvio"
+   },
+   {
+    "family": "Xiong",
+    "given": "Caiming"
+   },
+   {
+    "family": "Li",
+    "given": "Junnan"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2025
+    ]
+   ]
+  },
+  "title": "MCP-Universe: Benchmarking large language models with real-world Model Context Protocol servers",
+  "number": "arXiv:2508.14704",
+  "publisher": "arXiv",
+  "URL": "https://arxiv.org/abs/2508.14704"
+ },
+ {
+  "id": "malkov2020",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Malkov",
+    "given": "Yu. A."
+   },
+   {
+    "family": "Yashunin",
+    "given": "D. A."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2020
+    ]
+   ]
+  },
+  "title": "Efficient and robust approximate nearest neighbor search using hierarchical navigable small world graphs",
+  "container-title": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+  "volume": "42",
+  "issue": "4",
+  "page": "824-836",
+  "DOI": "10.1109/TPAMI.2018.2889473"
+ },
+ {
+  "id": "manning2008",
+  "type": "book",
+  "author": [
+   {
+    "family": "Manning",
+    "given": "Christopher D."
+   },
+   {
+    "family": "Raghavan",
+    "given": "Prabhakar"
+   },
+   {
+    "family": "Schütze",
+    "given": "Hinrich"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2008
+    ]
+   ]
+  },
+  "title": "Introduction to information retrieval",
+  "publisher": "Cambridge University Press",
+  "publisher-place": "Cambridge"
+ },
+ {
+  "id": "maslej2025",
+  "type": "report",
+  "author": [
+   {
+    "family": "Maslej",
+    "given": "Nestor"
+   },
+   {
+    "family": "Fattorini",
+    "given": "Loredana"
+   },
+   {
+    "family": "Perrault",
+    "given": "Raymond"
+   },
+   {
+    "literal": "others"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2025
+    ]
+   ]
+  },
+  "title": "Artificial intelligence index report 2025",
+  "publisher": "Institute for Human-Centered AI, Stanford University",
+  "publisher-place": "Stanford, CA",
+  "URL": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
+ },
+ {
+  "id": "mcp_spec",
+  "type": "webpage",
+  "author": [
+   {
+    "literal": "Model Context Protocol"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2026,
+     7,
+     28
+    ]
+   ]
+  },
+  "title": "Model Context Protocol specification, version 2026-07-28",
+  "container-title": "modelcontextprotocol.io",
+  "URL": "https://modelcontextprotocol.io/specification/2026-07-28",
+  "accessed": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     12
+    ]
+   ]
+  }
+ },
+ {
+  "id": "mialon2023",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Mialon",
+    "given": "Grégoire"
+   },
+   {
+    "family": "Dessì",
+    "given": "Roberto"
+   },
+   {
+    "family": "Lomeli",
+    "given": "Maria"
+   },
+   {
+    "family": "Nalmpantis",
+    "given": "Christoforos"
+   },
+   {
+    "family": "Pasunuru",
+    "given": "Ramakanth"
+   },
+   {
+    "family": "Raileanu",
+    "given": "Roberta"
+   },
+   {
+    "family": "Rozière",
+    "given": "Baptiste"
+   },
+   {
+    "family": "Schick",
+    "given": "Timo"
+   },
+   {
+    "family": "Dwivedi-Yu",
+    "given": "Jane"
+   },
+   {
+    "family": "Celikyilmaz",
+    "given": "Asli"
+   },
+   {
+    "literal": "others"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2023
+    ]
+   ]
+  },
+  "title": "Augmented language models: A survey",
+  "container-title": "Transactions on Machine Learning Research",
+  "URL": "https://openreview.net/forum?id=jh7wH2AzKK"
+ },
+ {
+  "id": "min2024phd",
+  "type": "thesis",
+  "author": [
+   {
+    "family": "Min",
+    "given": "Sewon"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2024
+    ]
+   ]
+  },
+  "title": "Rethinking data use in large language models",
+  "genre": "Doctoral dissertation",
+  "publisher": "University of Washington",
+  "publisher-place": "Seattle, WA",
+  "URL": "https://hdl.handle.net/1773/51864"
+ },
+ {
+  "id": "mishchenko2024patent",
+  "type": "patent",
+  "author": [
+   {
+    "family": "Mishchenko",
+    "given": "Andrey"
+   },
+   {
+    "family": "Medina",
+    "given": "David"
+   },
+   {
+    "family": "McMillan",
+    "given": "Paul"
+   },
+   {
+    "family": "Eleti",
+    "given": "Athyuttam"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2024,
+     3,
+     5
+    ]
+   ]
+  },
+  "submitted": {
+   "date-parts": [
+    [
+     2023,
+     3,
+     20
+    ]
+   ]
+  },
+  "title": "Schema-based integration of external APIs with natural language applications",
+  "number": "No. 11,922,144",
+  "authority": "U.S.",
+  "URL": "https://patents.google.com/patent/US11922144B1/en"
+ },
+ {
+  "id": "ms2025copilotmcp",
+  "type": "webpage",
+  "author": [
+   {
+    "literal": "Microsoft"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2025,
+     5,
+     29
+    ]
+   ]
+  },
+  "title": "Model Context Protocol (MCP) is now generally available in Microsoft Copilot Studio",
+  "container-title": "Microsoft Copilot Blog",
+  "URL": "https://www.microsoft.com/en-us/copilot/blog/copilot-studio/model-context-protocol-mcp-is-now-generally-available-in-microsoft-copilot-studio/",
+  "accessed": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     12
+    ]
+   ]
+  }
+ },
+ {
+  "id": "ms2025foundryga",
+  "type": "webpage",
+  "author": [
+   {
+    "literal": "Microsoft"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2025,
+     5
+    ]
+   ]
+  },
+  "title": "Announcing general availability of Azure AI Foundry Agent Service",
+  "container-title": "Microsoft Tech Community: Azure AI Foundry Blog",
+  "URL": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/announcing-general-availability-of-azure-ai-foundry-agent-service/4414352",
+  "accessed": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     12
+    ]
+   ]
+  }
+ },
+ {
+  "id": "ms2025foundryignite",
+  "type": "webpage",
+  "author": [
+   {
+    "literal": "Microsoft"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2025,
+     11
+    ]
+   ]
+  },
+  "title": "Foundry Agent Service at Ignite 2025: Simple to build, powerful to deploy, trusted to operate",
+  "container-title": "Microsoft Tech Community: Azure AI Foundry Blog",
+  "URL": "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/foundry-agent-service-at-ignite-2025-simple-to-build-powerful-to-deploy-trusted-/4469788",
+  "accessed": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     12
+    ]
+   ]
+  }
+ },
+ {
+  "id": "ms_foundry_overview",
+  "type": "webpage",
+  "author": [
+   {
+    "literal": "Microsoft"
+   }
+  ],
+  "title": "What is Foundry Agent Service?",
+  "container-title": "Microsoft Learn",
+  "URL": "https://learn.microsoft.com/en-us/azure/foundry/agents/overview",
+  "accessed": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     12
+    ]
+   ]
+  }
+ },
+ {
+  "id": "nakispekova2024",
+  "type": "article-newspaper",
+  "author": [
+   {
+    "family": "Nakispekova",
+    "given": "Aiman"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2024,
+     12,
+     21
+    ]
+   ]
+  },
+  "title": "Kazakhstan embraces future of AI with its first large language model",
+  "container-title": "The Astana Times",
+  "URL": "https://astanatimes.com/2024/12/kazakhstan-embraces-future-of-ai-with-its-first-large-language-model/"
+ },
+ {
+  "id": "nist2023rmf",
+  "type": "report",
+  "author": [
+   {
+    "family": "Tabassi",
+    "given": "Elham"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2023
+    ]
+   ]
+  },
+  "title": "Artificial intelligence risk management framework (AI RMF 1.0)",
+  "number": "NIST AI 100-1",
+  "publisher": "National Institute of Standards and Technology",
+  "publisher-place": "Gaithersburg, MD",
+  "DOI": "10.6028/NIST.AI.100-1"
+ },
+ {
+  "id": "nist2024genai",
+  "type": "report",
+  "author": [
+   {
+    "family": "Autio",
+    "given": "Chloe"
+   },
+   {
+    "family": "Schwartz",
+    "given": "Reva"
+   },
+   {
+    "family": "Dunietz",
+    "given": "Jesse"
+   },
+   {
+    "family": "Jain",
+    "given": "Shomik"
+   },
+   {
+    "family": "Stanley",
+    "given": "Martin"
+   },
+   {
+    "family": "Tabassi",
+    "given": "Elham"
+   },
+   {
+    "family": "Hall",
+    "given": "Patrick"
+   },
+   {
+    "family": "Roberts",
+    "given": "Kamie"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2024
+    ]
+   ]
+  },
+  "title": "Artificial intelligence risk management framework: Generative artificial intelligence profile",
+  "number": "NIST AI 600-1",
+  "publisher": "National Institute of Standards and Technology",
+  "publisher-place": "Gaithersburg, MD",
+  "DOI": "10.6028/NIST.AI.600-1"
+ },
+ {
+  "id": "oecd2023kz",
+  "type": "report",
+  "author": [
+   {
+    "literal": "OECD"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2023
+    ]
+   ]
+  },
+  "title": "Improving framework conditions for the digital transformation of businesses in Kazakhstan",
+  "publisher": "OECD Publishing",
+  "publisher-place": "Paris",
+  "URL": "https://www.oecd.org/en/publications/improving-framework-conditions-for-the-digital-transformation-of-businesses-in-kazakhstan_368d4d01-en/full-report.html"
+ },
+ {
+  "id": "omirgazy2025",
+  "type": "article-newspaper",
+  "author": [
+   {
+    "family": "Omirgazy",
+    "given": "Dana"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2025,
+     11,
+     17
+    ]
+   ]
+  },
+  "title": "Kazakhstan adopts Central Asia's first AI law",
+  "container-title": "The Astana Times",
+  "URL": "https://astanatimes.com/2025/11/kazakhstan-adopts-central-asias-first-ai-law/"
+ },
+ {
+  "id": "openai2025agentkit",
+  "type": "webpage",
+  "author": [
+   {
+    "literal": "OpenAI"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2025,
+     10,
+     6
+    ]
+   ]
+  },
+  "title": "Introducing AgentKit, new Evals, and RFT for agents",
+  "container-title": "OpenAI",
+  "URL": "https://openai.com/index/introducing-agentkit/",
+  "accessed": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     12
+    ]
+   ]
+  }
+ },
+ {
+  "id": "openai2025newtools",
+  "type": "webpage",
+  "author": [
+   {
+    "literal": "OpenAI"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2025,
+     3,
+     11
+    ]
+   ]
+  },
+  "title": "New tools for building agents",
+  "container-title": "OpenAI",
+  "URL": "https://openai.com/index/new-tools-for-building-agents/",
+  "accessed": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     12
+    ]
+   ]
+  }
+ },
+ {
+  "id": "openai2025responses",
+  "type": "webpage",
+  "author": [
+   {
+    "literal": "OpenAI"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2025,
+     5
+    ]
+   ]
+  },
+  "title": "New tools and features in the Responses API",
+  "container-title": "OpenAI",
+  "URL": "https://openai.com/index/new-tools-and-features-in-the-responses-api/",
+  "accessed": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     12
+    ]
+   ]
+  }
+ },
+ {
+  "id": "openai_agentbuilder",
+  "type": "webpage",
+  "author": [
+   {
+    "literal": "OpenAI"
+   }
+  ],
+  "title": "Agent Builder",
+  "container-title": "OpenAI API documentation",
+  "URL": "https://developers.openai.com/api/docs/guides/agent-builder",
+  "accessed": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     12
+    ]
+   ]
+  }
+ },
+ {
+  "id": "openai_agentssdk",
+  "type": "webpage",
+  "author": [
+   {
+    "literal": "OpenAI"
+   }
+  ],
+  "title": "OpenAI Agents SDK (Python): Model Context Protocol (MCP)",
+  "container-title": "OpenAI Agents SDK documentation",
+  "URL": "https://openai.github.io/openai-agents-python/mcp/",
+  "accessed": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     12
+    ]
+   ]
+  }
+ },
+ {
+  "id": "owasp2025llm",
+  "type": "webpage",
+  "author": [
+   {
+    "literal": "OWASP GenAI Security Project"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2024,
+     11,
+     18
+    ]
+   ]
+  },
+  "title": "OWASP Top 10 for LLM applications 2025",
+  "container-title": "OWASP Foundation",
+  "URL": "https://genai.owasp.org/llm-top-10/",
+  "accessed": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     12
+    ]
+   ]
+  }
+ },
+ {
+  "id": "patil2024",
+  "type": "paper-conference",
+  "author": [
+   {
+    "family": "Patil",
+    "given": "Shishir G."
+   },
+   {
+    "family": "Zhang",
+    "given": "Tianjun"
+   },
+   {
+    "family": "Wang",
+    "given": "Xin"
+   },
+   {
+    "family": "Gonzalez",
+    "given": "Joseph E."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2024
+    ]
+   ]
+  },
+  "title": "Gorilla: Large language model connected with massive APIs",
+  "container-title": "Advances in Neural Information Processing Systems 37 (NeurIPS 2024)",
+  "page": "126544-126565",
+  "DOI": "10.52202/079017-4020",
+  "publisher": "Curran Associates"
+ },
+ {
+  "id": "peffers2007",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Peffers",
+    "given": "Ken"
+   },
+   {
+    "family": "Tuunanen",
+    "given": "Tuure"
+   },
+   {
+    "family": "Rothenberger",
+    "given": "Marcus A."
+   },
+   {
+    "family": "Chatterjee",
+    "given": "Samir"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2007
+    ]
+   ]
+  },
+  "title": "A design science research methodology for information systems research",
+  "container-title": "Journal of Management Information Systems",
+  "volume": "24",
+  "issue": "3",
+  "page": "45-77",
+  "DOI": "10.2753/MIS0742-1222240302"
+ },
+ {
+  "id": "qin2024",
+  "type": "paper-conference",
+  "author": [
+   {
+    "family": "Qin",
+    "given": "Yujia"
+   },
+   {
+    "family": "Liang",
+    "given": "Shihao"
+   },
+   {
+    "family": "Ye",
+    "given": "Yining"
+   },
+   {
+    "family": "Zhu",
+    "given": "Kunlun"
+   },
+   {
+    "family": "Yan",
+    "given": "Lan"
+   },
+   {
+    "family": "Lu",
+    "given": "Yaxi"
+   },
+   {
+    "family": "Lin",
+    "given": "Yankai"
+   },
+   {
+    "family": "Cong",
+    "given": "Xin"
+   },
+   {
+    "family": "Tang",
+    "given": "Xiangru"
+   },
+   {
+    "family": "Qian",
+    "given": "Bill"
+   },
+   {
+    "literal": "others"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2024
+    ]
+   ]
+  },
+  "title": "ToolLLM: Facilitating large language models to master 16000+ real-world APIs",
+  "container-title": "The Twelfth International Conference on Learning Representations (ICLR 2024)",
+  "URL": "https://arxiv.org/abs/2307.16789"
+ },
+ {
+  "id": "radosevich2025",
+  "type": "article",
+  "author": [
+   {
+    "family": "Radosevich",
+    "given": "Brandon"
+   },
+   {
+    "family": "Halloran",
+    "given": "John T."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2025
+    ]
+   ]
+  },
+  "title": "MCP safety audit: LLMs with the Model Context Protocol allow major security exploits",
+  "number": "arXiv:2504.03767",
+  "publisher": "arXiv",
+  "URL": "https://arxiv.org/abs/2504.03767"
+ },
+ {
+  "id": "robertson2009",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Robertson",
+    "given": "Stephen"
+   },
+   {
+    "family": "Zaragoza",
+    "given": "Hugo"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2009
+    ]
+   ]
+  },
+  "title": "The probabilistic relevance framework: BM25 and beyond",
+  "container-title": "Foundations and Trends in Information Retrieval",
+  "volume": "3",
+  "issue": "4",
+  "page": "333-389",
+  "DOI": "10.1561/1500000019"
+ },
+ {
+  "id": "russell2021",
+  "type": "book",
+  "author": [
+   {
+    "family": "Russell",
+    "given": "Stuart"
+   },
+   {
+    "family": "Norvig",
+    "given": "Peter"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2021
+    ]
+   ]
+  },
+  "title": "Artificial intelligence: A modern approach",
+  "edition": "4",
+  "publisher": "Pearson",
+  "publisher-place": "Hoboken, NJ"
+ },
+ {
+  "id": "schick2022phd",
+  "type": "thesis",
+  "author": [
+   {
+    "family": "Schick",
+    "given": "Timo"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2022
+    ]
+   ]
+  },
+  "title": "Few-shot learning with language models: Learning from instructions and contexts",
+  "genre": "Doctoral dissertation",
+  "publisher": "Ludwig-Maximilians-Universität München",
+  "publisher-place": "Munich, Germany",
+  "URL": "https://edoc.ub.uni-muenchen.de/29867/"
+ },
+ {
+  "id": "schick2023",
+  "type": "paper-conference",
+  "author": [
+   {
+    "family": "Schick",
+    "given": "Timo"
+   },
+   {
+    "family": "Dwivedi-Yu",
+    "given": "Jane"
+   },
+   {
+    "family": "Dessì",
+    "given": "Roberto"
+   },
+   {
+    "family": "Raileanu",
+    "given": "Roberta"
+   },
+   {
+    "family": "Lomeli",
+    "given": "Maria"
+   },
+   {
+    "family": "Hambro",
+    "given": "Eric"
+   },
+   {
+    "family": "Zettlemoyer",
+    "given": "Luke"
+   },
+   {
+    "family": "Cancedda",
+    "given": "Nicola"
+   },
+   {
+    "family": "Scialom",
+    "given": "Thomas"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2023
+    ]
+   ]
+  },
+  "title": "Toolformer: Language models can teach themselves to use tools",
+  "container-title": "Advances in Neural Information Processing Systems 36 (NeurIPS 2023)",
+  "publisher": "Curran Associates",
+  "URL": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/d842425e4bf79ba039352da0f658a906-Abstract-Conference.html"
+ },
+ {
+  "id": "schluntz2024",
+  "type": "webpage",
+  "author": [
+   {
+    "family": "Schluntz",
+    "given": "Erik"
+   },
+   {
+    "family": "Zhang",
+    "given": "Barry"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2024,
+     12
+    ]
+   ]
+  },
+  "title": "Building effective agents",
+  "container-title": "Anthropic",
+  "URL": "https://www.anthropic.com/research/building-effective-agents",
+  "accessed": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     12
+    ]
+   ]
+  }
+ },
+ {
+  "id": "shinn2023",
+  "type": "paper-conference",
+  "author": [
+   {
+    "family": "Shinn",
+    "given": "Noah"
+   },
+   {
+    "family": "Cassano",
+    "given": "Federico"
+   },
+   {
+    "family": "Gopinath",
+    "given": "Ashwin"
+   },
+   {
+    "family": "Narasimhan",
+    "given": "Karthik"
+   },
+   {
+    "family": "Yao",
+    "given": "Shunyu"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2023
+    ]
+   ]
+  },
+  "title": "Reflexion: Language agents with verbal reinforcement learning",
+  "container-title": "Advances in Neural Information Processing Systems 36 (NeurIPS 2023)",
+  "page": "8634-8652",
+  "DOI": "10.52202/075280-0377",
+  "publisher": "Curran Associates"
+ },
+ {
+  "id": "siebel2024patent",
+  "type": "patent",
+  "author": [
+   {
+    "family": "Siebel",
+    "given": "Thomas M."
+   },
+   {
+    "family": "Krishnan",
+    "given": "Nikhil"
+   },
+   {
+    "family": "Poirier",
+    "given": "Louis"
+   },
+   {
+    "family": "Juban",
+    "given": "Romain"
+   },
+   {
+    "family": "Haines",
+    "given": "Michael"
+   },
+   {
+    "family": "Homma",
+    "given": "Yushi"
+   },
+   {
+    "family": "Muradov",
+    "given": "Riyad"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2024,
+     10,
+     8
+    ]
+   ]
+  },
+  "submitted": {
+   "date-parts": [
+    [
+     2023,
+     12,
+     15
+    ]
+   ]
+  },
+  "title": "Enterprise generative artificial intelligence architecture",
+  "number": "No. 12,111,859",
+  "authority": "U.S.",
+  "URL": "https://patents.google.com/patent/US12111859B2/en"
+ },
+ {
+  "id": "singla2025",
+  "type": "report",
+  "author": [
+   {
+    "family": "Singla",
+    "given": "Alex"
+   },
+   {
+    "family": "Sukharevsky",
+    "given": "Alexander"
+   },
+   {
+    "family": "Yee",
+    "given": "Lareina"
+   },
+   {
+    "family": "Chui",
+    "given": "Michael"
+   },
+   {
+    "family": "Hall",
+    "given": "Bryce"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2025
+    ]
+   ]
+  },
+  "title": "The state of AI in 2025: Agents, innovation, and transformation",
+  "publisher": "McKinsey & Company",
+  "URL": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai"
+ },
+ {
+  "id": "togmanov2025",
+  "type": "paper-conference",
+  "author": [
+   {
+    "family": "Togmanov",
+    "given": "Mukhammed"
+   },
+   {
+    "family": "Mukhituly",
+    "given": "Nurdaulet"
+   },
+   {
+    "family": "Turmakhan",
+    "given": "Diana"
+   },
+   {
+    "family": "Mansurov",
+    "given": "Jonibek"
+   },
+   {
+    "family": "Goloburda",
+    "given": "Maiya"
+   },
+   {
+    "family": "Sakip",
+    "given": "Akhmed"
+   },
+   {
+    "family": "Xie",
+    "given": "Zhuohan"
+   },
+   {
+    "family": "Wang",
+    "given": "Yuxia"
+   },
+   {
+    "family": "Syzdykov",
+    "given": "Bekassyl"
+   },
+   {
+    "family": "Laiyk",
+    "given": "Nurkhan"
+   },
+   {
+    "literal": "others"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2025
+    ]
+   ]
+  },
+  "title": "KazMMLU: Evaluating language models on Kazakh, Russian, and regional knowledge of Kazakhstan",
+  "container-title": "Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+  "page": "14403-14416",
+  "publisher": "Association for Computational Linguistics",
+  "URL": "https://aclanthology.org/2025.acl-long.701/"
+ },
+ {
+  "id": "vaswani2017",
+  "type": "paper-conference",
+  "author": [
+   {
+    "family": "Vaswani",
+    "given": "Ashish"
+   },
+   {
+    "family": "Shazeer",
+    "given": "Noam"
+   },
+   {
+    "family": "Parmar",
+    "given": "Niki"
+   },
+   {
+    "family": "Uszkoreit",
+    "given": "Jakob"
+   },
+   {
+    "family": "Jones",
+    "given": "Llion"
+   },
+   {
+    "family": "Gomez",
+    "given": "Aidan N."
+   },
+   {
+    "family": "Kaiser",
+    "given": "Łukasz"
+   },
+   {
+    "family": "Polosukhin",
+    "given": "Illia"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2017
+    ]
+   ]
+  },
+  "title": "Attention is all you need",
+  "container-title": "Advances in Neural Information Processing Systems 30 (NIPS 2017)",
+  "page": "5998-6008",
+  "publisher": "Curran Associates"
+ },
+ {
+  "id": "venkatesh2003",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Venkatesh",
+    "given": "Viswanath"
+   },
+   {
+    "family": "Morris",
+    "given": "Michael G."
+   },
+   {
+    "family": "Davis",
+    "given": "Gordon B."
+   },
+   {
+    "family": "Davis",
+    "given": "Fred D."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2003
+    ]
+   ]
+  },
+  "title": "User acceptance of information technology: Toward a unified view",
+  "container-title": "MIS Quarterly",
+  "volume": "27",
+  "issue": "3",
+  "page": "425-478",
+  "DOI": "10.2307/30036540"
+ },
+ {
+  "id": "wang2024survey",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Wang",
+    "given": "Lei"
+   },
+   {
+    "family": "Ma",
+    "given": "Chen"
+   },
+   {
+    "family": "Feng",
+    "given": "Xueyang"
+   },
+   {
+    "family": "Zhang",
+    "given": "Zeyu"
+   },
+   {
+    "family": "Yang",
+    "given": "Hao"
+   },
+   {
+    "family": "Zhang",
+    "given": "Jingsen"
+   },
+   {
+    "family": "Chen",
+    "given": "Zhiyuan"
+   },
+   {
+    "family": "Tang",
+    "given": "Jiakai"
+   },
+   {
+    "family": "Chen",
+    "given": "Xu"
+   },
+   {
+    "family": "Lin",
+    "given": "Yankai"
+   },
+   {
+    "literal": "others"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2024
+    ]
+   ]
+  },
+  "title": "A survey on large language model based autonomous agents",
+  "container-title": "Frontiers of Computer Science",
+  "volume": "18",
+  "issue": "6",
+  "DOI": "10.1007/s11704-024-40231-1",
+  "number": "186345"
+ },
+ {
+  "id": "wang2025mcpbench",
+  "type": "article",
+  "author": [
+   {
+    "family": "Wang",
+    "given": "Zhenting"
+   },
+   {
+    "family": "Chang",
+    "given": "Qi"
+   },
+   {
+    "family": "Patel",
+    "given": "Hemani"
+   },
+   {
+    "family": "Biju",
+    "given": "Shashank"
+   },
+   {
+    "family": "Wu",
+    "given": "Cheng-En"
+   },
+   {
+    "family": "Liu",
+    "given": "Quan"
+   },
+   {
+    "family": "Ding",
+    "given": "Aolin"
+   },
+   {
+    "family": "Rezazadeh",
+    "given": "Alireza"
+   },
+   {
+    "family": "Shah",
+    "given": "Ankit"
+   },
+   {
+    "family": "Bao",
+    "given": "Yujia"
+   },
+   {
+    "literal": "others"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2025
+    ]
+   ]
+  },
+  "title": "MCP-Bench: Benchmarking tool-using LLM agents with complex real-world tasks via MCP servers",
+  "number": "arXiv:2508.20453",
+  "publisher": "arXiv",
+  "URL": "https://arxiv.org/abs/2508.20453"
+ },
+ {
+  "id": "wei2022",
+  "type": "paper-conference",
+  "author": [
+   {
+    "family": "Wei",
+    "given": "Jason"
+   },
+   {
+    "family": "Wang",
+    "given": "Xuezhi"
+   },
+   {
+    "family": "Schuurmans",
+    "given": "Dale"
+   },
+   {
+    "family": "Bosma",
+    "given": "Maarten"
+   },
+   {
+    "family": "Ichter",
+    "given": "Brian"
+   },
+   {
+    "family": "Xia",
+    "given": "Fei"
+   },
+   {
+    "family": "Chi",
+    "given": "Ed H."
+   },
+   {
+    "family": "Le",
+    "given": "Quoc V."
+   },
+   {
+    "family": "Zhou",
+    "given": "Denny"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2022
+    ]
+   ]
+  },
+  "title": "Chain-of-thought prompting elicits reasoning in large language models",
+  "container-title": "Advances in Neural Information Processing Systems 35 (NeurIPS 2022)",
+  "page": "24824-24837",
+  "publisher": "Curran Associates",
+  "URL": "https://proceedings.neurips.cc/paper/2022/hash/9d5609613524ecf4f15af0f7b31abca4-Abstract-Conference.html"
+ },
+ {
+  "id": "wiggers2024mcp",
+  "type": "article-newspaper",
+  "author": [
+   {
+    "family": "Wiggers",
+    "given": "Kyle"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2024,
+     11,
+     25
+    ]
+   ]
+  },
+  "title": "Anthropic proposes a new way to connect data to AI chatbots",
+  "container-title": "TechCrunch",
+  "URL": "https://techcrunch.com/2024/11/25/anthropic-proposes-a-way-to-connect-data-to-ai-chatbots/"
+ },
+ {
+  "id": "wiggers2025google",
+  "type": "article-newspaper",
+  "author": [
+   {
+    "family": "Wiggers",
+    "given": "Kyle"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2025,
+     4,
+     9
+    ]
+   ]
+  },
+  "title": "Google to embrace Anthropic's standard for connecting AI models to data",
+  "container-title": "TechCrunch",
+  "URL": "https://techcrunch.com/2025/04/09/google-says-itll-embrace-anthropics-standard-for-connecting-ai-models-to-data/"
+ },
+ {
+  "id": "wiggers2025openai",
+  "type": "article-newspaper",
+  "author": [
+   {
+    "family": "Wiggers",
+    "given": "Kyle"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2025,
+     3,
+     26
+    ]
+   ]
+  },
+  "title": "OpenAI adopts rival Anthropic's standard for connecting AI models to data",
+  "container-title": "TechCrunch",
+  "URL": "https://techcrunch.com/2025/03/26/openai-adopts-rival-anthropics-standard-for-connecting-ai-models-to-data/"
+ },
+ {
+  "id": "wooldridge2009",
+  "type": "book",
+  "author": [
+   {
+    "family": "Wooldridge",
+    "given": "Michael"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2009
+    ]
+   ]
+  },
+  "title": "An introduction to multiagent systems",
+  "edition": "2",
+  "publisher": "John Wiley & Sons",
+  "publisher-place": "Chichester"
+ },
+ {
+  "id": "wu2024",
+  "type": "paper-conference",
+  "author": [
+   {
+    "family": "Wu",
+    "given": "Qingyun"
+   },
+   {
+    "family": "Bansal",
+    "given": "Gagan"
+   },
+   {
+    "family": "Zhang",
+    "given": "Jieyu"
+   },
+   {
+    "family": "Wu",
+    "given": "Yiran"
+   },
+   {
+    "family": "Li",
+    "given": "Beibin"
+   },
+   {
+    "family": "Zhu",
+    "given": "Erkang"
+   },
+   {
+    "family": "Jiang",
+    "given": "Li"
+   },
+   {
+    "family": "Zhang",
+    "given": "Xiaoyun"
+   },
+   {
+    "family": "Zhang",
+    "given": "Shaokun"
+   },
+   {
+    "family": "Liu",
+    "given": "Jiale"
+   },
+   {
+    "literal": "others"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2024
+    ]
+   ]
+  },
+  "title": "AutoGen: Enabling next-gen LLM applications via multi-agent conversation",
+  "container-title": "First Conference on Language Modeling (COLM 2024)",
+  "URL": "https://arxiv.org/abs/2308.08155"
+ },
+ {
+  "id": "xi2025",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Xi",
+    "given": "Zhiheng"
+   },
+   {
+    "family": "Chen",
+    "given": "Wenxiang"
+   },
+   {
+    "family": "Guo",
+    "given": "Xin"
+   },
+   {
+    "family": "He",
+    "given": "Wei"
+   },
+   {
+    "family": "Ding",
+    "given": "Yiwen"
+   },
+   {
+    "family": "Hong",
+    "given": "Boyang"
+   },
+   {
+    "family": "Zhang",
+    "given": "Ming"
+   },
+   {
+    "family": "Wang",
+    "given": "Junzhe"
+   },
+   {
+    "family": "Jin",
+    "given": "Senjie"
+   },
+   {
+    "family": "Zhou",
+    "given": "Enyu"
+   },
+   {
+    "literal": "others"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2025
+    ]
+   ]
+  },
+  "title": "The rise and potential of large language model based agents: A survey",
+  "container-title": "Science China Information Sciences",
+  "volume": "68",
+  "DOI": "10.1007/s11432-024-4222-0",
+  "number": "121101"
+ },
+ {
+  "id": "yao2023react",
+  "type": "paper-conference",
+  "author": [
+   {
+    "family": "Yao",
+    "given": "Shunyu"
+   },
+   {
+    "family": "Zhao",
+    "given": "Jeffrey"
+   },
+   {
+    "family": "Yu",
+    "given": "Dian"
+   },
+   {
+    "family": "Du",
+    "given": "Nan"
+   },
+   {
+    "family": "Shafran",
+    "given": "Izhak"
+   },
+   {
+    "family": "Narasimhan",
+    "given": "Karthik"
+   },
+   {
+    "family": "Cao",
+    "given": "Yuan"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2023
+    ]
+   ]
+  },
+  "title": "ReAct: Synergizing reasoning and acting in language models",
+  "container-title": "The Eleventh International Conference on Learning Representations (ICLR 2023)",
+  "URL": "https://openreview.net/forum?id=WE_vluYUL-X"
+ },
+ {
+  "id": "yao2024phd",
+  "type": "thesis",
+  "author": [
+   {
+    "family": "Yao",
+    "given": "Shunyu"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2024
+    ]
+   ]
+  },
+  "title": "Language agents: From next-token prediction to digital automation",
+  "genre": "Doctoral dissertation",
+  "publisher": "Princeton University",
+  "publisher-place": "Princeton, NJ",
+  "URL": "http://arks.princeton.edu/ark:/88435/dsp015h73q0433"
+ },
+ {
+  "id": "yao2025tau",
+  "type": "paper-conference",
+  "author": [
+   {
+    "family": "Yao",
+    "given": "Shunyu"
+   },
+   {
+    "family": "Shinn",
+    "given": "Noah"
+   },
+   {
+    "family": "Razavi",
+    "given": "Pedram"
+   },
+   {
+    "family": "Narasimhan",
+    "given": "Karthik R."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2025
+    ]
+   ]
+  },
+  "title": "τ-bench: A benchmark for tool-agent-user interaction in real-world domains",
+  "container-title": "The Thirteenth International Conference on Learning Representations (ICLR 2025)",
+  "URL": "https://openreview.net/forum?id=roNSXZpUDN"
+ },
+ {
+  "id": "yeshpanov2024kazqad",
+  "type": "paper-conference",
+  "author": [
+   {
+    "family": "Yeshpanov",
+    "given": "Rustem"
+   },
+   {
+    "family": "Efimov",
+    "given": "Pavel"
+   },
+   {
+    "family": "Boytsov",
+    "given": "Leonid"
+   },
+   {
+    "family": "Shalkarbayuli",
+    "given": "Ardak"
+   },
+   {
+    "family": "Braslavski",
+    "given": "Pavel"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2024
+    ]
+   ]
+  },
+  "title": "KazQAD: Kazakh open-domain question answering dataset",
+  "container-title": "Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024)",
+  "page": "9645-9656",
+  "publisher": "ELRA and ICCL",
+  "URL": "https://aclanthology.org/2024.lrec-main.843/"
+ },
+ {
+  "id": "zheng2023",
+  "type": "paper-conference",
+  "author": [
+   {
+    "family": "Zheng",
+    "given": "Lianmin"
+   },
+   {
+    "family": "Chiang",
+    "given": "Wei-Lin"
+   },
+   {
+    "family": "Sheng",
+    "given": "Ying"
+   },
+   {
+    "family": "Zhuang",
+    "given": "Siyuan"
+   },
+   {
+    "family": "Wu",
+    "given": "Zhanghao"
+   },
+   {
+    "family": "Zhuang",
+    "given": "Yonghao"
+   },
+   {
+    "family": "Lin",
+    "given": "Zi"
+   },
+   {
+    "family": "Li",
+    "given": "Zhuohan"
+   },
+   {
+    "family": "Li",
+    "given": "Dacheng"
+   },
+   {
+    "family": "Xing",
+    "given": "Eric P."
+   },
+   {
+    "literal": "others"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2023
+    ]
+   ]
+  },
+  "title": "Judging LLM-as-a-judge with MT-Bench and Chatbot Arena",
+  "container-title": "Advances in Neural Information Processing Systems 36 (NeurIPS 2023), Datasets and Benchmarks Track",
+  "publisher": "Curran Associates",
+  "URL": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html"
+ }
+]

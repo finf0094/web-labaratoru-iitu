@@ -1,20 +1,24 @@
 ---
-title: "Early Warning of At-Risk Students: Demonstration of Citation Management"
-author: "Generated from the Zotero library export (sources/zotero-library.json)"
-lang: en-GB
+title: "Agentic AI Platforms: Demonstration of Citation Management"
+author: "Generated from the Zotero library export (output/zotero-library.json)"
+lang: en-US
 ---
 
-# Learning analytics and early warning
+# From language models to agents
 
-Learning analytics emerged as a field that uses data about learners and their contexts to understand and optimise learning [@siemens2011]. One of the first institutional early-warning systems was Course Signals at Purdue University, which combined grades, demographics and LMS activity into a traffic-light signal for students [@arnold2012]. Earlier, a proof-of-concept study showed that LMS tracking data such as discussion posts and completed assessments could predict final grades [@macfadyen2010], and the Open Academic Analytics Initiative demonstrated that such models can be transferred between institutions [@jayaprakash2014].
+Large language models can solve new tasks from a few examples given in the prompt [@brown2020], and prompting them to produce intermediate reasoning steps further improves their performance [@wei2022]. Surveys describe how such models are "augmented" with reasoning, retrieval and tools [@mialon2023] and how they become autonomous agents with planning, memory and action modules [@wang2024survey; @xi2025].
 
-# Predictive models and their limitations
+# Retrieval-augmented generation
 
-Systematic reviews report that decision trees, random forests, neural networks and gradient boosting are the most frequently used algorithms for predicting student performance [@namoun2021; @albreiki2021; @hellas2018]. Deep learning on virtual learning environment data has also achieved high accuracy on the public OULAD dataset [@waheed2020; @kuzilek2017]. However, the predictive power of LMS data differs substantially between courses [@conijn2017], and generic models that ignore instructional conditions can be misleading [@gasevic2016].
+Retrieval-augmented generation combines a generator with a retriever over a document index [@lewis2020], typically using dense passage retrieval [@karpukhin2020]. Later work lets the model decide when to retrieve and critique its own output [@asai2024], while surveys summarise the growing family of RAG techniques [@fan2024]. However, models do not use long contexts uniformly [@liu2024lost].
 
-# Teachers, ethics and fairness
+# Tools, the agent loop and evaluation
 
-Large-scale implementations show that predictions help only when teachers actually act on them [@herodotou2019a]. Ethical issues — consent, transparency and the risk of labelling students — must be addressed by institutional policy [@slade2013; @tsai2017], and models should be audited for algorithmic bias across student groups [@baker2022]. Updated surveys of educational data mining summarise these trends and open challenges [@romero2020; @ifenthaler2020].
+The ReAct pattern interleaves reasoning and actions in a loop [@yao2023react]; models can also learn when to call tools [@schick2023] and how to use thousands of real APIs [@qin2024; @patil2024]. Verbal self-reflection helps agents recover from errors [@shinn2023]. Benchmarks show that agents remain unreliable on realistic multi-step tasks [@liu2024agentbench; @yao2025tau], and RAG pipelines can be evaluated with automated metrics [@es2024].
+
+# Security and the Model Context Protocol
+
+Indirect prompt injection allows attackers to control LLM-integrated applications through retrieved data [@greshake2023], and the Model Context Protocol introduces new threats across the life cycle of tool servers [@hou2026].
 
 # Bibliography {.unnumbered}
 

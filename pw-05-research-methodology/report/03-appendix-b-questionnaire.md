@@ -1,6 +1,6 @@
-# Appendix B. Evaluation questionnaire (advisors and teachers)
+# Appendix B. Evaluation questionnaire
 
-**Section 1. About you.** Role (advisor / teacher / academic office); years of experience (<2, 2–5, 6–10, >10); number of students supervised; frequency of using Platonus/Moodle (daily / weekly / monthly).
+**Section 1. About you.** Role (student / developer / staff); experience with AI assistants (never / sometimes / weekly / daily); for developers — years of programming experience.
 
 **Section 2. System Usability Scale** [@brooke1996]. *1 = strongly disagree … 5 = strongly agree.*
 
@@ -20,29 +20,25 @@
 **Section 3. Perceived usefulness and ease of use** (adapted from [@davis1989]). *1 = strongly disagree … 7 = strongly agree.*
 
 | Code | Item |
-|---|---|
-| PU1 | Using the system would enable me to identify struggling students more quickly. |
-| PU2 | Using the system would improve the quality of my support to students. |
-| PU3 | Using the system would make it easier to decide whom to contact first. |
-| PU4 | I find the system useful in my work. |
-| PEOU1 | Learning to operate the system would be easy for me. |
-| PEOU2 | My interaction with the system is clear and understandable. |
-| PEOU3 | It is easy to find the information I need about a student. |
-| PEOU4 | I find the system easy to use. |
+|------|--------------------------------------------------------------|
+| PU1 | Using the platform would enable me to get answers to my questions more quickly. |
+| PU2 | Using the platform would improve the quality of the information I use. |
+| PU3 | Using the platform would make routine tasks (requests, reminders, tickets) easier. |
+| PU4 | I find the platform useful in my study or work. |
+| PEOU1 | Learning to use the platform would be easy for me. |
+| PEOU2 | My interaction with the platform is clear and understandable. |
+| PEOU3 | (Developers) It is easy to connect a new tool or data source to the platform. |
+| PEOU4 | I find the platform easy to use. |
 
-**Section 4. Trust in predictions.** *1 = strongly disagree … 7 = strongly agree.*
+**Section 4. Trust in answers and actions.** *1 = strongly disagree … 7 = strongly agree.*
 
 | Code | Item |
-|---|---|
-| TR1 | I understand why the system marked a student as "at risk". |
-| TR2 | The reasons shown by the system match my own knowledge of the student. |
-| TR3 | I would rely on the system's risk list when planning consultations. |
-| TR4 | I would be comfortable explaining the system's assessment to a student. |
+|------|--------------------------------------------------------------|
+| TR1 | The sources shown with the answers help me check them. |
+| TR2 | The platform tells me when it does not know the answer. |
+| TR3 | I understand which actions the agent performed and why. |
+| TR4 | I am comfortable letting the agent perform actions after my approval. |
 
-**Section 5. Open questions.**
-
-* What did you like most about the system?
-* What would you change first?
-* Did any prediction surprise you? Please describe.
+**Section 5. Open questions.** What did you like most? What should be changed first? Describe a wrong or surprising answer, if any.
 
 *Estimated completion time: 8–10 minutes. Responses are anonymous.*

@@ -1,0 +1,36 @@
+{
+ "note": "Sources for Task 1. Items are referenced by id from common/references.json; whole journals are formatted manually because CSL has no reliable template for citing a periodical as a whole.",
+ "categories": [
+  {"name": "Journal articles", "ids": ["liu2024lost", "hou2026", "robertson2009", "malkov2020", "johnson2021", "hevner2004", "peffers2007"]},
+  {"name": "Books", "ids": ["russell2021", "manning2008", "goodfellow2016", "huyen2025", "alammar2024", "wooldridge2009"]},
+  {"name": "Journals (periodicals as a whole)", "manual": [
+    {"apa": "*Journal of Artificial Intelligence Research*. (1993–present). AI Access Foundation. ISSN 1076-9757. https://www.jair.org",
+     "chicago": "*Journal of Artificial Intelligence Research*. AI Access Foundation, 1993–. ISSN 1076-9757. https://www.jair.org.",
+     "ieee": "*Journal of Artificial Intelligence Research*. AI Access Foundation, 1993–present. ISSN: 1076-9757. [Online]. Available: https://www.jair.org",
+     "mla": "*Journal of Artificial Intelligence Research*. AI Access Foundation, 1993–present. ISSN 1076-9757, www.jair.org."},
+    {"apa": "*Transactions of the Association for Computational Linguistics*. (2013–present). MIT Press. ISSN 2307-387X. https://transacl.org",
+     "chicago": "*Transactions of the Association for Computational Linguistics*. Cambridge, MA: MIT Press, 2013–. ISSN 2307-387X. https://transacl.org.",
+     "ieee": "*Transactions of the Association for Computational Linguistics*. Cambridge, MA, USA: MIT Press, 2013–present. ISSN: 2307-387X. [Online]. Available: https://transacl.org",
+     "mla": "*Transactions of the Association for Computational Linguistics*. MIT Press, 2013–present. ISSN 2307-387X, transacl.org."},
+    {"apa": "*ACM Computing Surveys*. (1969–present). Association for Computing Machinery. ISSN 0360-0300. https://dl.acm.org/journal/csur",
+     "chicago": "*ACM Computing Surveys*. New York: Association for Computing Machinery, 1969–. ISSN 0360-0300. https://dl.acm.org/journal/csur.",
+     "ieee": "*ACM Computing Surveys*. New York, NY, USA: ACM, 1969–present. ISSN: 0360-0300. [Online]. Available: https://dl.acm.org/journal/csur",
+     "mla": "*ACM Computing Surveys*. Association for Computing Machinery, 1969–present. ISSN 0360-0300, dl.acm.org/journal/csur."},
+    {"apa": "*IEEE Transactions on Pattern Analysis and Machine Intelligence*. (1979–present). IEEE Computer Society. ISSN 0162-8828. https://www.computer.org/csdl/journal/tp",
+     "chicago": "*IEEE Transactions on Pattern Analysis and Machine Intelligence*. Los Alamitos, CA: IEEE Computer Society, 1979–. ISSN 0162-8828. https://www.computer.org/csdl/journal/tp.",
+     "ieee": "*IEEE Transactions on Pattern Analysis and Machine Intelligence*. Los Alamitos, CA, USA: IEEE Computer Society, 1979–present. ISSN: 0162-8828. [Online]. Available: https://www.computer.org/csdl/journal/tp",
+     "mla": "*IEEE Transactions on Pattern Analysis and Machine Intelligence*. IEEE Computer Society, 1979–present. ISSN 0162-8828, www.computer.org/csdl/journal/tp."},
+    {"apa": "*Artificial Intelligence*. (1970–present). Elsevier. ISSN 0004-3702. https://www.sciencedirect.com/journal/artificial-intelligence",
+     "chicago": "*Artificial Intelligence*. Amsterdam: Elsevier, 1970–. ISSN 0004-3702. https://www.sciencedirect.com/journal/artificial-intelligence.",
+     "ieee": "*Artificial Intelligence*. Amsterdam, Netherlands: Elsevier, 1970–present. ISSN: 0004-3702. [Online]. Available: https://www.sciencedirect.com/journal/artificial-intelligence",
+     "mla": "*Artificial Intelligence*. Elsevier, 1970–present. ISSN 0004-3702, www.sciencedirect.com/journal/artificial-intelligence."}
+  ]},
+  {"name": "Newspaper and news-media articles", "ids": ["wiggers2024mcp", "wiggers2025openai", "wiggers2025google", "nakispekova2024", "omirgazy2025", "birbayeva2026"]},
+  {"name": "Dissertations", "ids": ["chen2018phd", "lewis2022phd", "schick2022phd", "yao2024phd", "min2024phd", "asai2025phd"]},
+  {"name": "Electronic resources (web pages, specifications, documentation)", "ids": ["mcp_spec", "anthropic2024mcp", "schluntz2024", "openai_agentssdk", "langchain_mcpadapters", "owasp2025llm"]},
+  {"name": "Patents", "ids": ["lee2021patent", "mishchenko2024patent", "siebel2024patent", "faonte2025patent", "bhat2025patent", "eleti2026patent"]},
+  {"name": "Additional type 1: Conference papers", "ids": ["karpukhin2020", "yao2023react", "greshake2023", "shinn2023", "asai2024", "es2024"]},
+  {"name": "Additional type 2: Standards", "ids": ["iso22989", "iso23053", "iso23894", "iso42001", "iso5338"]},
+  {"name": "Additional type 3: Reports (government, international and industry)", "ids": ["nist2023rmf", "nist2024genai", "oecd2023kz", "singla2025", "maslej2025"]}
+ ]
+}

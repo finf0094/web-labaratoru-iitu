@@ -1,115 +1,121 @@
 ---
 title: "Practical Work 5. Research Plan and Methodology"
-subtitle: "Topic: Information System for Monitoring Students' Academic Performance with Machine-Learning-Based Early Warning of At-Risk Students"
+subtitle: "Topic: Design and Evaluation of an Agentic AI Platform Integrating the Agent Loop, Model Context Protocol (MCP) Tools and Retrieval-Augmented Generation (RAG)"
 author: "Student: ____________________  ·  Group: ________  ·  Instructor: ____________________"
 date: "International Information Technology University (IITU), Almaty, 2026"
-lang: en-GB
+lang: en-US
+abstract: |
+  A research plan and methodology are developed for the design and evaluation of an agentic AI platform that combines an LLM agent loop, tools connected through the Model Context Protocol (MCP) and retrieval-augmented generation (RAG). Research questions and hypotheses are derived from the literature review; design science research with a sequential mixed-methods design is chosen and justified; the units of analysis, sampling strategies and sample sizes (justified by power analysis, Cochran's formula and saturation research) are defined; data collection methods and instruments (interview guide, questionnaire with SUS/TAM scales, evaluation dataset specification, consent form) are developed; the data collection process with ethical safeguards and the data analysis techniques (RAG and agent metrics, human and LLM-as-a-judge rating, statistical tests, thematic analysis, triangulation) are planned. **Keywords:** research methodology, design science, mixed methods, evaluation of LLM agents, MCP, RAG.
 ---
 
 # Introduction
 
-This work turns the research plan (PW2) and the literature review (PW3, PW4) into a detailed, replicable methodology. The study investigates whether an explainable machine-learning early-warning system (working name **EduRadar**), integrated with the data a Kazakhstani university already stores in its automated information system (AIS, e.g. Platonus) and learning management system (LMS, e.g. Moodle), can identify students at risk of failing a course early enough for advisors to intervene.
+This work turns the research plan (PW2) and the literature review (PW3, PW4) into a detailed, replicable methodology. The study designs and evaluates an open, model-agnostic agentic AI platform (working name **AgentHub**) in which a large language model works in an agent loop, calls tools exposed by MCP servers [@mcp_spec] and uses a RAG service over university documents [@lewis2020]. The object of research is the architecture of tool-augmented LLM agents; the subject is the effect of integration method, retrieval configuration, loop design and guardrails on task success, answer quality, effort, cost and security.
 
 # 1. Research questions and hypotheses
 
-The questions follow directly from the gaps identified in the literature review: predictive models are rarely validated outside the institution where they were built [@gasevic2016; @namoun2021], explanations and teacher use of predictions are under-studied [@herodotou2019a; @matcha2020], fairness is seldom checked [@baker2022], and there is almost no evidence from Central Asian universities with their admission-rating/FX grading model.
+The questions follow from the gaps identified in the literature review: the benefits of MCP are claimed but not measured [@anthropic2024mcp; @hou2026]; RAG configurations are rarely compared on non-English corporate documents [@gao2023]; agent reliability on multi-step tasks remains low [@liu2024agentbench; @yao2025tau]; indirect prompt injection threatens tool-using agents [@greshake2023].
 
 | Code | Research question | Hypothesis (testable) | Measure |
-|---|---|---|---|
-| RQ1 | Which AIS/LMS features are the strongest early predictors of course failure? | H1: grades + attendance + LMS activity give ROC-AUC ≥ 0.80 at week 7 and significantly higher AUC than grades only. | ROC-AUC, DeLong test; mean \|SHAP\| per feature |
-| RQ2 | Which model gives the best recall–precision trade-off and how does quality evolve from week 2 to 8? | H2: gradient boosting has higher recall at precision ≥ 0.60 than logistic regression. | Recall, precision, F1, PR-AUC per week; Wilcoxon test over folds |
-| RQ3 | Do SHAP-based explanations increase advisors' perceived usefulness and trust? | H3: TAM usefulness and trust scores are higher for the explained dashboard; SUS ≥ 68. | TAM / trust items (7-point), SUS (0–100) |
-| RQ4 | Does using the system reduce failures? | H4: the share of FX/F grades in pilot groups is lower than in control groups. | FX/F rate, χ², logistic regression with prior GPA |
+|------|--------------------------------|--------------------------------------|----------------------|
+| RQ1 | Does MCP reduce the effort of connecting tools compared with bespoke function calling? | H1: MCP integration takes ≥ 30 % less developer time. | Minutes, changed lines of code, integration errors |
+| RQ2 | Which retrieval configuration gives the best context recall and faithfulness on bilingual documents? | H2: hybrid retrieval with reranking outperforms BM25-only and dense-only. | Context precision/recall, faithfulness, correctness |
+| RQ3 | How do agent-loop design choices affect task success, cost and latency? | H3: agentic RAG has higher task success than single-shot RAG on multi-step questions at < 2× token cost. | Task success, tokens, USD, latency, iterations |
+| RQ4 | How effective are guardrails against indirect prompt injection? | H4: with guardrails ASR < 5 % and benign success drops ≤ 5 p.p. | Attack success rate, benign task success |
+| RQ5 | Is the platform usable and useful for developers and end users? | H5: SUS ≥ 68; TAM usefulness ≥ 5/7. | SUS, TAM items |
 
-All questions are specific (one target population and one outcome each), measurable (numeric indicators) and aligned with the overall objective of the thesis.
+The questions are specific (one factor and one outcome each), measurable and aligned with the goal of the thesis.
 
 # 2. Research design
 
-**Overall framework: Design Science Research (DSR)** — the artefact (the early-warning information system) is designed, built and evaluated in iterations — combined with a **mixed-methods sequential design** [@creswell2018]:
+**Overall framework: Design Science Research (DSR).** The artefact — the platform and its reference architecture — is built and evaluated in iterations following the DSR process: problem identification, objectives of a solution, design and development, demonstration, evaluation and communication [@hevner2004; @peffers2007]. Evaluation uses a **sequential mixed-methods design** [@creswell2018]:
 
-1. **Exploratory qualitative phase** — interviews and focus groups define requirements, the operational definition of "at risk" and acceptable interventions.
-2. **Quantitative modelling phase** — secondary analysis of historical institutional records and the open OULAD dataset [@kuzilek2017]; computational experiments compare models (RQ1, RQ2).
-3. **Evaluation phase (mixed)** — within-subject experiment with advisors (explained vs. plain dashboard), SUS/TAM survey, second focus group (RQ3), and a one-semester quasi-experimental pilot (RQ4).
-4. **Integration** — triangulation: statistical results are interpreted together with qualitative themes in a joint display.
+1. **Exploratory qualitative phase** — interviews and focus groups define requirements, typical tasks and acceptable automatic actions.
+2. **Quantitative experimental phase** — controlled computational experiments (factorial comparison of configurations on fixed datasets) and a within-subject developer experiment.
+3. **Evaluation phase (mixed)** — red-teaming, pilot use, SUS/TAM survey and focus group 2.
+4. **Integration** — triangulation of metrics, traces and qualitative themes in a joint display.
 
-**Justification.** Prediction quality (RQ1–RQ2) and impact (RQ4) are numerical questions and require quantitative methods; acceptance and trust (RQ3) also depend on context, workload and beliefs that only qualitative data can reveal. A mixed design therefore increases **validity** (triangulation of sources and methods), **reliability** (standardised instruments, fixed protocols, reproducible code) and **feasibility** (the modelling phase can start on open data while institutional access is being approved).
+**Type of research** (by the classification used in the course lecture *Research Methodology: An Introduction*): applied, empirical, analytical, mixed qualitative–quantitative, decision-oriented; it combines the **experimental** approach (manipulation of configurations and integration method), the **simulation** approach (agents act against simulated tool back-ends and simulated attacks) and the **inferential** approach (survey of users).
+
+**Justification.** RQ1–RQ4 concern causal effects of design choices and therefore require controlled experiments with quantitative measures; RQ5 and the interpretation of failures require users' views, which only qualitative data can reveal. The design supports **validity** (controlled comparisons, triangulation, human validation of automatic metrics), **reliability** (fixed datasets, pinned model versions, repeated runs, standard scales) and **feasibility** (experiments run on open data and synthetic back-ends, without access to personal data).
 
 # 3. Target population and sample
 
-| Strand | Population | Sampling strategy | Expected sample size and justification |
-|---|---|---|---|
-| Historical records (modelling) | All student-course enrolments of bachelor's programmes in 2021/22–2025/26 | Census (all records), stratified temporal split: earlier years → training, last year → test | Several tens of thousands of enrolments (exact number after data export); OULAD: 32 593 students, 22 module presentations [@kuzilek2017] |
-| Interviews | Advisors/curators, teachers of 1st-year courses, academic office staff | Purposive maximum-variation sampling (different programmes, experience), snowball for academic office | 12–15 interviews; data saturation in comparable studies is typically reached by about 12 interviews [@guest2006] |
-| Focus groups | Advisors, teachers, students (incl. students who had FX) | Purposive | 3 groups × 6–8 participants, two rounds |
-| Student survey (perceptions of monitoring, privacy) | All bachelor's students of the university | Stratified random sampling by year of study and programme | n = 357 for N ≈ 5 000 (Cochran, 95 % confidence, ±5 %) [@cochran1977]; with a 60 % response rate ≈ 595 invitations (`tools/sample_size.py`) |
-| Dashboard experiment (H3) | Advisors and teachers who supervise 1st/2nd-year groups | Convenience sample of all available, counterbalanced within-subject design | 34 participants for d = 0.5, 24 for d = 0.6 (α = 0.05, power 0.8) [@faul2007]; if fewer are available, results are treated as exploratory with effect sizes reported |
-| Pilot (H4) | Academic groups of 1st-year bachelor's students in spring 2027 | Cluster assignment of whole groups to pilot/control, matched by programme and prior GPA | ≈ 330 student-course enrolments per arm to detect a reduction of FX/F from 20 % to 12 % (α = 0.05, power 0.8) |
+| Strand | Population / units of analysis | Sampling strategy | Expected sample size and justification |
+|-----------|-------------------------|------------------------------|------------------------------------------|
+| Questions for RAG experiments (RQ2, RQ3) | All questions that students and staff may ask about public university documents (Russian, Kazakh, English) | Stratified sampling of questions by document type, language and difficulty (single-fact / multi-step); written by the researcher and validated by two staff members | ≈ 300 questions, of which ≥ 150 multi-step; 152 per configuration are needed to detect 60 % → 75 % success (α = 0.05, power 0.8); paired McNemar design requires fewer |
+| Tool tasks (RQ3, RQ4) | Realistic multi-step tasks over calendar, timetable, ticketing and database tools | Purposive selection from the task catalogue collected in interviews | ≈ 60 tasks × 3 repetitions × each configuration |
+| Attack cases (RQ4) | Indirect prompt-injection variants in documents and tool outputs | Systematic generation from attack taxonomies [@greshake2023; @owasp2025llm] | ≈ 200 cases: estimate ASR ≈ 5 % with ±3 % margin (95 % confidence) |
+| Developer experiment (RQ1) | Developers able to write Python (senior IT students, junior engineers) | Convenience sample, counterbalanced within-subject design | 24 participants for d = 0.6, 34 for d = 0.5 (α = 0.05, power 0.8) [@faul2007] |
+| Interviews | Developers, IT staff, administrative staff, students | Purposive maximum-variation and snowball sampling | 12–15 interviews; saturation is typically reached by about 12 interviews [@guest2006] |
+| Focus groups | Developers, staff, students | Purposive | 3 groups × 6–8 participants, two rounds |
+| User survey (RQ5) | Students and staff who used the pilot | Stratified random invitation by role and year of study | n = 357 for N ≈ 5 000 (Cochran, 95 %, ±5 %) [@cochran1977]; at 60 % response ≈ 595 invitations |
 
-**Limitations of generalisability.** One university and one national grading model; purposive qualitative samples are not statistically representative; the pilot is quasi-experimental (no individual randomisation, possible teacher effects). These are mitigated by external validation on OULAD, control variables and transparent reporting.
+All numbers are produced by `tools/sample_size.py`. In terms of sample design, **probability sampling** (stratified random) is used where results are generalised to users, and **non-probability sampling** (purposive, snowball, convenience) where depth or feasibility matters.
+
+**Limitations of generalisability.** One university and its documents; a limited set of models at a fixed point in time; simulated rather than production back-ends; student developers rather than professional teams. These are mitigated by including two different models (commercial and open-weight), publishing datasets and configurations, and discussing external validity.
 
 # 4. Data collection methods
 
-| Method | Type | Research question | Why chosen; validity, reliability, ethics |
-|---|---|---|---|
-| Semi-structured interviews | Qual. | Requirements, RQ3 | Deep understanding of how risk is detected today; same guide for all (reliability); member checking of summaries (validity). |
-| Focus groups | Qual. | Requirements, RQ3 | Group interaction reveals shared needs and disagreements; moderated by protocol; recorded with consent. |
-| Document analysis | Qual. | RQ1 | Academic policy, grading regulations, curricula — to define the target variable correctly. |
-| Secondary analysis of AIS/LMS data | Quant. | RQ1, RQ2, RQ4 | Objective behavioural and outcome data without extra burden on students; pseudonymised export; data-quality audit. |
-| Computational experiments | Quant. | RQ1, RQ2 | Controlled comparison of models with fixed seeds, temporal validation and identical feature sets (reproducibility). |
-| Structured questionnaire (SUS, TAM, trust) | Quant. | RQ3 | Validated scales [@brooke1996; @davis1989; @venkatesh2003] allow comparison with other systems; reliability checked with Cronbach's α. |
-| Within-subject experiment + usability test (think-aloud) | Mixed | RQ3 | Each participant sees both dashboard variants in counterbalanced order — controls individual differences; think-aloud explains the scores. |
-| Quasi-experimental pilot | Quant. | RQ4 | Real-world effect under normal teaching conditions; ethically acceptable because control groups receive standard support. |
+| Method | Type | RQ | Why chosen; validity, reliability, ethics |
+|-------------------|-------|-----|----------------------------------------------------------|
+| Semi-structured interviews | Qual. | Requirements, RQ5 | Reveal real tasks, needed tools and trust conditions; same guide for all; summaries checked with participants. |
+| Focus groups | Qual. | Requirements, RQ5 | Group discussion shows shared needs and disagreements; moderated protocol; recorded with consent. |
+| Document analysis | Qual. | RQ2 | Public regulations, calendars, syllabi form the corpus; ensures realistic content without personal data. |
+| Computational experiments | Quant. | RQ2–RQ4 | Controlled manipulation of one factor at a time on fixed datasets; pinned model versions; 3 repetitions; full execution traces stored. |
+| Developer experiment (task-based, timed) | Quant. + observation | RQ1 | Same tools integrated with MCP and bespoke code in counterbalanced order controls individual differences; screen recording measures time and errors. |
+| Red-teaming (attack suite) | Quant. | RQ4 | Systematic attack cases make results comparable across configurations; performed only on test systems. |
+| Questionnaire (SUS, TAM) | Quant. | RQ5 | Validated scales [@brooke1996; @davis1989; @venkatesh2003] allow comparison with other systems; reliability checked with Cronbach's α. |
+| Usability observation with think-aloud | Qual. | RQ5 | Explains scores and finds concrete interface problems. |
 
 # 5. Data collection instruments
 
-* **Interview guide** (Appendix A) — 5 blocks, 18 questions: current practice, early signals, information needs, trust in algorithms, privacy.
-* **Focus-group protocol** — questions for round 1 (needs) and round 2 (prototype evaluation), see PW2 Section 6.
-* **Questionnaire** (Appendix B) — demographic block, SUS (10 items), TAM usefulness and ease of use (8 items), trust in the risk prediction (4 items), open questions.
-* **Data extraction specification** — list of AIS/LMS fields, their types, the pseudonymisation rule (salted hash of student ID) and the weekly aggregation rules (Appendix C).
+* **Interview guide** (Appendix A) — 5 blocks, 18 questions: current work, tasks for an assistant, tools and data, trust and control, risks.
+* **Focus-group protocol** — questions for rounds 1 and 2 (PW2, Section 6).
+* **Questionnaire** (Appendix B) — background, SUS (10 items), TAM usefulness and ease of use (8 items), trust in answers and actions (4 items), open questions.
+* **Evaluation dataset specification** (Appendix C) — schemas for questions, tool tasks, attack cases and run logs.
+* **Developer task sheet** — the same three tools (timetable lookup, ticket creation, document search) to be integrated twice; acceptance tests define "done".
 * **Informed consent form** (Appendix D).
-* **Observation checklist for usability sessions** — task completion, time on task, errors, requests for help.
 
-**Pilot testing.** All instruments are pilot-tested before full data collection: the interview guide with 2 advisors, the questionnaire with 10 students and 3 teachers (clarity, time ≤ 10 min, cultural appropriateness), and translations into Kazakh and Russian are checked with back-translation. The data extraction script is tested on one semester of one programme and the computed features are compared by hand for 50 random students.
+**Pilot testing.** The interview guide is tried with two developers; the questionnaire with 10 students and 3 staff (clarity, ≤ 10 minutes, Kazakh/Russian translation checked by back-translation); 30 questions and 10 tasks are run end-to-end to test the harness, metrics and logging; the developer task sheet is tried by two volunteers to calibrate the time limit.
 
 # 6. Data collection process
 
 | When | Where / how | What | Ethics and logistics |
-|---|---|---|---|
-| Nov 2026 | Online application to the university ethics committee and academic office | Approval, data-sharing agreement | Purpose limitation, list of fields, retention period |
-| Nov – Dec 2026 | In person (meeting room) or Zoom/Teams, 40–45 min | 12–15 interviews | Written consent, audio recording only with permission, pseudonyms in transcripts |
-| Dec 2026 | Campus, 60–90 min | Focus groups round 1 | Consent, confidentiality agreement among participants |
-| Dec 2026 – Jan 2027 | IT department exports CSV from AIS/LMS to an encrypted university server | Historical data 2021/22–2025/26 | Only pseudonymised IDs; no names, IIN, contacts; access limited to the researcher and supervisor |
-| Jan 2027 | Download from the official OULAD page | Open dataset | CC-BY licence; cite the dataset |
-| Mar 2027 | Computer lab / online, 45 min per participant | Usability test + dashboard experiment + SUS/TAM | Consent; synthetic or pseudonymised student data shown in the prototype |
-| Mar – Apr 2027 | Google Forms / MS Forms link via university e-mail | Student survey | Anonymous, voluntary, no IP collection, can stop at any time |
-| Feb – May 2027 | Weekly automatic ETL from AIS/LMS | Pilot data | Advisors see risk lists only for their own groups; students are informed about the pilot and may opt out |
+|------------------|-----------------------------|-------------------------|------------------------------------|
+| Nov 2026 | University ethics/approval process | Approval of studies with participants | Purpose, data, retention, consent forms |
+| Nov 2026 | In person or Zoom/Teams, 40–45 min | 12–15 interviews | Written consent; recording only with permission; pseudonyms |
+| Nov – Dec 2026 | Campus, 60–90 min | Focus groups round 1 | Consent; confidentiality among participants |
+| Dec 2026 – Jan 2027 | Researcher's workstation | Corpus of public documents; questions; tasks; attack cases | No personal data; two-person validation of reference answers |
+| Feb – Mar 2027 | Evaluation harness on a cloud server | Experiment runs and traces | API keys stored as secrets; synthetic back-ends only |
+| Mar 2027 | Computer lab, 2 × 45 min per participant | Developer experiment | Consent; compensation; results anonymised |
+| Mar – Apr 2027 | Online (Google/MS Forms) after pilot use | SUS/TAM survey | Anonymous, voluntary, no IP collection |
+| Apr 2027 | Campus | Focus groups round 2 | As above |
 
-**Ethical safeguards.** Informed consent; anonymity and confidentiality (pseudonymisation, aggregated reporting, minimum group size of 10 in any published table); voluntary participation; compliance with the Law of the Republic of Kazakhstan "On Personal Data and Their Protection" and institutional policy; predictions are advisory and never used for sanctions [@slade2013]; data deleted one year after the defence.
+**Ethical safeguards.** Informed consent, anonymity and confidentiality, voluntary participation; compliance with the personal-data law of Kazakhstan [@kz2013pdlaw]; no real user data in experiments; attacks only against own test systems; write actions in the pilot require human approval; documents with any personal data are excluded from the corpus.
 
 # 7. Data analysis methods
 
-**Qualitative data.** Transcripts are coded with **reflexive thematic analysis** [@braun2006] in Taguette/NVivo: familiarisation → initial codes → themes → review → definition. Two coders independently code 20 % of transcripts; disagreements are discussed and the codebook refined (reliability). Themes feed into requirements and explain quantitative results.
+**Quantitative — experiments.**
 
-**Quantitative data — modelling (RQ1, RQ2).**
+* *Retrieval and answers (RQ2):* context precision and recall, faithfulness, answer relevance and correctness computed with RAGAS-style metrics [@es2024]; correctness additionally rated by two humans on a 20 % sample (Cohen's κ ≥ 0.7 required before relying on LLM-as-a-judge [@zheng2023]); Friedman test across retrieval methods with Holm-corrected Wilcoxon post-hoc tests; results reported per language.
+* *Agent loop (RQ3):* task success rate with Wilson 95 % confidence intervals; McNemar test for paired success of two configurations; tokens, USD and latency as medians and p95 with bootstrap intervals; failure analysis of traces by category (wrong tool, wrong arguments, premature stop, loop limit, hallucinated answer).
+* *Security (RQ4):* attack success rate with Wilson intervals; two-proportion test with vs without guardrails; benign success difference.
+* *Developer study (RQ1):* paired t-test (or Wilcoxon if non-normal) on minutes and lines of code; effect size Cohen's *d*; integration errors counted.
 
-* Pre-processing: cleaning, weekly aggregation, missing-value indicators, scaling for linear models.
-* Models: logistic regression (interpretable baseline), random forest, gradient boosting (XGBoost) [@chen2016; @pedregosa2011]; one model per prediction week w ∈ {2, 4, 6, 8}.
-* Validation: temporal hold-out (last academic year) + 10-fold stratified cross-validation on training years; hyper-parameters tuned only inside training folds; class imbalance handled by class weights and threshold selection.
-* Metrics: ROC-AUC, PR-AUC, recall, precision, F1, Brier score; fairness — difference in recall and false-positive rate between subgroups (gender, language of instruction, grant/paid) [@baker2022].
-* Explanation: SHAP values for global feature importance (RQ1) and per-student reasons shown in the dashboard [@lundberg2017].
-* Tests: DeLong test for AUC (H1); Wilcoxon signed-rank test over folds (H2).
+**Quantitative — survey (RQ5).** Descriptive statistics; Cronbach's α ≥ 0.70; one-sample t-tests (SUS vs 68; usefulness vs 5); comparison of roles with Mann–Whitney U.
 
-**Quantitative data — survey, experiment, pilot (RQ3, RQ4).** Descriptive statistics (mean, SD, median, distributions); internal consistency (Cronbach's α ≥ 0.70); paired t-test or Wilcoxon test for the within-subject dashboard comparison and one-sample t-test SUS vs 68 (H3); χ² test and multilevel logistic regression (students nested in groups, prior GPA as covariate) for the pilot (H4). Effect sizes (Cohen's *d*, odds ratios) and 95 % confidence intervals are always reported. Tools: Python (pandas, scikit-learn, statsmodels), JASP.
+**Qualitative.** Reflexive thematic analysis [@braun2006] of interview and focus-group transcripts; two coders double-code 20 % of the material; themes are linked to requirements and to failure categories.
 
-**Integration of findings.** Explanatory integration and triangulation: a joint display table places each hypothesis next to the corresponding qualitative themes (e.g. low trust scores explained by interview comments about "black-box" predictions); convergence, complementarity or divergence is discussed explicitly.
+**Integration of findings.** A joint display places each hypothesis next to related themes (e.g. low trust explained by missing source citations); convergence or divergence is discussed explicitly. Tools: Python (pandas, SciPy, statsmodels), RAGAS, JASP, Taguette.
 
-**Reliability, validity, transparency.** Pre-registered analysis plan (hypotheses, metrics, thresholds) before the test set is opened; code and synthetic sample data in a public repository; audit trail of qualitative coding decisions; threats to validity (internal, external, construct, conclusion) discussed in the thesis.
+**Reliability, validity, transparency.** Pre-registered analysis plan (metrics, thresholds, tests) before the main runs; fixed seeds and pinned model versions; publication of code, configurations, datasets and anonymised results; threats to validity (internal, external, construct, conclusion) discussed in the thesis.
 
 # 8. Summary of the methodology
 
-* **Research design:** design science research with a sequential mixed-methods design (qualitative exploration → quantitative modelling → mixed evaluation and pilot) integrated by triangulation.
-* **Population and sampling:** census of historical student-course enrolments (and OULAD for external validation); purposive samples of 12–15 interviewees and 3 focus groups; stratified random survey sample of ≈ 357 students; 24–34 advisors/teachers in the dashboard experiment; ≈ 330 enrolments per arm in the cluster-assigned pilot. Sample sizes are justified by saturation research, Cochran's formula and power analysis (`tools/sample_size.py`).
-* **Data collection methods and instruments:** interviews, focus groups, document analysis, secondary analysis of AIS/LMS data, computational experiments, validated SUS/TAM questionnaires, usability observation; all instruments are pilot-tested; consent, pseudonymisation and legal compliance are ensured.
-* **Data analysis techniques:** thematic analysis; logistic regression, random forest and gradient boosting with temporal validation, SHAP explanations and fairness checks; DeLong, Wilcoxon, t/Mann–Whitney, χ² and multilevel logistic regression; Python and JASP.
+* **Research design:** design science research with a sequential mixed-methods evaluation (qualitative exploration → controlled experiments and developer study → mixed evaluation), integrated by triangulation.
+* **Population and sampling:** ≈ 300 stratified questions, ≈ 60 purposive tool tasks and ≈ 200 systematic attack cases; 24–34 developers (power analysis); 12–15 interviewees and 3 focus groups (purposive, saturation); ≈ 357 survey respondents (stratified random, Cochran's formula).
+* **Data collection methods and instruments:** interviews, focus groups, document analysis, computational experiments with full tracing, timed developer experiment, red-teaming, SUS/TAM questionnaire; all instruments pilot-tested; consent and data-protection safeguards.
+* **Data analysis techniques:** RAG and agent metrics with human validation; Friedman, Wilcoxon, McNemar, t-tests, Wilson and bootstrap intervals; thematic analysis; Python, RAGAS, JASP.
 
-The methodology ensures **rigour** (pre-specified hypotheses, temporal validation, standard metrics), **reliability** (validated scales, double coding, fixed seeds and published code), and **validity** (triangulation, external validation on OULAD, fairness analysis). Remaining limitations — one institution, a quasi-experimental pilot, possible incompleteness of attendance data and a small number of advisors — are acknowledged and will be reported as threats to validity together with suggestions for multi-institutional follow-up studies.
+The methodology meets the **criteria of good research** discussed in the course lecture: it is *systematic* (defined phases and procedures), *logical* (hypotheses derived from the literature and tested deductively), *empirical* (conclusions based on measured data) and *replicable* (datasets, configurations and code are published). Remaining limitations — one institution, fast-changing models and protocols, simulated back-ends and student developers — are acknowledged and will be reported as threats to validity.

@@ -1,0 +1,998 @@
+[
+ {
+  "id": "brown2020",
+  "type": "paper-conference",
+  "author": [
+   {
+    "family": "Brown",
+    "given": "Tom B."
+   },
+   {
+    "family": "Mann",
+    "given": "Benjamin"
+   },
+   {
+    "family": "Ryder",
+    "given": "Nick"
+   },
+   {
+    "family": "Subbiah",
+    "given": "Melanie"
+   },
+   {
+    "family": "Kaplan",
+    "given": "Jared"
+   },
+   {
+    "family": "Dhariwal",
+    "given": "Prafulla"
+   },
+   {
+    "family": "Neelakantan",
+    "given": "Arvind"
+   },
+   {
+    "family": "Shyam",
+    "given": "Pranav"
+   },
+   {
+    "family": "Sastry",
+    "given": "Girish"
+   },
+   {
+    "family": "Askell",
+    "given": "Amanda"
+   },
+   {
+    "literal": "others"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2020
+    ]
+   ]
+  },
+  "title": "Language models are few-shot learners",
+  "container-title": "Advances in Neural Information Processing Systems 33 (NeurIPS 2020)",
+  "page": "1877-1901",
+  "publisher": "Curran Associates",
+  "keyword": "LLM, in-context learning"
+ },
+ {
+  "id": "wei2022",
+  "type": "paper-conference",
+  "author": [
+   {
+    "family": "Wei",
+    "given": "Jason"
+   },
+   {
+    "family": "Wang",
+    "given": "Xuezhi"
+   },
+   {
+    "family": "Schuurmans",
+    "given": "Dale"
+   },
+   {
+    "family": "Bosma",
+    "given": "Maarten"
+   },
+   {
+    "family": "Ichter",
+    "given": "Brian"
+   },
+   {
+    "family": "Xia",
+    "given": "Fei"
+   },
+   {
+    "family": "Chi",
+    "given": "Ed H."
+   },
+   {
+    "family": "Le",
+    "given": "Quoc V."
+   },
+   {
+    "family": "Zhou",
+    "given": "Denny"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2022
+    ]
+   ]
+  },
+  "title": "Chain-of-thought prompting elicits reasoning in large language models",
+  "container-title": "Advances in Neural Information Processing Systems 35 (NeurIPS 2022)",
+  "page": "24824-24837",
+  "publisher": "Curran Associates",
+  "URL": "https://proceedings.neurips.cc/paper/2022/hash/9d5609613524ecf4f15af0f7b31abca4-Abstract-Conference.html",
+  "keyword": "reasoning, prompting"
+ },
+ {
+  "id": "mialon2023",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Mialon",
+    "given": "Grégoire"
+   },
+   {
+    "family": "Dessì",
+    "given": "Roberto"
+   },
+   {
+    "family": "Lomeli",
+    "given": "Maria"
+   },
+   {
+    "family": "Nalmpantis",
+    "given": "Christoforos"
+   },
+   {
+    "family": "Pasunuru",
+    "given": "Ramakanth"
+   },
+   {
+    "family": "Raileanu",
+    "given": "Roberta"
+   },
+   {
+    "family": "Rozière",
+    "given": "Baptiste"
+   },
+   {
+    "family": "Schick",
+    "given": "Timo"
+   },
+   {
+    "family": "Dwivedi-Yu",
+    "given": "Jane"
+   },
+   {
+    "family": "Celikyilmaz",
+    "given": "Asli"
+   },
+   {
+    "literal": "others"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2023
+    ]
+   ]
+  },
+  "title": "Augmented language models: A survey",
+  "container-title": "Transactions on Machine Learning Research",
+  "URL": "https://openreview.net/forum?id=jh7wH2AzKK",
+  "keyword": "survey, augmented LM, tools"
+ },
+ {
+  "id": "wang2024survey",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Wang",
+    "given": "Lei"
+   },
+   {
+    "family": "Ma",
+    "given": "Chen"
+   },
+   {
+    "family": "Feng",
+    "given": "Xueyang"
+   },
+   {
+    "family": "Zhang",
+    "given": "Zeyu"
+   },
+   {
+    "family": "Yang",
+    "given": "Hao"
+   },
+   {
+    "family": "Zhang",
+    "given": "Jingsen"
+   },
+   {
+    "family": "Chen",
+    "given": "Zhiyuan"
+   },
+   {
+    "family": "Tang",
+    "given": "Jiakai"
+   },
+   {
+    "family": "Chen",
+    "given": "Xu"
+   },
+   {
+    "family": "Lin",
+    "given": "Yankai"
+   },
+   {
+    "literal": "others"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2024
+    ]
+   ]
+  },
+  "title": "A survey on large language model based autonomous agents",
+  "container-title": "Frontiers of Computer Science",
+  "volume": "18",
+  "issue": "6",
+  "DOI": "10.1007/s11704-024-40231-1",
+  "number": "186345",
+  "keyword": "survey, agents"
+ },
+ {
+  "id": "xi2025",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Xi",
+    "given": "Zhiheng"
+   },
+   {
+    "family": "Chen",
+    "given": "Wenxiang"
+   },
+   {
+    "family": "Guo",
+    "given": "Xin"
+   },
+   {
+    "family": "He",
+    "given": "Wei"
+   },
+   {
+    "family": "Ding",
+    "given": "Yiwen"
+   },
+   {
+    "family": "Hong",
+    "given": "Boyang"
+   },
+   {
+    "family": "Zhang",
+    "given": "Ming"
+   },
+   {
+    "family": "Wang",
+    "given": "Junzhe"
+   },
+   {
+    "family": "Jin",
+    "given": "Senjie"
+   },
+   {
+    "family": "Zhou",
+    "given": "Enyu"
+   },
+   {
+    "literal": "others"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2025
+    ]
+   ]
+  },
+  "title": "The rise and potential of large language model based agents: A survey",
+  "container-title": "Science China Information Sciences",
+  "volume": "68",
+  "DOI": "10.1007/s11432-024-4222-0",
+  "number": "121101",
+  "keyword": "survey, agents"
+ },
+ {
+  "id": "lewis2020",
+  "type": "paper-conference",
+  "author": [
+   {
+    "family": "Lewis",
+    "given": "Patrick"
+   },
+   {
+    "family": "Perez",
+    "given": "Ethan"
+   },
+   {
+    "family": "Piktus",
+    "given": "Aleksandra"
+   },
+   {
+    "family": "Petroni",
+    "given": "Fabio"
+   },
+   {
+    "family": "Karpukhin",
+    "given": "Vladimir"
+   },
+   {
+    "family": "Goyal",
+    "given": "Naman"
+   },
+   {
+    "family": "Küttler",
+    "given": "Heinrich"
+   },
+   {
+    "family": "Lewis",
+    "given": "Mike"
+   },
+   {
+    "family": "Yih",
+    "given": "Wen-tau"
+   },
+   {
+    "family": "Rocktäschel",
+    "given": "Tim"
+   },
+   {
+    "family": "Riedel",
+    "given": "Sebastian"
+   },
+   {
+    "family": "Kiela",
+    "given": "Douwe"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2020
+    ]
+   ]
+  },
+  "title": "Retrieval-augmented generation for knowledge-intensive NLP tasks",
+  "container-title": "Advances in Neural Information Processing Systems 33 (NeurIPS 2020)",
+  "page": "9459-9474",
+  "publisher": "Curran Associates",
+  "URL": "https://proceedings.neurips.cc/paper/2020/hash/6b493230205f780e1bc26945df7481e5-Abstract.html",
+  "keyword": "RAG, dense retrieval"
+ },
+ {
+  "id": "karpukhin2020",
+  "type": "paper-conference",
+  "author": [
+   {
+    "family": "Karpukhin",
+    "given": "Vladimir"
+   },
+   {
+    "family": "Oguz",
+    "given": "Barlas"
+   },
+   {
+    "family": "Min",
+    "given": "Sewon"
+   },
+   {
+    "family": "Lewis",
+    "given": "Patrick"
+   },
+   {
+    "family": "Wu",
+    "given": "Ledell"
+   },
+   {
+    "family": "Edunov",
+    "given": "Sergey"
+   },
+   {
+    "family": "Chen",
+    "given": "Danqi"
+   },
+   {
+    "family": "Yih",
+    "given": "Wen-tau"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2020
+    ]
+   ]
+  },
+  "title": "Dense passage retrieval for open-domain question answering",
+  "container-title": "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+  "page": "6769-6781",
+  "DOI": "10.18653/v1/2020.emnlp-main.550",
+  "publisher": "Association for Computational Linguistics",
+  "keyword": "dense retrieval, open-domain QA"
+ },
+ {
+  "id": "asai2024",
+  "type": "paper-conference",
+  "author": [
+   {
+    "family": "Asai",
+    "given": "Akari"
+   },
+   {
+    "family": "Wu",
+    "given": "Zeqiu"
+   },
+   {
+    "family": "Wang",
+    "given": "Yizhong"
+   },
+   {
+    "family": "Sil",
+    "given": "Avirup"
+   },
+   {
+    "family": "Hajishirzi",
+    "given": "Hannaneh"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2024
+    ]
+   ]
+  },
+  "title": "Self-RAG: Learning to retrieve, generate, and critique through self-reflection",
+  "container-title": "The Twelfth International Conference on Learning Representations (ICLR 2024)",
+  "URL": "https://arxiv.org/abs/2310.11511",
+  "keyword": "RAG, self-reflection, adaptive retrieval"
+ },
+ {
+  "id": "fan2024",
+  "type": "paper-conference",
+  "author": [
+   {
+    "family": "Fan",
+    "given": "Wenqi"
+   },
+   {
+    "family": "Ding",
+    "given": "Yujuan"
+   },
+   {
+    "family": "Ning",
+    "given": "Liangbo"
+   },
+   {
+    "family": "Wang",
+    "given": "Shijie"
+   },
+   {
+    "family": "Li",
+    "given": "Hengyun"
+   },
+   {
+    "family": "Yin",
+    "given": "Dawei"
+   },
+   {
+    "family": "Chua",
+    "given": "Tat-Seng"
+   },
+   {
+    "family": "Li",
+    "given": "Qing"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2024
+    ]
+   ]
+  },
+  "title": "A survey on RAG meeting LLMs: Towards retrieval-augmented large language models",
+  "container-title": "Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD '24)",
+  "page": "6491-6501",
+  "DOI": "10.1145/3637528.3671470",
+  "publisher": "ACM",
+  "publisher-place": "New York, NY",
+  "keyword": "survey, RAG"
+ },
+ {
+  "id": "liu2024lost",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Liu",
+    "given": "Nelson F."
+   },
+   {
+    "family": "Lin",
+    "given": "Kevin"
+   },
+   {
+    "family": "Hewitt",
+    "given": "John"
+   },
+   {
+    "family": "Paranjape",
+    "given": "Ashwin"
+   },
+   {
+    "family": "Bevilacqua",
+    "given": "Michele"
+   },
+   {
+    "family": "Petroni",
+    "given": "Fabio"
+   },
+   {
+    "family": "Liang",
+    "given": "Percy"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2024
+    ]
+   ]
+  },
+  "title": "Lost in the middle: How language models use long contexts",
+  "container-title": "Transactions of the Association for Computational Linguistics",
+  "volume": "12",
+  "page": "157-173",
+  "DOI": "10.1162/tacl_a_00638",
+  "keyword": "long context, RAG"
+ },
+ {
+  "id": "yao2023react",
+  "type": "paper-conference",
+  "author": [
+   {
+    "family": "Yao",
+    "given": "Shunyu"
+   },
+   {
+    "family": "Zhao",
+    "given": "Jeffrey"
+   },
+   {
+    "family": "Yu",
+    "given": "Dian"
+   },
+   {
+    "family": "Du",
+    "given": "Nan"
+   },
+   {
+    "family": "Shafran",
+    "given": "Izhak"
+   },
+   {
+    "family": "Narasimhan",
+    "given": "Karthik"
+   },
+   {
+    "family": "Cao",
+    "given": "Yuan"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2023
+    ]
+   ]
+  },
+  "title": "ReAct: Synergizing reasoning and acting in language models",
+  "container-title": "The Eleventh International Conference on Learning Representations (ICLR 2023)",
+  "URL": "https://openreview.net/forum?id=WE_vluYUL-X",
+  "keyword": "agent loop, reasoning, tools"
+ },
+ {
+  "id": "schick2023",
+  "type": "paper-conference",
+  "author": [
+   {
+    "family": "Schick",
+    "given": "Timo"
+   },
+   {
+    "family": "Dwivedi-Yu",
+    "given": "Jane"
+   },
+   {
+    "family": "Dessì",
+    "given": "Roberto"
+   },
+   {
+    "family": "Raileanu",
+    "given": "Roberta"
+   },
+   {
+    "family": "Lomeli",
+    "given": "Maria"
+   },
+   {
+    "family": "Hambro",
+    "given": "Eric"
+   },
+   {
+    "family": "Zettlemoyer",
+    "given": "Luke"
+   },
+   {
+    "family": "Cancedda",
+    "given": "Nicola"
+   },
+   {
+    "family": "Scialom",
+    "given": "Thomas"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2023
+    ]
+   ]
+  },
+  "title": "Toolformer: Language models can teach themselves to use tools",
+  "container-title": "Advances in Neural Information Processing Systems 36 (NeurIPS 2023)",
+  "publisher": "Curran Associates",
+  "URL": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/d842425e4bf79ba039352da0f658a906-Abstract-Conference.html",
+  "keyword": "tool use, self-supervised"
+ },
+ {
+  "id": "qin2024",
+  "type": "paper-conference",
+  "author": [
+   {
+    "family": "Qin",
+    "given": "Yujia"
+   },
+   {
+    "family": "Liang",
+    "given": "Shihao"
+   },
+   {
+    "family": "Ye",
+    "given": "Yining"
+   },
+   {
+    "family": "Zhu",
+    "given": "Kunlun"
+   },
+   {
+    "family": "Yan",
+    "given": "Lan"
+   },
+   {
+    "family": "Lu",
+    "given": "Yaxi"
+   },
+   {
+    "family": "Lin",
+    "given": "Yankai"
+   },
+   {
+    "family": "Cong",
+    "given": "Xin"
+   },
+   {
+    "family": "Tang",
+    "given": "Xiangru"
+   },
+   {
+    "family": "Qian",
+    "given": "Bill"
+   },
+   {
+    "literal": "others"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2024
+    ]
+   ]
+  },
+  "title": "ToolLLM: Facilitating large language models to master 16000+ real-world APIs",
+  "container-title": "The Twelfth International Conference on Learning Representations (ICLR 2024)",
+  "URL": "https://arxiv.org/abs/2307.16789",
+  "keyword": "tool use, APIs, benchmark"
+ },
+ {
+  "id": "patil2024",
+  "type": "paper-conference",
+  "author": [
+   {
+    "family": "Patil",
+    "given": "Shishir G."
+   },
+   {
+    "family": "Zhang",
+    "given": "Tianjun"
+   },
+   {
+    "family": "Wang",
+    "given": "Xin"
+   },
+   {
+    "family": "Gonzalez",
+    "given": "Joseph E."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2024
+    ]
+   ]
+  },
+  "title": "Gorilla: Large language model connected with massive APIs",
+  "container-title": "Advances in Neural Information Processing Systems 37 (NeurIPS 2024)",
+  "page": "126544-126565",
+  "DOI": "10.52202/079017-4020",
+  "publisher": "Curran Associates",
+  "keyword": "tool use, APIs, retrieval"
+ },
+ {
+  "id": "shinn2023",
+  "type": "paper-conference",
+  "author": [
+   {
+    "family": "Shinn",
+    "given": "Noah"
+   },
+   {
+    "family": "Cassano",
+    "given": "Federico"
+   },
+   {
+    "family": "Gopinath",
+    "given": "Ashwin"
+   },
+   {
+    "family": "Narasimhan",
+    "given": "Karthik"
+   },
+   {
+    "family": "Yao",
+    "given": "Shunyu"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2023
+    ]
+   ]
+  },
+  "title": "Reflexion: Language agents with verbal reinforcement learning",
+  "container-title": "Advances in Neural Information Processing Systems 36 (NeurIPS 2023)",
+  "page": "8634-8652",
+  "DOI": "10.52202/075280-0377",
+  "publisher": "Curran Associates",
+  "keyword": "agent loop, self-reflection"
+ },
+ {
+  "id": "es2024",
+  "type": "paper-conference",
+  "author": [
+   {
+    "family": "Es",
+    "given": "Shahul"
+   },
+   {
+    "family": "James",
+    "given": "Jithin"
+   },
+   {
+    "family": "Espinosa Anke",
+    "given": "Luis"
+   },
+   {
+    "family": "Schockaert",
+    "given": "Steven"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2024
+    ]
+   ]
+  },
+  "title": "RAGAs: Automated evaluation of retrieval augmented generation",
+  "container-title": "Proceedings of the 18th Conference of the European Chapter of the Association for Computational Linguistics: System Demonstrations",
+  "page": "150-158",
+  "DOI": "10.18653/v1/2024.eacl-demo.16",
+  "publisher": "Association for Computational Linguistics",
+  "keyword": "evaluation, RAG, metrics"
+ },
+ {
+  "id": "liu2024agentbench",
+  "type": "paper-conference",
+  "author": [
+   {
+    "family": "Liu",
+    "given": "Xiao"
+   },
+   {
+    "family": "Yu",
+    "given": "Hao"
+   },
+   {
+    "family": "Zhang",
+    "given": "Hanchen"
+   },
+   {
+    "family": "Xu",
+    "given": "Yifan"
+   },
+   {
+    "family": "Lei",
+    "given": "Xuanyu"
+   },
+   {
+    "family": "Lai",
+    "given": "Hanyu"
+   },
+   {
+    "family": "Gu",
+    "given": "Yu"
+   },
+   {
+    "family": "Ding",
+    "given": "Hangliang"
+   },
+   {
+    "family": "Men",
+    "given": "Kaiwen"
+   },
+   {
+    "family": "Yang",
+    "given": "Kejuan"
+   },
+   {
+    "literal": "others"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2024
+    ]
+   ]
+  },
+  "title": "AgentBench: Evaluating LLMs as agents",
+  "container-title": "The Twelfth International Conference on Learning Representations (ICLR 2024)",
+  "URL": "https://arxiv.org/abs/2308.03688",
+  "keyword": "evaluation, agents, benchmark"
+ },
+ {
+  "id": "yao2025tau",
+  "type": "paper-conference",
+  "author": [
+   {
+    "family": "Yao",
+    "given": "Shunyu"
+   },
+   {
+    "family": "Shinn",
+    "given": "Noah"
+   },
+   {
+    "family": "Razavi",
+    "given": "Pedram"
+   },
+   {
+    "family": "Narasimhan",
+    "given": "Karthik R."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2025
+    ]
+   ]
+  },
+  "title": "τ-bench: A benchmark for tool-agent-user interaction in real-world domains",
+  "container-title": "The Thirteenth International Conference on Learning Representations (ICLR 2025)",
+  "URL": "https://openreview.net/forum?id=roNSXZpUDN",
+  "keyword": "evaluation, tool use, benchmark"
+ },
+ {
+  "id": "greshake2023",
+  "type": "paper-conference",
+  "author": [
+   {
+    "family": "Greshake",
+    "given": "Kai"
+   },
+   {
+    "family": "Abdelnabi",
+    "given": "Sahar"
+   },
+   {
+    "family": "Mishra",
+    "given": "Shailesh"
+   },
+   {
+    "family": "Endres",
+    "given": "Christoph"
+   },
+   {
+    "family": "Holz",
+    "given": "Thorsten"
+   },
+   {
+    "family": "Fritz",
+    "given": "Mario"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2023
+    ]
+   ]
+  },
+  "title": "Not what you've signed up for: Compromising real-world LLM-integrated applications with indirect prompt injection",
+  "container-title": "Proceedings of the 16th ACM Workshop on Artificial Intelligence and Security (AISec '23)",
+  "page": "79-90",
+  "DOI": "10.1145/3605764.3623985",
+  "publisher": "ACM",
+  "publisher-place": "New York, NY",
+  "keyword": "security, prompt injection"
+ },
+ {
+  "id": "hou2026",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Hou",
+    "given": "Xinyi"
+   },
+   {
+    "family": "Zhao",
+    "given": "Yanjie"
+   },
+   {
+    "family": "Wang",
+    "given": "Shenao"
+   },
+   {
+    "family": "Wang",
+    "given": "Haoyu"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "title": "Model Context Protocol (MCP): Landscape, security threats, and future research directions",
+  "container-title": "ACM Transactions on Software Engineering and Methodology",
+  "volume": "35",
+  "issue": "10",
+  "DOI": "10.1145/3796519",
+  "number": "302",
+  "keyword": "MCP, security, survey"
+ }
+]

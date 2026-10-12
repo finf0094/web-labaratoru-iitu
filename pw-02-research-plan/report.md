@@ -1,208 +1,238 @@
 ---
 title: "Practical Work 2. Research Plan Development"
-subtitle: "Topic: Information System for Monitoring Students' Academic Performance with Machine-Learning-Based Early Warning of At-Risk Students"
+subtitle: "Topic: Design and Evaluation of an Agentic AI Platform Integrating the Agent Loop, Model Context Protocol (MCP) Tools and Retrieval-Augmented Generation (RAG)"
 author: "Student: ____________________  ·  Group: ________  ·  Instructor: ____________________"
 date: "International Information Technology University (IITU), Almaty, 2026"
-lang: en-GB
+lang: en-US
+abstract: |
+  A research plan is developed for the design and evaluation of an agentic AI platform in which a large language model (LLM) works in an agent loop, calls external tools exposed through the Model Context Protocol (MCP) and uses retrieval-augmented generation (RAG) over organisational documents. The plan defines the problem and its importance, the goal, five research questions with testable hypotheses, operational definitions of the core concepts, methods of data collection, analysis and validation, the required resources, research issues (constraints, variables, assumptions, ethics), the research structure, the testing strategy, a focus-group design, the budget and the schedule. An additional stage — security and responsible-AI assurance — is proposed. **Keywords:** research plan, AI agents, agent loop, Model Context Protocol, tool calling, retrieval-augmented generation, AI platform.
 ---
 
 # Overview of the study plan
 
 | Item of the study plan | Content for this project |
-|---|---|
-| **Purpose** (1–2 lines) | To design, build and evaluate an information system that monitors students' academic performance in real time and, using explainable machine learning, warns advisors about students at risk of failing a course early enough (by week 4–7 of a 15-week semester) to intervene. |
-| **Problem** | Kazakhstani universities record grades, attendance and LMS activity in separate systems (e.g. Platonus, Moodle). Risk becomes visible only after the midterm (*rubezhnyi kontrol 1*, week 7–8) or after the final exam (grade FX/F), when it is often too late to help. Advisors have no early, explained signal and no workflow to track interventions. |
-| **Core concepts (operational definitions)** | See Section 2.4 — *at-risk student*, *early*, *academic performance*, *engagement*, *prediction quality*, *explainability*, *usefulness*. |
-| **General method** | Design Science Research with a sequential mixed-methods evaluation: qualitative requirements study → quantitative predictive modelling on historical and open data → prototype → usability/acceptance evaluation and a one-semester pilot. |
-| **Detailed methods** | Semi-structured interviews and focus groups (advisors, teachers, students); secondary analysis of anonymised AIS/LMS records and the public OULAD dataset [@kuzilek2017]; ML experiments with logistic regression, random forest and gradient boosting [@chen2016; @pedregosa2011]; SHAP explanations [@lundberg2017]; SUS and TAM questionnaires [@brooke1996; @davis1989]; quasi-experimental pilot. |
-| **Data quantification** | Grades on the 0–100 scale and letter grades (A…F); attendance as a share of attended classes; LMS activity as counts of logins/clicks/submissions per week; model quality as ROC-AUC, recall, precision, F1; usability as SUS score (0–100); acceptance as mean of 7-point Likert items; pilot outcome as pass rate and share of FX/F grades. |
+|-------------------------|------------------------------------------------------------------|
+| **Purpose** (1–2 lines) | To design, build and evaluate an open, model-agnostic AI platform in which an LLM agent loop uses tools connected through MCP and a RAG service over university documents, and to measure how these components affect task success, answer quality, integration effort, cost and security. |
+| **Problem** | Organisations want AI assistants that answer questions from their own documents *and* perform actions in their systems. Today every model-to-tool integration is written separately for each vendor, RAG pipelines are built ad hoc, agent loops fail unpredictably, and there is no agreed method to evaluate quality, cost and security (e.g. prompt injection through retrieved documents or tool outputs). |
+| **Core concepts (operational definitions)** | See Section 2.4 — *agent loop*, *tool*, *MCP server*, *RAG*, *task success*, *faithfulness*, *context recall*, *integration effort*, *attack success rate*, *usability*. |
+| **General method** | Design Science Research [@hevner2004; @peffers2007] with mixed-methods evaluation: requirements interviews → platform design and prototype → controlled experiments on benchmark task suites → developer study → security red-teaming → usability/acceptance study. |
+| **Detailed methods** | Semi-structured interviews and focus groups with developers, IT staff and end users; construction of a bilingual (Russian/Kazakh/English) question set from public university documents; computational experiments with alternative RAG and agent-loop configurations; within-subject developer experiment (MCP vs bespoke integration); attack suite for indirect prompt injection [@greshake2023]; SUS and TAM questionnaires [@brooke1996; @davis1989]. |
+| **Data quantification** | Task success (0/1 per task), answer correctness and faithfulness (0–1, RAGAS-style metrics [@es2024]), context precision/recall (0–1), latency (s), cost (tokens and USD per task), number of agent-loop iterations, integration effort (minutes and lines of code), attack success rate (%), SUS (0–100), TAM items (1–7). |
+
+## Type of research and research process
+
+Following the classification of research types and the research process presented in the course lecture *Research Methodology: An Introduction*, the planned study is characterised as follows.
+
+| Basis of classification | Type of this study | Reason |
+|-------------------|-----------------|-------------------------------------------------------|
+| Descriptive vs analytical | Mainly **analytical** | Hypotheses about the effect of design choices are tested on collected data |
+| Applied vs fundamental | **Applied** | Produces a working platform design for a practical problem of organisations |
+| Qualitative vs quantitative | **Mixed** | Interviews and focus groups + experiments and statistical analysis |
+| Conceptual vs empirical | **Empirical** | Conclusions are based on measurements of the prototype |
+| Environment | **Laboratory** and **simulation** research, with a short **field** pilot | Controlled experiments on task suites; simulated attacks; pilot use by students and staff |
+| Purpose | **Hypothesis-testing** (with an exploratory phase) | Tests causal effects of MCP, RAG configuration, loop design and guardrails |
+| Orientation | **Decision-oriented** | Results guide architectural decisions of organisations adopting AI agents |
+
+**Mapping to the research process.** (1) Formulating the research problem → Section 1; (2) extensive literature survey → LW1, PW3, PW4; (3) developing hypotheses → Section 2.3; (4) preparing the research design → Sections 2.5 and 4, PW5; (5) determining sample design → PW5; (6) collecting the data and (7) execution of the project → Sections 4 and 8; (8) analysis of data and (9) hypothesis testing → Section 5; (10) generalisations and interpretation and (11) preparation of the report → thesis chapters (Section 4.2).
 
 # 1. Identify and define the problem
 
 ## 1.1 Problem statement
 
-Universities in Kazakhstan work under the credit-technology system. A course grade is formed from the *admission rating* (average of two midterm controls, 60 %) and the final exam (40 %); a student with an admission rating below 50 is not admitted to the exam, and a final grade FX/F means a paid retake or, in the worst case, expulsion. All of these data are already stored in the university's automated information system (AIS) and LMS, but they are used for **reporting after the fact**, not for **prediction**.
+Large language models can follow instructions, but on their own they cannot see an organisation's current documents or act in its systems. Two techniques address this: **retrieval-augmented generation (RAG)**, which adds retrieved passages to the model's context [@lewis2020], and **tool use**, in which the model decides to call external functions and continues reasoning with their results [@yao2023react; @schick2023]. Running these steps repeatedly — think, call a tool, observe, decide again — is the **agent loop** that underlies modern AI agents [@wang2024survey].
 
-Practical gap: existing domestic systems (e.g. Platonus) provide electronic grade books and attendance journals, but no predictive risk scoring or advisor workflow; international platforms with predictive analytics (EAB Navigate360, OU Analyse) are expensive, closed, tuned to other education systems, and not integrated with Kazakhstani AIS (see Laboratory work 1).
+In practice three problems appear:
 
-Scientific gap: the literature shows that LMS and grade data can predict course failure [@macfadyen2010; @conijn2017; @namoun2021], but (a) prediction quality strongly depends on the course and its instructional conditions [@gasevic2016], (b) few studies evaluate how teachers actually use predictions [@herodotou2019a], and (c) there is almost no evidence from Central Asian universities, whose grading model (midterm controls, admission rating, FX) differs from Western systems.
+1. **Integration problem (practical gap).** Every tool or data source has to be wired separately to every model vendor's function-calling format. The **Model Context Protocol (MCP)**, an open protocol introduced in November 2024, standardises how applications expose tools, resources and prompts to LLM clients [@anthropic2024mcp; @mcp_spec], but its effect on integration effort and reliability has not been measured systematically.
+2. **Quality problem (scientific gap).** RAG quality depends on many choices — chunking, sparse vs dense retrieval, reranking, how retrieval is triggered — and on the language of documents. Models may ignore relevant passages placed in the middle of long contexts [@liu2024lost]. Evidence for Russian- and Kazakh-language corporate documents is scarce.
+3. **Reliability and security problem.** Agents fail on multi-step tasks [@liu2024agentbench; @yao2025tau], and content returned by retrieval or tools can carry *indirect prompt injections* that hijack the agent [@greshake2023]; MCP adds new attack surfaces such as malicious tool descriptions [@hou2026].
 
 ## 1.2 Importance of the problem
 
-* **For students** — early help reduces the number of FX/F grades, paid retakes and dropouts.
-* **For the university** — retention and graduation rates are accreditation and ranking indicators; each retained student also keeps tuition revenue.
-* **For the scientific community** — the study contributes evidence on transferability of predictive learning analytics to a new national context and on the effect of explanations on advisor decisions.
-* **For industry** — a reusable, open integration layer for Platonus/Moodle-type systems that local EdTech companies can adopt.
+* **For organisations (universities, SMEs, public bodies in Kazakhstan):** a reusable platform reduces the cost of building AI assistants, avoids vendor lock-in and allows sensitive data to stay on own servers in line with the personal-data law [@kz2013pdlaw].
+* **For the scientific community:** controlled evidence on how MCP, RAG design and agent-loop design affect quality, cost and security, including bilingual (Russian/Kazakh) data.
+* **For industry:** a reference architecture and an evaluation protocol that developers can reproduce; aligned with the national AI development agenda [@kz2024aiconcept].
 
 # 2. Research plan
 
 ## 2.1 Goal
 
-To develop and empirically evaluate an explainable early-warning information system that identifies students at risk of failing a course by the middle of the semester with ROC-AUC ≥ 0.80 and is perceived by advisors as useful and usable.
+To design and empirically evaluate an open, model-agnostic agentic AI platform that combines an agent loop, MCP-based tool integration and a RAG service, and to determine which design choices maximise task success and answer faithfulness while keeping cost, latency and security risks acceptable.
 
 ## 2.2 Research questions
 
-* **RQ1.** Which data available in a Kazakhstani university (current-control grades, attendance, LMS activity, prior GPA, demographics) are the strongest early predictors of course failure?
-* **RQ2.** Which machine-learning model provides the best trade-off between recall of at-risk students and precision, and how does prediction quality change from week 2 to week 8 of the semester?
-* **RQ3.** Do explanations of predictions (SHAP-based "reasons for risk") increase advisors' perceived usefulness and trust compared with a bare risk score?
-* **RQ4.** Does the use of the system during one semester reduce the share of FX/F grades in pilot groups compared with control groups?
+* **RQ1 (integration).** Does connecting tools through MCP reduce developer effort and integration errors compared with bespoke, provider-specific function calling?
+* **RQ2 (retrieval).** Which RAG configuration — sparse (BM25), dense, or hybrid retrieval with reranking — gives the best context recall and answer faithfulness on a bilingual university document corpus?
+* **RQ3 (agent loop).** How do agent-loop design choices (retrieval as a tool vs single-shot RAG, maximum number of iterations, self-reflection step, number and quality of tool descriptions) affect task success, cost and latency?
+* **RQ4 (security).** How effective are guardrails (tool allow-lists, human approval of write actions, isolation of untrusted content) against indirect prompt injection delivered through retrieved documents and MCP tool outputs?
+* **RQ5 (acceptance).** Do developers and end users perceive the platform as usable and useful?
 
 ## 2.3 Hypotheses
 
-* **H1.** A model using grades + attendance + LMS activity reaches ROC-AUC ≥ 0.80 by week 7 and significantly outperforms a model that uses grades only (DeLong test, α = 0.05).
-* **H2.** Gradient boosting achieves higher recall at precision ≥ 0.60 than logistic regression (paired comparison over 10 cross-validation folds, Wilcoxon signed-rank test).
-* **H3.** Advisors who see explanations report higher perceived usefulness (TAM, 7-point scale) than advisors who see only a risk score (independent t-test / Mann–Whitney U), and the system's SUS score is ≥ 68.
-* **H4.** The share of FX/F grades in pilot groups is lower than in comparable control groups (χ² test / logistic regression controlling for prior GPA).
+* **H1.** Integrating a new tool through MCP takes at least 30 % less developer time than a bespoke integration (paired t-test or Wilcoxon, α = 0.05).
+* **H2.** Hybrid retrieval with reranking achieves higher context recall and faithfulness than BM25-only and dense-only retrieval (Friedman test with post-hoc Wilcoxon tests).
+* **H3.** On multi-step questions, an agent that uses retrieval as a tool inside the loop ("agentic RAG") has a higher task success rate than single-shot RAG (McNemar test), at a cost increase of less than 2× tokens per task.
+* **H4.** With guardrails enabled, the attack success rate of indirect prompt injection falls below 5 %, while benign task success decreases by no more than 5 percentage points.
+* **H5.** The platform's mean SUS score is ≥ 68 and the mean perceived usefulness (TAM) is ≥ 5 on a 7-point scale.
 
 ## 2.4 Operational definitions of core concepts
 
 | Concept | Operational definition and measurement |
-|---|---|
-| Academic performance | Points (0–100) for current control, midterm controls 1 and 2, exam; final letter grade A–F; GPA (0–4). |
-| At-risk student | Student whose final course grade is FX or F, or whose admission rating is < 50 (binary target, 1 = at risk). |
-| Early prediction | Prediction made on data available up to week *w* of the semester, *w* ∈ {2, 4, 6, 8}; "early" = *w* ≤ 7 (before midterm 1 results). |
-| Engagement | Weekly LMS log-ins, number of resource views, submissions on time, forum posts; attendance rate = attended / scheduled classes. |
-| Prediction quality | ROC-AUC, recall (share of truly at-risk students detected), precision, F1, calibration (Brier score). |
-| Explainability | Presence of top-3 feature contributions per student computed with SHAP [@lundberg2017], shown in the advisor dashboard. |
-| Perceived usefulness / ease of use | Mean score of TAM items [@davis1989] on a 7-point Likert scale. |
-| Usability | System Usability Scale score (0–100) [@brooke1996]. |
+|-----------------|-------------------------------------------------------------------------|
+| Agent loop | Repeated cycle *model call → (optional) tool call → observation appended to context* until the model returns a final answer or the iteration limit is reached; measured by number of iterations per task. |
+| Tool | A function with a name, natural-language description and JSON-Schema input that the model can request; executed by the platform, not by the model. |
+| MCP server | A process that exposes tools, resources and prompts via the Model Context Protocol (JSON-RPC over stdio or streamable HTTP) [@mcp_spec]. |
+| RAG | Retrieval of top-*k* document chunks for a query and their insertion into the model context before generation [@lewis2020]. |
+| Task success | Binary: the final answer or final system state matches the reference defined for the task (checked automatically or by two raters). |
+| Faithfulness | Share of claims in the answer that are supported by the retrieved context (0–1) [@es2024]. |
+| Context precision / recall | Share of retrieved chunks that are relevant / share of reference facts present in retrieved chunks (0–1). |
+| Integration effort | Minutes and changed lines of code needed to make a new tool usable by the agent and pass its acceptance test. |
+| Attack success rate (ASR) | Share of injected test cases in which the agent performs the attacker's instruction (e.g. calls a forbidden tool or leaks data). |
+| Cost / latency | Input + output tokens and USD per task; wall-clock seconds from request to final answer. |
+| Usability / acceptance | SUS score (0–100) [@brooke1996]; mean of TAM perceived usefulness and ease-of-use items (1–7) [@davis1989]. |
 
 ## 2.5 Methods of data collection, analysis and validation
 
-1. **Literature review** (PW3, PW4) — systematic search in Scopus, IEEE Xplore, ScienceDirect, MDPI, Google Scholar.
-2. **Interviews and focus groups** (qualitative) — requirements and validation of the risk definition with advisors, teachers, students; thematic analysis [@braun2006].
-3. **Secondary data analysis** (quantitative) — anonymised historical records (2021/22–2025/26) from the AIS and LMS; public OULAD dataset for replication and benchmarking [@kuzilek2017].
-4. **Experiments** — training and comparing models on temporal splits (train on earlier years, test on the latest year) to avoid data leakage.
-5. **Prototype development** — web application (backend API, ETL from AIS/LMS, ML service, dashboard).
-6. **Evaluation** — usability testing (SUS), acceptance survey (TAM), A/B comparison of dashboards with and without explanations, one-semester quasi-experimental pilot.
+1. **Literature review and analogue analysis** (LW1, PW3, PW4).
+2. **Interviews and focus groups** with developers, IT staff and potential end users to collect requirements and typical tasks; thematic analysis [@braun2006].
+3. **Dataset construction:** a bilingual question set (≈ 300 questions with reference answers and source passages, of which ≥ 150 require several retrieval steps) from public IITU documents (regulations, academic calendar, syllabi, FAQ), a task suite (≈ 60 multi-step tasks requiring 2–5 tool calls, e.g. "find the deadline in the regulation and create a calendar reminder") and an attack suite (≈ 200 injection cases).
+4. **Computational experiments:** the same tasks are run under different configurations (retrieval method, loop design, guardrails, two LLMs — a commercial API model and an open-weight model served locally); each configuration is repeated 3 times to account for model randomness.
+5. **Developer experiment:** participants integrate the same tools with MCP and with bespoke code (counterbalanced order).
+6. **Security red-teaming:** a suite of indirect-prompt-injection cases embedded in documents and tool outputs, following known attack patterns [@greshake2023; @owasp2025llm].
+7. **Usability and acceptance study:** SUS/TAM questionnaires after a short pilot.
+
+Validation: automatic metrics are checked against human ratings on a 20 % sample (Cohen's κ); LLM-as-a-judge scores [@zheng2023] are used only after agreement with human raters is confirmed.
 
 ## 2.6 Resources
 
 | Type | Resources |
-|---|---|
-| Data | Anonymised AIS (Platonus) export: grades, attendance, enrolment; Moodle logs; OULAD open dataset. |
-| Software | Python 3.12, pandas, scikit-learn, XGBoost, SHAP; PostgreSQL; FastAPI / Django; React; Docker; Git/GitHub; Zotero; Google Forms; NVivo or Taguette for qualitative coding; JASP / SPSS for statistics. |
-| Hardware | Developer laptop (16 GB RAM), university virtual server (4 vCPU, 16 GB RAM) for the pilot. |
-| Access | Permission of the university's academic affairs office and ethics committee; databases Scopus/IEEE Xplore via the university library. |
-| People | Supervisor, 2–3 advisors and 4–6 teachers for the pilot, IT department contact for data export. |
+|---------|------------------------------------------------------------------------|
+| Software | Python 3.12; official MCP SDK; FastAPI; PostgreSQL with pgvector or Qdrant; BM25 implementation; a multilingual embedding model and reranker; Docker; Git/GitHub; Zotero; RAGAS; JASP for statistics; Taguette/NVivo for qualitative coding. |
+| Models | One commercial LLM via API (tool-calling capable); one open-weight instruction model (7–14 B parameters) served locally with an OpenAI-compatible server. |
+| Hardware | Developer laptop (16–32 GB RAM); rented GPU server (24–48 GB VRAM) for the open-weight model and embeddings. |
+| Data | Public IITU documents (Russian, Kazakh, English); synthetic tool back-ends (calendar, ticketing, timetable, database) with test data only. |
+| Access | University library databases (Scopus, IEEE Xplore, ACM DL); API keys funded by the project; permission of the IT department for the pilot. |
+| People | Supervisor; 24–34 student developers for the developer experiment; 12–15 interviewees; 3 focus groups; pilot users. |
 
 # 3. Research issues
 
 ## 3.1 Potential problems and constraints
 
 | Issue | Risk | Mitigation |
-|---|---|---|
-| Access to institutional data | Legal/organisational delays in obtaining AIS export | Early request with a data-sharing agreement; fall back to OULAD for model development. |
-| Data quality | Missing attendance records, inconsistent course codes, teachers filling journals late | Data-quality audit, imputation rules, "data completeness" feature, exclude courses with < 50 % completeness. |
-| Class imbalance | At-risk students are typically 10–20 % | Stratified splits, class weights, threshold tuning, report precision–recall curves. |
-| Participant availability | Advisors and teachers are busy during sessions | Schedule interviews outside exam weeks; short (≤ 45 min) sessions; online option. |
-| Technical constraints | No public API in the AIS | CSV/Excel export + ETL; read-only database replica if allowed. |
-| Concept drift | Curricula and grading rules change between years | Temporal validation; retraining every semester; monitoring of model performance. |
+|-------------------|---------------------------------------|-------------------------------------------|
+| Non-determinism of LLMs | Results vary between runs | Fixed temperature, 3 repetitions, report means with 95 % confidence intervals |
+| Model and API changes | Provider updates a model during the study | Pin model versions; record dates; include an open-weight model as a stable baseline |
+| API cost | Experiments become expensive | Token budget per configuration; caching; pilot runs on small subsets first |
+| Language coverage | Weak quality for Kazakh text | Multilingual embeddings; report results per language; human review of Kazakh answers |
+| Data access and privacy | Personal data in documents | Only public documents and synthetic data; no real student records |
+| Participant availability | Developers busy during exams | Sessions outside exam weeks; online option; small compensation |
+| Evolving MCP specification | Protocol versions change | Fix one specification version for the experiments and document it |
 
 ## 3.2 Variables and assumptions
 
-* **Dependent variables:** at-risk status (binary), final course score (0–100); for evaluation — SUS, TAM scores, FX/F rate.
-* **Independent variables:** weekly current-control points, midterm points (when available), attendance rate, LMS activity counts, timeliness of submissions, prior GPA, number of previous FX/F, study year, programme, form of study (grant/paid), language of instruction.
-* **Control variables:** course, teacher, semester, group size.
-* **Assumptions:** grades and attendance in the AIS are entered within one week of the class; LMS logs reflect real learning activity; the definition of risk (FX/F or admission rating < 50) is accepted by the academic office; historical patterns are reasonably stable between consecutive years.
+* **Independent variables:** integration method (MCP / bespoke); retrieval method (BM25 / dense / hybrid + rerank); chunk size; RAG mode (single-shot / agentic); loop settings (max iterations, reflection on/off, number of tools); guardrails (on/off); model (commercial / open-weight); question language.
+* **Dependent variables:** task success, correctness, faithfulness, context precision/recall, latency, cost, iterations, integration effort, attack success rate, SUS, TAM.
+* **Control variables:** prompts and tool descriptions held constant within a comparison; same hardware; same question set; same model version.
+* **Assumptions:** the question set and task suite are representative of real requests; reference answers are correct (double-checked); automated metrics correlate with human judgement after calibration; participants' prior experience is balanced by counterbalancing.
 
 ## 3.3 Ethical considerations
 
-* Personal data are processed in accordance with the Law of the Republic of Kazakhstan "On Personal Data and Their Protection" and university policy; only pseudonymised identifiers leave the AIS.
-* Informed consent is obtained from all interview, focus-group and survey participants; participation is voluntary and can be withdrawn.
-* Predictions are **advisory**: no automatic sanctions; a human advisor always makes the decision.
-* Algorithmic fairness is checked across gender, language of instruction and form of study [@baker2022]; students have the right to see why they were flagged [@slade2013].
-* Data are stored on university servers with role-based access and encryption; logs of who viewed which student record are kept.
+* Informed consent of all interview, focus-group, survey and experiment participants; voluntary participation and the right to withdraw.
+* No personal data in the corpus; synthetic back-ends for tools that would change data; the pilot uses read-only tools or human approval for any write action.
+* Responsible AI: answers show sources; the system states when it does not know; harmful or out-of-scope requests are refused; red-teaming results are disclosed responsibly.
+* Compliance with the Law of the Republic of Kazakhstan "On Personal Data and Their Protection" [@kz2013pdlaw] and alignment with AI risk-management guidance [@nist2023rmf].
 
 # 4. Research structure
 
 ## 4.1 Stages
 
-1. **Background study** — literature review, analysis of analogues (LW1, PW3, PW4).
-2. **Requirements and problem validation** — interviews, focus group 1.
-3. **Data collection and preparation** — data agreement, export, cleaning, feature engineering.
-4. **Modelling** — baseline and advanced models, temporal validation, explanation.
-5. **System design and development** — architecture, database, ETL, ML service, dashboard.
-6. **Evaluation** — usability test, acceptance survey, focus group 2, semester pilot.
-7. **Analysis and conclusion** — statistical testing of H1–H4, interpretation, thesis writing.
+1. **Background study** — literature review and analysis of analogues.
+2. **Requirements** — interviews, focus group 1, use-case and task catalogue.
+3. **Design** — reference architecture: agent loop service, MCP client and servers, RAG service, guardrails, tracing and evaluation module.
+4. **Implementation** — prototype and test back-ends; dataset construction.
+5. **Experiments** — RAG configurations (H2), loop designs (H3), guardrails (H4), two models.
+6. **Developer study** — MCP vs bespoke integration (H1).
+7. **User evaluation** — pilot, SUS/TAM, focus group 2 (H5).
+8. **Analysis and writing** — statistical tests, interpretation, thesis.
 
 ## 4.2 Structure of the thesis
 
 | Chapter | Content | Connection |
-|---|---|---|
-| Introduction | Relevance, problem, goal, RQs, hypotheses, novelty | Based on Sections 1–2 of this plan |
-| 1. Literature review and analysis of analogues | Learning analytics, EWS, ML for performance prediction, ethics; comparison of 5 systems | Gaps found here define the RQs and feature set |
-| 2. Methodology | Design science + mixed methods, data, sampling, instruments, analysis | Uses gaps/limitations from Chapter 1 to choose models and evaluation metrics |
-| 3. System design and implementation | Requirements, architecture, data model, ML pipeline, UI | Implements requirements from interviews and the best model from Chapter 2 experiments |
-| 4. Results and discussion | Model results, usability, acceptance, pilot outcomes, threats to validity | Tests H1–H4; compares with results of earlier studies from Chapter 1 |
-| Conclusion | Answers to RQs, contribution, limitations, future work | — |
-| References, Appendices | Interview guide, questionnaires, consent form, code repository | — |
+|--------------|---------------------------------------------------|----------------------------------------|
+| Introduction | Relevance, problem, goal, RQs, hypotheses, novelty | Sections 1–2 of this plan |
+| 1. Literature review and analogues | LLM agents, tool use, MCP, RAG, evaluation, security; comparison of five platforms | Gaps found here define RQ1–RQ5 and the evaluation metrics |
+| 2. Methodology | Design science, mixed methods, datasets, samples, instruments, analysis | Uses limitations of earlier studies to design fair comparisons |
+| 3. Platform design and implementation | Requirements, architecture, MCP integration, RAG pipeline, guardrails, observability | Implements requirements from interviews and best practices from Chapter 1 |
+| 4. Results and discussion | Experiment results, developer study, security, usability; threats to validity | Tests H1–H5 and compares results with earlier studies |
+| Conclusion | Answers to RQs, recommendations for organisations, future work | — |
+| References, appendices | Instruments, task suite, attack suite, configuration files | — |
 
 # 5. Testing
 
-* **Hypothesis testing.** H1 — DeLong test for the difference of two correlated ROC-AUCs; H2 — Wilcoxon signed-rank test over 10 folds; H3 — t-test or Mann–Whitney U on TAM scores, one-sample t-test of SUS vs 68; H4 — χ² test and logistic regression with prior GPA as a covariate. Significance level α = 0.05, effect sizes reported (Cohen's *d*, odds ratio).
-* **Model testing.** Benchmarks: (a) majority-class baseline, (b) rule "admission rating < 50", (c) logistic regression. Test on the most recent academic year (temporal hold-out) and on OULAD for external validity. Metrics: ROC-AUC, PR-AUC, recall, precision, F1, Brier score; fairness gap in recall between subgroups.
-* **Software testing.** Unit tests for ETL and feature computation (pytest), API tests, load test of the dashboard with 10 000 students × 50 courses (Locust), security test of authentication and role-based access (OWASP Top 10 checklist), accuracy test — re-computation of 100 random students' features by hand.
-* **Comparison with expectations.** Expected AUC by week 7 is 0.80–0.90 based on previous studies [@macfadyen2010; @conijn2017; @namoun2021]; deviations will be analysed per course and per programme.
+* **Hypothesis testing.** H1 — paired t-test or Wilcoxon signed-rank test on minutes and lines of code; H2 — Friedman test across three retrieval methods with Holm-corrected post-hoc Wilcoxon tests on per-question scores; H3 — McNemar test on paired task outcomes, bootstrap confidence intervals for cost ratios; H4 — attack success rate with Wilson 95 % confidence intervals, two-proportion comparison with and without guardrails; H5 — one-sample t-tests of SUS against 68 and TAM usefulness against 5.
+* **Benchmarks.** Internal question set and task suite; comparison with published agent benchmarks for orientation [@liu2024agentbench; @yao2025tau]; baselines: (a) LLM without retrieval or tools, (b) single-shot RAG, (c) bespoke function calling.
+* **Software testing.** Unit tests for tools and MCP servers; contract tests of JSON schemas; integration tests of the full loop with mocked models; load test (concurrent sessions) and measurement of p50/p95 latency; security tests against the OWASP Top 10 for LLM applications [@owasp2025llm].
+* **Comparison with expectations.** Retrieval and agent results are compared with values reported in the literature for similar settings [@gao2023; @es2024]; anomalies (e.g. loops that never terminate, tool-selection errors) are analysed from execution traces.
 
 # 6. Focus group
 
 | Element | Plan |
-|---|---|
-| Participants | Group A — 6–8 advisors / curators; Group B — 6–8 teachers of first-year courses; Group C — 6–8 students (1st–2nd year, incl. students who previously received FX). Selected purposively from different programmes. |
-| Format | 60–90 min, moderated, audio-recorded with consent; two rounds: before development (requirements) and after the prototype (evaluation). |
-| Guiding questions (round 1) | 1) How do you currently find out that a student is struggling? 2) Which signals appear first? 3) What information would you need to act earlier? 4) What would make you trust or distrust an automatic risk score? 5) What actions do you take when a student is at risk? 6) What privacy concerns do you have? |
-| Guiding questions (round 2) | 1) Is the risk list understandable? 2) Are the "reasons for risk" correct and useful? 3) What would you change in the dashboard? 4) Would you use it weekly? Why / why not? 5) Did a prediction surprise you? |
-| Analysis | Transcription → open coding → themes (needs, trust, workload, privacy, usability) following [@braun2006]; recurring themes become requirements or change requests; results are triangulated with survey data. |
+|---------------|-------------------------------------------------------------------------|
+| Participants | Group A — 6–8 software developers (students of IT programmes and junior engineers); Group B — 6–8 IT/administrative staff who answer typical requests; Group C — 6–8 end users (students). Purposive selection with different experience levels. |
+| Format | 60–90 min, moderated, recorded with consent; round 1 before development (needs, tasks, risks), round 2 after the prototype (evaluation). |
+| Guiding questions (round 1) | 1) Which questions and tasks take most of your time? 2) Which documents and systems are needed to answer them? 3) Which actions may an AI assistant perform automatically and which need approval? 4) What would make you trust an answer (sources, explanations)? 5) What are your concerns (errors, privacy, security)? 6) (Developers) How do you integrate external APIs with LLMs today? |
+| Guiding questions (round 2) | 1) Were the answers correct and properly sourced? 2) Was connecting a new tool via MCP clear? 3) Which failures did you notice? 4) Would you use the platform weekly? 5) What should be improved first? |
+| Analysis | Transcription → coding → themes (tasks, trust, control, integration effort, risks) [@braun2006]; themes become requirements and explain quantitative results. |
 
 # 7. Budget
 
-| Item | Qty | Unit cost, KZT | Total, KZT |
-|---|---|---|---|
-| Cloud/virtual server for pilot (4 vCPU, 16 GB RAM), 6 months | 6 | 25 000 | 150 000 |
-| Domain + SSL certificate | 1 | 10 000 | 10 000 |
-| Qualitative analysis software (NVivo student licence) or free Taguette | 1 | 0–60 000 | 60 000 |
-| Statistical software (JASP — free; SPSS academic licence via university) | 1 | 0 | 0 |
-| Participant compensation (gift cards for focus groups and usability tests) | 30 | 3 000 | 90 000 |
-| Survey incentive (prize draw) | 3 | 10 000 | 30 000 |
-| Transcription of interviews (auto-transcription service) | 10 h | 3 000 | 30 000 |
-| Printing of consent forms and questionnaires | — | — | 10 000 |
-| Conference registration / publication fee (local conference) | 1 | 50 000 | 50 000 |
-| **Subtotal** | | | **430 000** |
-| Contingency buffer (15 %) | | | 64 500 |
-| **Total** | | | **≈ 494 500** |
+Costs are estimated in KZT at an assumed rate of 500 KZT per USD; actual prices of API providers are checked before purchase.
 
-**Sources of funding:** university support for diploma projects (server, software licences), departmental research budget, student research grants and competitions (e.g. university innovation contests), EdTech industry partner sponsorship. The buffer covers server overuse, extra participant sessions and delays in data collection.
+| Item | Qty | Unit cost, KZT | Total, KZT |
+|----------------------------------------------|--------|------------|-------------|
+| LLM API tokens for experiments (≈ 60 M tokens incl. repetitions) | 1 | 250 000 | 250 000 |
+| GPU cloud server for open-weight model and embeddings (≈ 150 h) | 150 h | 1 000 | 150 000 |
+| Virtual server for the platform pilot, 4 months | 4 | 25 000 | 100 000 |
+| Domain and TLS certificate | 1 | 10 000 | 10 000 |
+| Participant compensation (developer study, focus groups, usability tests) | 50 | 3 000 | 150 000 |
+| Transcription service (≈ 12 h of audio) | 12 h | 3 000 | 36 000 |
+| Qualitative analysis software (or free Taguette) | 1 | 0–60 000 | 60 000 |
+| Conference registration / publication fee | 1 | 60 000 | 60 000 |
+| **Subtotal** | | | **816 000** |
+| Contingency buffer (15 %) | | | 122 400 |
+| **Total** | | | **≈ 938 400** |
+
+**Possible funding sources:** university support of diploma and research projects (servers, licences), academic credits programmes of cloud and AI providers, student research grants and start-up competitions (e.g. through Astana Hub), sponsorship by an industry partner. The buffer covers price changes of APIs, extra experiment runs and additional participant sessions.
 
 # 8. Schedule
 
 | Phase | Period | Duration | Milestone |
-|---|---|---|---|
-| 1. Topic approval, literature review, analogues | Sep – Oct 2026 | 7 weeks | Approved topic; LW1, PW3, PW4 completed |
-| 2. Methodology and instruments | Oct – Nov 2026 | 4 weeks | PW5 methodology; interview guide and questionnaires pilot-tested |
-| 3. Ethics approval and data access | Nov 2026 | 3 weeks | Signed data-sharing agreement; consent forms approved |
-| 4. Interviews + focus group 1 | Nov – Dec 2026 | 4 weeks | Requirements specification |
-| 5. Data preparation and modelling | Dec 2026 – Feb 2027 | 9 weeks | Best model selected, H1–H2 tested (**prototype model ready by 15 Feb**) |
-| 6. System development | Jan – Mar 2027 | 10 weeks | Working prototype deployed on test server |
-| 7. Evaluation: usability test, survey, focus group 2 | Mar – Apr 2027 | 5 weeks | SUS/TAM results, H3 tested |
-| 8. Pilot during spring semester (weeks 1–15) | Feb – May 2027 | 15 weeks (parallel) | Pilot outcome data, H4 tested |
-| 9. Thesis writing and pre-defence | Apr – May 2027 | 6 weeks | Full thesis draft (**pre-defence in mid-May**) |
+|------------------------------------|------------------|-----------|-------------------------------------------|
+| 1. Topic approval, literature review, analogues | Sep – Oct 2026 | 7 weeks | LW1, PW3, PW4 completed |
+| 2. Methodology and instruments | Oct – Nov 2026 | 4 weeks | PW5; instruments pilot-tested |
+| 3. Interviews and focus group 1 | Nov 2026 | 3 weeks | Requirements and task catalogue |
+| 4. Architecture and prototype v1 | Nov 2026 – Jan 2027 | 8 weeks | Agent loop + MCP client + 3 MCP servers + RAG service (**demo by 15 Jan**) |
+| 5. Dataset and task suite construction | Dec 2026 – Jan 2027 | 6 weeks (parallel) | 300 questions, 60 tasks, 200 attack cases |
+| 6. Experiments (H2–H4) | Feb – Mar 2027 | 7 weeks | Results tables and traces |
+| 7. Developer study (H1) | Mar 2027 | 3 weeks | Effort data |
+| 8. Pilot, SUS/TAM, focus group 2 (H5) | Mar – Apr 2027 | 5 weeks | Acceptance results |
+| 9. Analysis and thesis writing | Apr – May 2027 | 6 weeks | Full draft; **pre-defence in mid-May** |
 | 10. Final defence | Jun 2027 | — | Defence |
 
-Flexibility: phases 5–6 and 6–8 overlap intentionally; each phase has 1–2 weeks of reserve; if institutional data are delayed, modelling starts on OULAD and is transferred later.
+Each phase includes 1–2 weeks of reserve; phases 4–5 and 6–7 overlap intentionally. If API access is delayed, experiments start with the open-weight model.
 
-# 9. Additional stage: Risk management and data management plan
+# 9. Additional stage: security and responsible-AI assurance
 
-Because the project depends on sensitive institutional data, an additional stage — **data management and risk monitoring** — runs through the whole project:
+Because an agent can act in real systems, a separate cross-cutting stage is planned:
 
-* **Data management plan:** what data are collected, file formats (CSV, Parquet), naming conventions, storage (encrypted university server, no personal laptops), retention period (deleted 1 year after defence), versioning of datasets and models (DVC/Git).
-* **Reproducibility:** code in a Git repository, fixed random seeds, environment described with `requirements.txt` / Docker, experiment tracking (MLflow).
-* **Risk register:** reviewed every two weeks with the supervisor (data access, participant drop-out, technical failures, schedule slips).
-* **Dissemination:** results presented at a student conference, short paper submitted to a local journal, open-source release of non-sensitive code.
+* **Threat modelling** of the platform (data flows between the model, MCP servers, retrieval index and users), using the OWASP Top 10 for LLM applications [@owasp2025llm] and the NIST AI RMF functions *Govern, Map, Measure, Manage* [@nist2023rmf].
+* **Guardrail design:** least-privilege tool scopes, allow-lists per agent, human approval for irreversible actions, marking of untrusted content, output filtering, rate limits.
+* **Observability:** every loop iteration, tool call and retrieved chunk is traced, enabling debugging and audit.
+* **Reproducibility:** configuration files, prompts, model versions and seeds are versioned in Git; datasets and results are published (except sensitive cases).
 
 # 10. Summary
 
-The research addresses a practical and scientific problem: Kazakhstani universities collect rich academic data but detect struggling students too late, and the literature lacks evidence on explainable early-warning systems in this context. The goal is to build and evaluate an explainable early-warning information system that predicts course failure by mid-semester (ROC-AUC ≥ 0.80) and is accepted by advisors. Four research questions and hypotheses cover predictors (RQ1), model choice and timing (RQ2), effect of explanations (RQ3) and real-world impact (RQ4). The study follows a design-science approach with sequential mixed methods: interviews and focus groups, secondary analysis of institutional and open data, ML experiments, prototype development, usability/acceptance evaluation and a one-semester pilot. Key risks — data access, data quality, imbalance and ethics — have mitigation plans. The estimated budget is about 0.5 million KZT including a 15 % buffer, and the work is scheduled from September 2026 to the defence in June 2027.
+The research addresses the practical and scientific problem of building AI assistants that both know an organisation's documents and act in its systems. The goal is to design and evaluate an open agentic AI platform that combines an agent loop, MCP-based tool integration and RAG. Five research questions and hypotheses cover integration effort (RQ1), retrieval quality (RQ2), agent-loop design (RQ3), security (RQ4) and acceptance (RQ5). The study is applied, empirical and analytical; it follows design science research with mixed methods: interviews and focus groups, dataset construction, controlled computational experiments, a developer experiment, red-teaming and a usability study. Risks — model non-determinism, cost, language coverage and evolving standards — have mitigation plans. The budget is about 0.94 million KZT including a 15 % buffer, and the work is scheduled from September 2026 to the defence in June 2027.
 
 # References {.unnumbered}
 

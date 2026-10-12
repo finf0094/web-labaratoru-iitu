@@ -1,0 +1,32 @@
+{
+ "note": "Structure of the Zotero library used in Task 2: collections (folders) and tags. Items come from common/references.json.",
+ "collections": {
+  "01 Foundations and surveys": ["brown2020", "wei2022", "mialon2023", "wang2024survey", "xi2025"],
+  "02 Retrieval-augmented generation": ["lewis2020", "karpukhin2020", "asai2024", "fan2024", "liu2024lost"],
+  "03 Tool use and the agent loop": ["yao2023react", "schick2023", "qin2024", "patil2024", "shinn2023"],
+  "04 Evaluation and benchmarks": ["es2024", "liu2024agentbench", "yao2025tau"],
+  "05 Security and MCP": ["greshake2023", "hou2026"]
+ },
+ "tags": {
+  "brown2020": ["LLM", "in-context learning"],
+  "wei2022": ["reasoning", "prompting"],
+  "mialon2023": ["survey", "augmented LM", "tools"],
+  "wang2024survey": ["survey", "agents"],
+  "xi2025": ["survey", "agents"],
+  "lewis2020": ["RAG", "dense retrieval"],
+  "karpukhin2020": ["dense retrieval", "open-domain QA"],
+  "asai2024": ["RAG", "self-reflection", "adaptive retrieval"],
+  "fan2024": ["survey", "RAG"],
+  "liu2024lost": ["long context", "RAG"],
+  "yao2023react": ["agent loop", "reasoning", "tools"],
+  "schick2023": ["tool use", "self-supervised"],
+  "qin2024": ["tool use", "APIs", "benchmark"],
+  "patil2024": ["tool use", "APIs", "retrieval"],
+  "shinn2023": ["agent loop", "self-reflection"],
+  "es2024": ["evaluation", "RAG", "metrics"],
+  "liu2024agentbench": ["evaluation", "agents", "benchmark"],
+  "yao2025tau": ["evaluation", "tool use", "benchmark"],
+  "greshake2023": ["security", "prompt injection"],
+  "hou2026": ["MCP", "security", "survey"]
+ }
+}

@@ -1,0 +1,397 @@
+TY  - CONF
+AU  - Brown, Tom B.
+AU  - Mann, Benjamin
+AU  - Ryder, Nick
+AU  - Subbiah, Melanie
+AU  - Kaplan, Jared
+AU  - Dhariwal, Prafulla
+AU  - Neelakantan, Arvind
+AU  - Shyam, Pranav
+AU  - Sastry, Girish
+AU  - Askell, Amanda
+PY  - 2020
+TI  - Language models are few-shot learners
+T2  - Advances in Neural Information Processing Systems 33 (NeurIPS 2020)
+PB  - Curran Associates
+SP  - 1877
+EP  - 1901
+KW  - LLM
+KW  - in-context learning
+N1  - Collection: 01 Foundations and surveys
+ER  - 
+
+TY  - CONF
+AU  - Wei, Jason
+AU  - Wang, Xuezhi
+AU  - Schuurmans, Dale
+AU  - Bosma, Maarten
+AU  - Ichter, Brian
+AU  - Xia, Fei
+AU  - Chi, Ed H.
+AU  - Le, Quoc V.
+AU  - Zhou, Denny
+PY  - 2022
+TI  - Chain-of-thought prompting elicits reasoning in large language models
+T2  - Advances in Neural Information Processing Systems 35 (NeurIPS 2022)
+UR  - https://proceedings.neurips.cc/paper/2022/hash/9d5609613524ecf4f15af0f7b31abca4-Abstract-Conference.html
+PB  - Curran Associates
+SP  - 24824
+EP  - 24837
+KW  - reasoning
+KW  - prompting
+N1  - Collection: 01 Foundations and surveys
+ER  - 
+
+TY  - JOUR
+AU  - Mialon, Grégoire
+AU  - Dessì, Roberto
+AU  - Lomeli, Maria
+AU  - Nalmpantis, Christoforos
+AU  - Pasunuru, Ramakanth
+AU  - Raileanu, Roberta
+AU  - Rozière, Baptiste
+AU  - Schick, Timo
+AU  - Dwivedi-Yu, Jane
+AU  - Celikyilmaz, Asli
+PY  - 2023
+TI  - Augmented language models: A survey
+T2  - Transactions on Machine Learning Research
+UR  - https://openreview.net/forum?id=jh7wH2AzKK
+KW  - survey
+KW  - augmented LM
+KW  - tools
+N1  - Collection: 01 Foundations and surveys
+ER  - 
+
+TY  - JOUR
+AU  - Wang, Lei
+AU  - Ma, Chen
+AU  - Feng, Xueyang
+AU  - Zhang, Zeyu
+AU  - Yang, Hao
+AU  - Zhang, Jingsen
+AU  - Chen, Zhiyuan
+AU  - Tang, Jiakai
+AU  - Chen, Xu
+AU  - Lin, Yankai
+PY  - 2024
+TI  - A survey on large language model based autonomous agents
+T2  - Frontiers of Computer Science
+VL  - 18
+IS  - 6
+DO  - 10.1007/s11704-024-40231-1
+KW  - survey
+KW  - agents
+N1  - Collection: 01 Foundations and surveys
+ER  - 
+
+TY  - JOUR
+AU  - Xi, Zhiheng
+AU  - Chen, Wenxiang
+AU  - Guo, Xin
+AU  - He, Wei
+AU  - Ding, Yiwen
+AU  - Hong, Boyang
+AU  - Zhang, Ming
+AU  - Wang, Junzhe
+AU  - Jin, Senjie
+AU  - Zhou, Enyu
+PY  - 2025
+TI  - The rise and potential of large language model based agents: A survey
+T2  - Science China Information Sciences
+VL  - 68
+DO  - 10.1007/s11432-024-4222-0
+KW  - survey
+KW  - agents
+N1  - Collection: 01 Foundations and surveys
+ER  - 
+
+TY  - CONF
+AU  - Lewis, Patrick
+AU  - Perez, Ethan
+AU  - Piktus, Aleksandra
+AU  - Petroni, Fabio
+AU  - Karpukhin, Vladimir
+AU  - Goyal, Naman
+AU  - Küttler, Heinrich
+AU  - Lewis, Mike
+AU  - Yih, Wen-tau
+AU  - Rocktäschel, Tim
+AU  - Riedel, Sebastian
+AU  - Kiela, Douwe
+PY  - 2020
+TI  - Retrieval-augmented generation for knowledge-intensive NLP tasks
+T2  - Advances in Neural Information Processing Systems 33 (NeurIPS 2020)
+UR  - https://proceedings.neurips.cc/paper/2020/hash/6b493230205f780e1bc26945df7481e5-Abstract.html
+PB  - Curran Associates
+SP  - 9459
+EP  - 9474
+KW  - RAG
+KW  - dense retrieval
+N1  - Collection: 02 Retrieval-augmented generation
+ER  - 
+
+TY  - CONF
+AU  - Karpukhin, Vladimir
+AU  - Oguz, Barlas
+AU  - Min, Sewon
+AU  - Lewis, Patrick
+AU  - Wu, Ledell
+AU  - Edunov, Sergey
+AU  - Chen, Danqi
+AU  - Yih, Wen-tau
+PY  - 2020
+TI  - Dense passage retrieval for open-domain question answering
+T2  - Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)
+DO  - 10.18653/v1/2020.emnlp-main.550
+PB  - Association for Computational Linguistics
+SP  - 6769
+EP  - 6781
+KW  - dense retrieval
+KW  - open-domain QA
+N1  - Collection: 02 Retrieval-augmented generation
+ER  - 
+
+TY  - CONF
+AU  - Asai, Akari
+AU  - Wu, Zeqiu
+AU  - Wang, Yizhong
+AU  - Sil, Avirup
+AU  - Hajishirzi, Hannaneh
+PY  - 2024
+TI  - Self-RAG: Learning to retrieve, generate, and critique through self-reflection
+T2  - The Twelfth International Conference on Learning Representations (ICLR 2024)
+UR  - https://arxiv.org/abs/2310.11511
+KW  - RAG
+KW  - self-reflection
+KW  - adaptive retrieval
+N1  - Collection: 02 Retrieval-augmented generation
+ER  - 
+
+TY  - CONF
+AU  - Fan, Wenqi
+AU  - Ding, Yujuan
+AU  - Ning, Liangbo
+AU  - Wang, Shijie
+AU  - Li, Hengyun
+AU  - Yin, Dawei
+AU  - Chua, Tat-Seng
+AU  - Li, Qing
+PY  - 2024
+TI  - A survey on RAG meeting LLMs: Towards retrieval-augmented large language models
+T2  - Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD '24)
+DO  - 10.1145/3637528.3671470
+PB  - ACM
+CY  - New York, NY
+SP  - 6491
+EP  - 6501
+KW  - survey
+KW  - RAG
+N1  - Collection: 02 Retrieval-augmented generation
+ER  - 
+
+TY  - JOUR
+AU  - Liu, Nelson F.
+AU  - Lin, Kevin
+AU  - Hewitt, John
+AU  - Paranjape, Ashwin
+AU  - Bevilacqua, Michele
+AU  - Petroni, Fabio
+AU  - Liang, Percy
+PY  - 2024
+TI  - Lost in the middle: How language models use long contexts
+T2  - Transactions of the Association for Computational Linguistics
+VL  - 12
+DO  - 10.1162/tacl_a_00638
+SP  - 157
+EP  - 173
+KW  - long context
+KW  - RAG
+N1  - Collection: 02 Retrieval-augmented generation
+ER  - 
+
+TY  - CONF
+AU  - Yao, Shunyu
+AU  - Zhao, Jeffrey
+AU  - Yu, Dian
+AU  - Du, Nan
+AU  - Shafran, Izhak
+AU  - Narasimhan, Karthik
+AU  - Cao, Yuan
+PY  - 2023
+TI  - ReAct: Synergizing reasoning and acting in language models
+T2  - The Eleventh International Conference on Learning Representations (ICLR 2023)
+UR  - https://openreview.net/forum?id=WE_vluYUL-X
+KW  - agent loop
+KW  - reasoning
+KW  - tools
+N1  - Collection: 03 Tool use and the agent loop
+ER  - 
+
+TY  - CONF
+AU  - Schick, Timo
+AU  - Dwivedi-Yu, Jane
+AU  - Dessì, Roberto
+AU  - Raileanu, Roberta
+AU  - Lomeli, Maria
+AU  - Hambro, Eric
+AU  - Zettlemoyer, Luke
+AU  - Cancedda, Nicola
+AU  - Scialom, Thomas
+PY  - 2023
+TI  - Toolformer: Language models can teach themselves to use tools
+T2  - Advances in Neural Information Processing Systems 36 (NeurIPS 2023)
+UR  - https://proceedings.neurips.cc/paper_files/paper/2023/hash/d842425e4bf79ba039352da0f658a906-Abstract-Conference.html
+PB  - Curran Associates
+KW  - tool use
+KW  - self-supervised
+N1  - Collection: 03 Tool use and the agent loop
+ER  - 
+
+TY  - CONF
+AU  - Qin, Yujia
+AU  - Liang, Shihao
+AU  - Ye, Yining
+AU  - Zhu, Kunlun
+AU  - Yan, Lan
+AU  - Lu, Yaxi
+AU  - Lin, Yankai
+AU  - Cong, Xin
+AU  - Tang, Xiangru
+AU  - Qian, Bill
+PY  - 2024
+TI  - ToolLLM: Facilitating large language models to master 16000+ real-world APIs
+T2  - The Twelfth International Conference on Learning Representations (ICLR 2024)
+UR  - https://arxiv.org/abs/2307.16789
+KW  - tool use
+KW  - APIs
+KW  - benchmark
+N1  - Collection: 03 Tool use and the agent loop
+ER  - 
+
+TY  - CONF
+AU  - Patil, Shishir G.
+AU  - Zhang, Tianjun
+AU  - Wang, Xin
+AU  - Gonzalez, Joseph E.
+PY  - 2024
+TI  - Gorilla: Large language model connected with massive APIs
+T2  - Advances in Neural Information Processing Systems 37 (NeurIPS 2024)
+DO  - 10.52202/079017-4020
+PB  - Curran Associates
+SP  - 126544
+EP  - 126565
+KW  - tool use
+KW  - APIs
+KW  - retrieval
+N1  - Collection: 03 Tool use and the agent loop
+ER  - 
+
+TY  - CONF
+AU  - Shinn, Noah
+AU  - Cassano, Federico
+AU  - Gopinath, Ashwin
+AU  - Narasimhan, Karthik
+AU  - Yao, Shunyu
+PY  - 2023
+TI  - Reflexion: Language agents with verbal reinforcement learning
+T2  - Advances in Neural Information Processing Systems 36 (NeurIPS 2023)
+DO  - 10.52202/075280-0377
+PB  - Curran Associates
+SP  - 8634
+EP  - 8652
+KW  - agent loop
+KW  - self-reflection
+N1  - Collection: 03 Tool use and the agent loop
+ER  - 
+
+TY  - CONF
+AU  - Es, Shahul
+AU  - James, Jithin
+AU  - Espinosa Anke, Luis
+AU  - Schockaert, Steven
+PY  - 2024
+TI  - RAGAs: Automated evaluation of retrieval augmented generation
+T2  - Proceedings of the 18th Conference of the European Chapter of the Association for Computational Linguistics: System Demonstrations
+DO  - 10.18653/v1/2024.eacl-demo.16
+PB  - Association for Computational Linguistics
+SP  - 150
+EP  - 158
+KW  - evaluation
+KW  - RAG
+KW  - metrics
+N1  - Collection: 04 Evaluation and benchmarks
+ER  - 
+
+TY  - CONF
+AU  - Liu, Xiao
+AU  - Yu, Hao
+AU  - Zhang, Hanchen
+AU  - Xu, Yifan
+AU  - Lei, Xuanyu
+AU  - Lai, Hanyu
+AU  - Gu, Yu
+AU  - Ding, Hangliang
+AU  - Men, Kaiwen
+AU  - Yang, Kejuan
+PY  - 2024
+TI  - AgentBench: Evaluating LLMs as agents
+T2  - The Twelfth International Conference on Learning Representations (ICLR 2024)
+UR  - https://arxiv.org/abs/2308.03688
+KW  - evaluation
+KW  - agents
+KW  - benchmark
+N1  - Collection: 04 Evaluation and benchmarks
+ER  - 
+
+TY  - CONF
+AU  - Yao, Shunyu
+AU  - Shinn, Noah
+AU  - Razavi, Pedram
+AU  - Narasimhan, Karthik R.
+PY  - 2025
+TI  - τ-bench: A benchmark for tool-agent-user interaction in real-world domains
+T2  - The Thirteenth International Conference on Learning Representations (ICLR 2025)
+UR  - https://openreview.net/forum?id=roNSXZpUDN
+KW  - evaluation
+KW  - tool use
+KW  - benchmark
+N1  - Collection: 04 Evaluation and benchmarks
+ER  - 
+
+TY  - CONF
+AU  - Greshake, Kai
+AU  - Abdelnabi, Sahar
+AU  - Mishra, Shailesh
+AU  - Endres, Christoph
+AU  - Holz, Thorsten
+AU  - Fritz, Mario
+PY  - 2023
+TI  - Not what you've signed up for: Compromising real-world LLM-integrated applications with indirect prompt injection
+T2  - Proceedings of the 16th ACM Workshop on Artificial Intelligence and Security (AISec '23)
+DO  - 10.1145/3605764.3623985
+PB  - ACM
+CY  - New York, NY
+SP  - 79
+EP  - 90
+KW  - security
+KW  - prompt injection
+N1  - Collection: 05 Security and MCP
+ER  - 
+
+TY  - JOUR
+AU  - Hou, Xinyi
+AU  - Zhao, Yanjie
+AU  - Wang, Shenao
+AU  - Wang, Haoyu
+PY  - 2026
+TI  - Model Context Protocol (MCP): Landscape, security threats, and future research directions
+T2  - ACM Transactions on Software Engineering and Methodology
+VL  - 35
+IS  - 10
+DO  - 10.1145/3796519
+KW  - MCP
+KW  - security
+KW  - survey
+N1  - Collection: 05 Security and MCP
+ER  - 
