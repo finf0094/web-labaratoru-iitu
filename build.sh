@@ -33,13 +33,30 @@ for dir in lab-* pw-*; do
   fi
 
   out="$dir/$(basename "$dir").docx"
+  extra=()
+  ref="$REF_DOC"
+  # A work with student.json (PW6) is personalised: name/group in text and figures,
+  # its own formatting profile and the file name required by the assignment.
+  if [ -f "$dir/student.json" ]; then
+    name=$(python3 -c "import json,sys;print(json.load(open(sys.argv[1]))['name_surname'])" "$dir/student.json")
+    group=$(python3 -c "import json,sys;print(json.load(open(sys.argv[1]))['group'])" "$dir/student.json")
+    [ -f common/reference-pw6.docx ] || python3 common/make_reference_docx.py pw6
+    ref="common/reference-pw6.docx"
+    if python3 -c "import matplotlib" 2>/dev/null; then
+      python3 "$dir/experiment/make_figures.py" >/dev/null
+    fi
+    extra=(--lua-filter "$dir/name.lua" --metadata "student_name=$name" --metadata "student_group=$group")
+    out="$dir/${name//_/}_${group}_PW6.docx"
+    rm -f "$dir"/*_PW6.docx
+  fi
   pandoc "${inputs[@]}" \
     --from markdown \
     --citeproc --bibliography "$BIB" --csl common/csl/ieee.csl \
     --metadata link-citations=true \
-    --resource-path "$dir" \
-    --reference-doc "$REF_DOC" \
+    --resource-path "$dir:$dir/report" \
+    --reference-doc "$ref" \
     --toc --toc-depth 2 \
+    "${extra[@]}" \
     -o "$out"
   echo "built $out"
 done

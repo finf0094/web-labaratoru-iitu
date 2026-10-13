@@ -15,7 +15,12 @@ from docx.oxml.ns import qn
 from docx.shared import Cm, Pt, RGBColor
 
 FONT = "Times New Roman"
-OUT = Path(__file__).with_name("reference.docx")
+# Profiles: "default" for PW1–PW5; "pw6" follows the PW6 assignment (A4, 20 mm margins,
+# 12 pt text, 14 pt task headings, single spacing, justified text).
+PROFILES = {
+    "default": {"out": "reference.docx", "margins_cm": (2, 2, 3, 1.5), "line": 1.5, "h1": 14, "h2": 13},
+    "pw6": {"out": "reference-pw6.docx", "margins_cm": (2, 2, 2, 2), "line": 1.0, "h1": 14, "h2": 12},
+}
 
 
 def set_font(style, size=None, bold=None, italic=None):
@@ -58,6 +63,8 @@ def table_borders(style):
 
 
 def main():
+    profile = PROFILES[sys.argv[1] if len(sys.argv) > 1 else "default"]
+    OUT = Path(__file__).with_name(profile["out"])
     subprocess.run(
         ["pandoc", "-o", str(OUT), "--print-default-data-file", "reference.docx"],
         check=True,
@@ -66,8 +73,9 @@ def main():
 
     for section in doc.sections:
         section.page_height, section.page_width = Cm(29.7), Cm(21.0)
-        section.top_margin = section.bottom_margin = Cm(2)
-        section.left_margin, section.right_margin = Cm(3), Cm(1.5)
+        top, bottom, left, right = profile["margins_cm"]
+        section.top_margin, section.bottom_margin = Cm(top), Cm(bottom)
+        section.left_margin, section.right_margin = Cm(left), Cm(right)
 
     styles = {s.name: s for s in doc.styles}
     for name in ("Normal", "Body Text", "First Paragraph", "Compact"):
@@ -75,7 +83,7 @@ def main():
             st = styles[name]
             set_font(st, 12)
             pf = st.paragraph_format
-            pf.line_spacing = 1.5 if name != "Compact" else 1.15
+            pf.line_spacing = profile["line"] if name != "Compact" else min(profile["line"], 1.15)
             pf.space_before, pf.space_after = Pt(0), Pt(6 if name != "Compact" else 0)
             if name in ("Body Text", "First Paragraph"):
                 pf.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
@@ -84,7 +92,7 @@ def main():
                 pf.alignment = WD_ALIGN_PARAGRAPH.LEFT
                 pf.first_line_indent = Cm(0)
 
-    sizes = {"Title": 16, "Subtitle": 14, "Heading 1": 14, "Heading 2": 13,
+    sizes = {"Title": 16, "Subtitle": 14, "Heading 1": profile["h1"], "Heading 2": profile["h2"],
              "Heading 3": 12, "Heading 4": 12}
     for name, size in sizes.items():
         st = styles[name]

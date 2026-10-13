@@ -381,6 +381,49 @@
   "publisher": "Curran Associates"
  },
  {
+  "id": "can2008",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Can",
+    "given": "Fazli"
+   },
+   {
+    "family": "Kocberber",
+    "given": "Seyit"
+   },
+   {
+    "family": "Balcik",
+    "given": "Erman"
+   },
+   {
+    "family": "Kaynak",
+    "given": "Cihan"
+   },
+   {
+    "family": "Ocalan",
+    "given": "H. Cagdas"
+   },
+   {
+    "family": "Vursavas",
+    "given": "Onur M."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2008
+    ]
+   ]
+  },
+  "title": "Information retrieval on Turkish texts",
+  "container-title": "Journal of the American Society for Information Science and Technology",
+  "volume": "59",
+  "issue": "3",
+  "page": "407-421",
+  "DOI": "10.1002/asi.20750"
+ },
+ {
   "id": "chen2018phd",
   "type": "thesis",
   "author": [
@@ -422,6 +465,37 @@
   "edition": "3",
   "publisher": "John Wiley & Sons",
   "publisher-place": "New York"
+ },
+ {
+  "id": "cormack2009",
+  "type": "paper-conference",
+  "author": [
+   {
+    "family": "Cormack",
+    "given": "Gordon V."
+   },
+   {
+    "family": "Clarke",
+    "given": "Charles L. A."
+   },
+   {
+    "family": "Büttcher",
+    "given": "Stefan"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2009
+    ]
+   ]
+  },
+  "title": "Reciprocal rank fusion outperforms Condorcet and individual rank learning methods",
+  "container-title": "Proceedings of the 32nd International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR '09)",
+  "page": "758-759",
+  "DOI": "10.1145/1571941.1572114",
+  "publisher": "ACM",
+  "publisher-place": "New York, NY"
  },
  {
   "id": "creswell2018",
@@ -496,6 +570,45 @@
   "issue": "3",
   "page": "319-340",
   "DOI": "10.2307/249008"
+ },
+ {
+  "id": "deerwester1990",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Deerwester",
+    "given": "Scott"
+   },
+   {
+    "family": "Dumais",
+    "given": "Susan T."
+   },
+   {
+    "family": "Furnas",
+    "given": "George W."
+   },
+   {
+    "family": "Landauer",
+    "given": "Thomas K."
+   },
+   {
+    "family": "Harshman",
+    "given": "Richard"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     1990
+    ]
+   ]
+  },
+  "title": "Indexing by latent semantic analysis",
+  "container-title": "Journal of the American Society for Information Science",
+  "volume": "41",
+  "issue": "6",
+  "page": "391-407",
+  "DOI": "10.1002/(SICI)1097-4571(199009)41:6<391::AID-ASI1>3.0.CO;2-9"
  },
  {
   "id": "dify2025mcp",
@@ -1404,6 +1517,27 @@
   "publisher": "Association for Computational Linguistics"
  },
  {
+  "id": "kazqad_github",
+  "type": "webpage",
+  "author": [
+   {
+    "literal": "ISSAI"
+   }
+  ],
+  "title": "KazQAD: Kazakh open-domain question answering dataset (version 1.0)",
+  "container-title": "GitHub",
+  "URL": "https://github.com/IS2AI/KazQAD",
+  "accessed": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     13
+    ]
+   ]
+  }
+ },
+ {
   "id": "kz2013pdlaw",
   "type": "legislation",
   "title": "Law of the Republic of Kazakhstan No. 94-V \"On Personal Data and Their Protection\"",
@@ -1964,6 +2098,27 @@
   "publisher": "Institute for Human-Centered AI, Stanford University",
   "publisher-place": "Stanford, CA",
   "URL": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
+ },
+ {
+  "id": "mcp_python_sdk",
+  "type": "webpage",
+  "author": [
+   {
+    "literal": "Model Context Protocol"
+   }
+  ],
+  "title": "MCP Python SDK (package mcp, version 2.2.0)",
+  "container-title": "Python Package Index",
+  "URL": "https://pypi.org/project/mcp/",
+  "accessed": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     13
+    ]
+   ]
+  }
  },
  {
   "id": "mcp_spec",
@@ -2559,6 +2714,67 @@
   "page": "126544-126565",
   "DOI": "10.52202/079017-4020",
   "publisher": "Curran Associates"
+ },
+ {
+  "id": "pedregosa2011",
+  "type": "article-journal",
+  "author": [
+   {
+    "family": "Pedregosa",
+    "given": "Fabian"
+   },
+   {
+    "family": "Varoquaux",
+    "given": "Gaël"
+   },
+   {
+    "family": "Gramfort",
+    "given": "Alexandre"
+   },
+   {
+    "family": "Michel",
+    "given": "Vincent"
+   },
+   {
+    "family": "Thirion",
+    "given": "Bertrand"
+   },
+   {
+    "family": "Grisel",
+    "given": "Olivier"
+   },
+   {
+    "family": "Blondel",
+    "given": "Mathieu"
+   },
+   {
+    "family": "Prettenhofer",
+    "given": "Peter"
+   },
+   {
+    "family": "Weiss",
+    "given": "Ron"
+   },
+   {
+    "family": "Dubourg",
+    "given": "Vincent"
+   },
+   {
+    "literal": "others"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2011
+    ]
+   ]
+  },
+  "title": "Scikit-learn: Machine learning in Python",
+  "container-title": "Journal of Machine Learning Research",
+  "volume": "12",
+  "page": "2825-2830",
+  "URL": "https://jmlr.org/papers/v12/pedregosa11a.html"
  },
  {
   "id": "peffers2007",

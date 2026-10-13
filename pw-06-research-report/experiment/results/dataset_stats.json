@@ -1,0 +1,21 @@
+{
+ "full_corpus_passages": 825309,
+ "subcorpus_passages": 100000,
+ "judged_passages_in_subcorpus": 2660,
+ "judged_passages_missing": 0,
+ "distractor_passages": 97340,
+ "test_topics": 1929,
+ "relevant_judgements": 2718,
+ "nonrelevant_judgements": 653,
+ "mean_relevant_per_topic": 1.409,
+ "topics_by_subject": {
+  "bio": 379,
+  "geo": 346,
+  "kzh": 659,
+  "lit": 368,
+  "woh": 177
+ },
+ "mean_question_length_words": 6.87,
+ "mean_passage_length_words": 39.35,
+ "seed": 42
+}
