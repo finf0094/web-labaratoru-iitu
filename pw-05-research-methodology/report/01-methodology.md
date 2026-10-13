@@ -1,7 +1,7 @@
 ---
 title: "Practical Work 5. Research Plan and Methodology"
 subtitle: "Topic: Tools for LLM Agents — Connecting Tools to an AI Platform through the Model Context Protocol (MCP) and LangChain"
-author: "Student: ____________________  ·  Group: ________  ·  Instructor: ____________________"
+author: "Student: Kulush Askhat  ·  Group: IT1CCO-2402IS  ·  Instructor: ____________________"
 date: "International Information Technology University (IITU), Almaty, 2026"
 lang: en-US
 abstract: |

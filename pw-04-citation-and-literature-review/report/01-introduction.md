@@ -1,7 +1,7 @@
 ---
 title: "Practical Work 4. Conducting and Designing a Literature Review on the Topic of Research (Development)"
 subtitle: "Topic: Design and Evaluation of an Agentic AI Platform Integrating the Agent Loop, Model Context Protocol (MCP) Tools and Retrieval-Augmented Generation (RAG)"
-author: "Student: ____________________  ·  Group: ________  ·  Instructor: ____________________"
+author: "Student: Kulush Askhat  ·  Group: IT1CCO-2402IS  ·  Instructor: ____________________"
 date: "International Information Technology University (IITU), Almaty, 2026"
 lang: en-US
 abstract: |
