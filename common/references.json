@@ -1538,6 +1538,60 @@
   }
  },
  {
+  "id": "kwon2023",
+  "type": "paper-conference",
+  "author": [
+   {
+    "family": "Kwon",
+    "given": "Woosuk"
+   },
+   {
+    "family": "Li",
+    "given": "Zhuohan"
+   },
+   {
+    "family": "Zhuang",
+    "given": "Siyuan"
+   },
+   {
+    "family": "Sheng",
+    "given": "Ying"
+   },
+   {
+    "family": "Zheng",
+    "given": "Lianmin"
+   },
+   {
+    "family": "Yu",
+    "given": "Cody Hao"
+   },
+   {
+    "family": "Gonzalez",
+    "given": "Joseph E."
+   },
+   {
+    "family": "Zhang",
+    "given": "Hao"
+   },
+   {
+    "family": "Stoica",
+    "given": "Ion"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2023
+    ]
+   ]
+  },
+  "title": "Efficient memory management for large language model serving with PagedAttention",
+  "container-title": "Proceedings of the 29th Symposium on Operating Systems Principles (SOSP '23)",
+  "DOI": "10.1145/3600006.3613165",
+  "publisher": "ACM",
+  "publisher-place": "New York, NY"
+ },
+ {
   "id": "kz2013pdlaw",
   "type": "legislation",
   "title": "Law of the Republic of Kazakhstan No. 94-V \"On Personal Data and Their Protection\"",
@@ -1638,6 +1692,27 @@
      2026,
      10,
      12
+    ]
+   ]
+  }
+ },
+ {
+  "id": "langchain_docs",
+  "type": "webpage",
+  "author": [
+   {
+    "literal": "LangChain"
+   }
+  ],
+  "title": "LangChain and LangGraph documentation",
+  "container-title": "Docs by LangChain",
+  "URL": "https://docs.langchain.com/",
+  "accessed": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     13
     ]
    ]
   }
@@ -2499,6 +2574,27 @@
   "URL": "https://www.oecd.org/en/publications/improving-framework-conditions-for-the-digital-transformation-of-businesses-in-kazakhstan_368d4d01-en/full-report.html"
  },
  {
+  "id": "ollama_openai",
+  "type": "webpage",
+  "author": [
+   {
+    "literal": "Ollama"
+   }
+  ],
+  "title": "OpenAI compatibility",
+  "container-title": "Ollama documentation",
+  "URL": "https://docs.ollama.com/api/openai-compatibility",
+  "accessed": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     13
+    ]
+   ]
+  }
+ },
+ {
   "id": "omirgazy2025",
   "type": "article-newspaper",
   "author": [
@@ -2894,6 +2990,32 @@
   "number": "arXiv:2504.03767",
   "publisher": "arXiv",
   "URL": "https://arxiv.org/abs/2504.03767"
+ },
+ {
+  "id": "reimers2019",
+  "type": "paper-conference",
+  "author": [
+   {
+    "family": "Reimers",
+    "given": "Nils"
+   },
+   {
+    "family": "Gurevych",
+    "given": "Iryna"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2019
+    ]
+   ]
+  },
+  "title": "Sentence-BERT: Sentence embeddings using Siamese BERT-networks",
+  "container-title": "Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)",
+  "page": "3982-3992",
+  "DOI": "10.18653/v1/D19-1410",
+  "publisher": "Association for Computational Linguistics"
  },
  {
   "id": "robertson2009",
@@ -3332,6 +3454,27 @@
   "DOI": "10.2307/30036540"
  },
  {
+  "id": "vllm_docs",
+  "type": "webpage",
+  "author": [
+   {
+    "literal": "vLLM Project"
+   }
+  ],
+  "title": "vLLM documentation: OpenAI-compatible server",
+  "container-title": "docs.vllm.ai",
+  "URL": "https://docs.vllm.ai/en/latest/serving/openai_compatible_server.html",
+  "accessed": {
+   "date-parts": [
+    [
+     2026,
+     10,
+     13
+    ]
+   ]
+  }
+ },
+ {
   "id": "wang2024survey",
   "type": "article-journal",
   "author": [
@@ -3572,6 +3715,67 @@
   "title": "OpenAI adopts rival Anthropic's standard for connecting AI models to data",
   "container-title": "TechCrunch",
   "URL": "https://techcrunch.com/2025/03/26/openai-adopts-rival-anthropics-standard-for-connecting-ai-models-to-data/"
+ },
+ {
+  "id": "wolf2020",
+  "type": "paper-conference",
+  "author": [
+   {
+    "family": "Wolf",
+    "given": "Thomas"
+   },
+   {
+    "family": "Debut",
+    "given": "Lysandre"
+   },
+   {
+    "family": "Sanh",
+    "given": "Victor"
+   },
+   {
+    "family": "Chaumond",
+    "given": "Julien"
+   },
+   {
+    "family": "Delangue",
+    "given": "Clement"
+   },
+   {
+    "family": "Moi",
+    "given": "Anthony"
+   },
+   {
+    "family": "Cistac",
+    "given": "Pierric"
+   },
+   {
+    "family": "Rault",
+    "given": "Tim"
+   },
+   {
+    "family": "Louf",
+    "given": "Rémi"
+   },
+   {
+    "family": "Funtowicz",
+    "given": "Morgan"
+   },
+   {
+    "literal": "others"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2020
+    ]
+   ]
+  },
+  "title": "Transformers: State-of-the-art natural language processing",
+  "container-title": "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing: System Demonstrations",
+  "page": "38-45",
+  "DOI": "10.18653/v1/2020.emnlp-demos.6",
+  "publisher": "Association for Computational Linguistics"
  },
  {
   "id": "wooldridge2009",
@@ -3849,6 +4053,43 @@
   "page": "9645-9656",
   "publisher": "ELRA and ICCL",
   "URL": "https://aclanthology.org/2024.lrec-main.843/"
+ },
+ {
+  "id": "yu2022orca",
+  "type": "paper-conference",
+  "author": [
+   {
+    "family": "Yu",
+    "given": "Gyeong-In"
+   },
+   {
+    "family": "Jeong",
+    "given": "Joo Seong"
+   },
+   {
+    "family": "Kim",
+    "given": "Geon-Woo"
+   },
+   {
+    "family": "Kim",
+    "given": "Soojeong"
+   },
+   {
+    "family": "Chun",
+    "given": "Byung-Gon"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2022
+    ]
+   ]
+  },
+  "title": "Orca: A distributed serving system for transformer-based generative models",
+  "container-title": "16th USENIX Symposium on Operating Systems Design and Implementation (OSDI 22)",
+  "page": "521-538",
+  "publisher": "USENIX Association"
  },
  {
   "id": "zheng2023",
