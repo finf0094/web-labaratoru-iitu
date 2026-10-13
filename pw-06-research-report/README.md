@@ -1,6 +1,6 @@
 # Practical Work 6 — Writing a Research Report (small-scale project)
 
-**Тема отчёта:** *Retrieval Quality, Poisoning Exposure and MCP Integration Overhead for a Kazakh-Language Agentic AI Platform: A Small-Scale Experimental Study* — малый реальный эксперимент в рамках общей темы (агентная AI-платформа с agent loop, MCP и RAG).
+**Тема отчёта:** *Retrieval for Retrieval-Augmented Generation (RAG) in Kazakh: A Small-Scale Comparison of Simple Search Methods on KazQAD* — малый реальный эксперимент про RAG (поиск по документам для AI-платформы). Тема ПР5 — MCP и LangChain, они не пересекаются.
 
 | Путь | Содержание |
 |---|---|
@@ -15,11 +15,11 @@
 | Требование | Как выполнено |
 |---|---|
 | 5 задач, каждая ≥ 1 страницы | Разделы 1–5 (Introduction, Methodology, Results, Discussion, Conclusion) |
-| ≥ 2 визуальных элемента на задачу, Name_Surname в каждом | Введение: табл. 1, рис. 1–2; Методология: табл. 2, рис. 3; Результаты: табл. 3–8, рис. 4–7; Обсуждение: табл. 9, рис. 8; Заключение: табл. 10, панель executive summary + текстовое поле с именем |
+| ≥ 2 визуальных элемента на задачу, Name_Surname в каждом | Введение: табл. 1, рис. 1 (концепт-карта), рис. 2 (схема RAG); Методология: табл. 2, рис. 3 (блок-схема); Результаты: табл. 3–6, рис. 4–7; Обсуждение: табл. 7, рис. 8 (логическая модель); Заключение: табл. 8, панель executive summary + текстовое поле с именем |
 | ≥ 10 источников во введении, IEEE | 20+ источников во введении; список литературы в IEEE |
 | Summary 5–7 предложений в конце каждой задачи | Есть в каждом разделе |
 | A4, поля 20 мм, Times New Roman 12 / заголовки 14, одинарный интервал, по ширине | Шаблон `common/reference-pw6.docx` |
-| Appendices | A — воспроизведение, B — шаблоны guardrail, C — атаки, D — схема MCP-инструмента, E — таблица по предметам, F — этика |
+| Appendices | A — как воспроизвести, B — результаты по предметам, C — пример prefix-5, D — этика |
 
 ## Как подставить своё имя и пересобрать
 
@@ -30,9 +30,9 @@
 ## Как повторить эксперимент
 
 ```bash
-pip install scipy scikit-learn matplotlib mcp
+pip install scipy scikit-learn matplotlib
 cd pw-06-research-report/experiment
-bash run_all.sh        # скачает KazQAD (git clone, ~400 МБ), ~6 минут на 4 ядрах
+bash run_all.sh        # скачает KazQAD (git clone, ~400 МБ), ~3 минуты на 4 ядрах
 ```
 
 Все числа в отчёте берутся из `experiment/results/*.json`; данные — открытый датасет KazQAD (ISSAI, CC BY-SA 4.0), без участников и персональных данных.

@@ -17,7 +17,7 @@
 | [`pw-03-literature-review-techniques/`](pw-03-literature-review-techniques/) | **Practical Work 3.** Literature review techniques | Базы данных и поисковые запросы (Boolean), фильтрация, матрица 12 статей, пробелы (gaps) по категориям, обзор, заключение |
 | [`pw-04-citation-and-literature-review/`](pw-04-citation-and-literature-review/) | **Practical Work 4.** Citation styles, Zotero, literature review | Задание 1 — источники 10 типов в APA, Chicago, IEEE, MLA; задание 2 — библиотека для Zotero (RIS/BibTeX) и документы с цитатами в 4 стилях; задание 3 — обзор литературы |
 | [`pw-05-research-methodology/`](pw-05-research-methodology/) | **Practical Work 5.** Research plan and methodology | RQ/гипотезы, дизайн исследования, выборка (со скриптом расчёта), методы и инструменты сбора данных, процесс, анализ, summary; приложения: гайд интервью, анкета SUS/TAM, спецификация датасетов, форма согласия |
-| [`pw-06-research-report/`](pw-06-research-report/) | **Practical Work 6.** Writing a research report | Полный отчёт по малому реальному эксперименту на датасете KazQAD (поиск для RAG на казахском, prompt injection, накладные расходы MCP): Introduction, Methodology, Results, Discussion, Conclusion, References (IEEE), Appendices; код эксперимента и графики; имя студента подставляется из `student.json` |
+| [`pw-06-research-report/`](pw-06-research-report/) | **Practical Work 6.** Writing a research report | Полный отчёт по малому реальному эксперименту про **RAG**: 5 методов поиска для казахского языка на датасете KazQAD (1 929 вопросов ЕНТ); Introduction, Methodology, Results, Discussion, Conclusion, References (IEEE), Appendices; код и графики; имя студента подставляется из `student.json` |
 | [`common/`](common/) | Общие ресурсы | `references.json` — единая база проверенных источников (CSL-JSON); `csl/` — стили APA, Chicago, IEEE, MLA; `reference.docx` — шаблон оформления Word |
 | [`build.sh`](build.sh) | Сборка | Собирает все отчёты в DOCX |
 
@@ -62,7 +62,7 @@ cd web-labaratoru-iitu
 ### 3. ПР6: имя, группа и эксперимент
 
 * Впишите имя и группу в `pw-06-research-report/student.json` и выполните `./build.sh pw-06` — получится `ИмяФамилия_Группа_PW6.docx`, имя появится во всех подписях, графиках и водяном знаке (для перерисовки графиков нужен `pip install matplotlib`).
-* Повтор эксперимента: `pip install scipy scikit-learn matplotlib mcp`, затем `bash pw-06-research-report/experiment/run_all.sh` (~6 минут, скачивает KazQAD).
+* Повтор эксперимента: `pip install scipy scikit-learn matplotlib`, затем `bash pw-06-research-report/experiment/run_all.sh` (~3 минуты, скачивает KazQAD).
 
 ### 4. Дополнительно
 

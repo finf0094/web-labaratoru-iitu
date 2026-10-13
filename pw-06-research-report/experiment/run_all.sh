@@ -4,7 +4,5 @@ set -euo pipefail
 cd "$(dirname "$0")"
 python3 prepare_data.py
 python3 run_retrieval.py
-python3 run_injection.py
-python3 run_mcp_overhead.py
 python3 make_figures.py
 python3 test_metrics.py

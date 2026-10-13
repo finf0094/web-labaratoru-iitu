@@ -1,54 +1,46 @@
 # 4. Discussion
 
-## 4.1 Alignment with the hypotheses
+## 4.1 Hypotheses
 
-: Table 9. Hypotheses versus observed results – Name_Surname
+: Table 7. Hypotheses versus results – Name_Surname
 
 | Hypothesis | Expected | Observed | Verdict |
 |------------|------------------------|------------------------------|-----------|
-| H1a | Hybrid RRF has the highest nDCG@10 | Prefix-5 BM25 is highest (0.473); RRF is 0.014 lower (*r* = −0.12) but has the highest Recall@100 | Not supported |
-| H1b | Sub-word representations beat word-level BM25 | Prefix-5: +0.102 (supported); character n-grams: −0.044 (not supported) | Partly supported |
-| H2a | Lexical retrievers expose the agent in > 50 % of attacks | 96.5–100 % (full copy), 69–95 % (partial copy) | Supported |
-| H2b | Guardrail TPR ≥ 90 % with FPR < 1 % | 100 % explicit, 0 % paraphrased (60 % overall); FPR 0.354 % | Not supported overall |
-| H3 | MCP overhead < 10 ms per call | Median 3.0 ms, p95 5.0 ms | Supported |
+| H1a | Hybrid RRF is best (nDCG@10) | Prefix-5 BM25 is best (0.473); RRF 0.459 | Not supported |
+| H1b | Prefix-5 improves BM25 | +0.102 nDCG@10, large effect | Supported |
+| H2 | ≥ 70 % recall within top 20 | 71.2 % (prefix-5), 72.0 % (RRF) | Supported |
+| H3 | BM25 < 10 ms per question | 1.6–1.8 ms | Supported |
 
-## 4.2 Interpretation of the retrieval results (RQ1)
+## 4.2 What the results mean
 
-The clearest finding is that **simple morphology-aware truncation is the most effective option for Kazakh** in this setting. Truncating words to five characters maps inflected forms of the same stem — for example, case and possessive forms of a noun — onto one index term, so a question and a passage that use different suffixes still match. This mirrors the result for Turkish, another agglutinative Turkic language, where prefix truncation was as effective as elaborate stemmers [@can2008]. The 27 % relative improvement in nDCG@10 over word-level BM25 is large compared with typical differences between ranking functions, which suggests that vocabulary mismatch caused by inflection is the main obstacle for lexical retrieval in Kazakh.
+**Prefix-5 works because of Kazakh morphology.** Cutting every word to five letters turns many forms of one word — with case, plural and possessive suffixes — into the same index term, so the question and the passage match even when they use different endings. The improvement of about 27 % over word-level BM25 shows that word-form mismatch is the main problem of simple search in Kazakh. This agrees with the result for Turkish, where five-letter truncation was as good as complex stemmers [@can2008]. It is good news for practice: a one-line change in tokenisation gives a large gain without any language-specific tools.
 
-Character n-grams were expected to capture the same morphology more flexibly, but they performed worse than both BM25 variants at the top of the ranking while achieving high Recall@100 (0.825). A plausible explanation is that cosine TF-IDF over many overlapping n-grams lacks BM25's term-frequency saturation and length normalisation, so it finds the right *neighbourhood* of passages but orders them less precisely. This also explains the result for the hybrid run: reciprocal rank fusion works best when it combines runs of comparable quality that make different errors [@cormack2009]. Here the n-gram run was weaker at the top ranks, so fusion slightly diluted the precision of prefix-5 BM25 while still adding a few relevant passages deeper in the list — hence the highest Recall@100. For an agent that passes only five to ten passages to the model, prefix-5 BM25 is preferable; for a two-stage pipeline with a reranker, the hybrid list is a better candidate pool.
+**Why the hybrid did not win.** Reciprocal rank fusion helps most when the merged rankings are of similar quality and make different mistakes [@cormack2009]. Here the character n-gram ranking was clearly weaker at the top, so mixing it in slightly lowered precision; however, it added some relevant passages deeper in the list, which is why the hybrid had the highest Recall@100. For a simple RAG pipeline that passes the top results directly to the model, prefix-5 BM25 is better; for a pipeline with a second step that re-sorts candidates (a reranker), the hybrid list is a better starting pool [@gao2023].
 
-LSA performed very poorly. Unsupervised 256-dimensional vectors merge many topics into the same dimensions and cannot distinguish the precise facts asked in exam questions; the original LSA work targeted small collections and synonymy rather than factoid retrieval over 100 000 passages [@deerwester1990]. The result should not be generalised to modern neural dense retrievers, which are trained on question–passage pairs and can outperform BM25 [@karpukhin2020]; such models were outside the scope of this small-scale study.
+**Why LSA failed.** LSA compresses all passages into 256 numbers without any training on questions, so it cannot separate the precise facts asked in exam questions [@deerwester1990]. This result should not be applied to modern neural embedding models, which are trained on question–passage pairs and can beat BM25 [@karpukhin2020; @reimers2019]; such models were outside the scope of this small study.
 
-Compared with the literature, the absolute values are higher than KazQAD's published best baseline (nDCG@10 = 0.389) [@yeshpanov2024kazqad], but the comparison is not direct: the sub-corpus contains about eight times fewer passages, which makes the task easier. The *ranking* of methods, rather than the absolute level, is the transferable result.
+**How many passages to give the model.** Going from 5 to 20 passages raised recall from 53 % to 71 %, while going to 100 passages added only about 14 percentage points more and would make the prompt very long — and models use the middle of long prompts poorly [@liu2024lost]. A practical setting is therefore **10–20 passages**, or 50–100 candidates if a reranker selects the best ones.
 
-## 4.3 Interpretation of the security results (RQ2)
+**Speed is not a problem.** BM25 needs under 2 ms per question, which is negligible compared with the time an LLM needs to write an answer, so a simple retriever does not slow down the platform.
 
-The poisoning experiment shows that **a retriever that is good at finding relevant text is equally good at finding attacker text that imitates the question**. Lexical methods reward word overlap, and an attacker who copies the likely question into a page obtains near-perfect overlap; with full copying, the poisoned passage was ranked first in up to 99.5 % of attacks and also pushed relevant passages down (nDCG@10 of prefix-5 BM25 fell from 0.499 to 0.355 for the attacked questions). The apparent robustness of LSA is not a virtue: it rarely surfaced poisoned passages because it rarely surfaced any matching passage. These findings converge with Greshake et al. [@greshake2023]: retrieved content must be treated as untrusted input, because the retrieval step does not filter it.
+**Comparison with the literature.** The scores are higher than KazQAD's published baseline (nDCG@10 = 0.389) [@yeshpanov2024kazqad], but our sub-corpus is about eight times smaller, which makes search easier. Therefore the *ranking* of the methods, not the absolute numbers, is the main finding.
 
-The guardrail illustrates both the value and the limit of pattern filters. It caught every explicit "ignore previous instructions" style payload in English, Russian and Kazakh, which shows that multilingual patterns are feasible and cheap. However, it missed every paraphrased payload that expressed the same malicious intent without trigger words, which supports the OWASP guidance that prompt injection cannot be solved by input filtering alone [@owasp2025llm]. The false alarms were also instructive: almost all came from e-mail addresses in Wikipedia pages about French and Italian municipalities, which contain official contact details. A rule that is a strong signal in one context (an instruction to send data to an address) is a normal fact in another, so the guardrail's flags should inform the agent and its policies rather than silently delete content.
+## 4.3 Unexpected results
 
-## 4.4 Interpretation of the integration results (RQ3)
+Two results were unexpected: the hybrid did not beat its best component, and character n-grams were worse than plain words. Plausible explanations are methodological (fusion of unequal rankings; TF-IDF lacks BM25's handling of repeated words and passage length) and contextual (exam questions contain distinctive names and terms that favour stem matching). Because the sample is very large, even small differences become statistically significant, so the effect sizes matter more: the gap between prefix-5 BM25 and the hybrid is small in practice.
 
-Exposing retrieval through MCP added about 3 ms per call — the cost of serialising the request and the 10 KB response as JSON-RPC messages and passing them through a pipe. This is small compared with the time an LLM needs to generate a response, so in an agent loop the protocol is not a bottleneck. The one-off start-up cost (2.5 s) matters only for short-lived processes and can be avoided by keeping the server running. The finding supports the architectural choice made in the research plan: MCP can be the single integration layer for tools without a measurable penalty for users. The response size, rather than latency, is the more important cost, because every retrieved character becomes input tokens for the model; truncating passages and returning flags alongside them, as done here, keeps the payload controlled.
+## 4.4 Limitations
 
-## 4.5 Unexpected results
+* **Sub-corpus.** 100 000 instead of 825 309 passages makes the task easier and raises absolute scores.
+* **One dataset and domain.** School-exam questions over Wikipedia; university regulations or business documents, and Russian or mixed-language texts, may behave differently.
+* **No neural models.** Pretrained embedding models and rerankers were not tested.
+* **Retrieval only.** The quality of the final LLM answers was not measured.
+* **Fixed settings.** Parameters were not tuned; tuning might change the order of close methods.
 
-Three results contradicted expectations: the hybrid run did not outperform its best component; character n-grams were worse than word-level BM25; and LSA was almost unusable. Methodological explanations (fusion of unequal runs, missing saturation and length normalisation in TF-IDF, too few latent dimensions) and contextual explanations (short factoid questions with distinctive named entities, which favour exact stem matching) are plausible. Statistically, the very large sample makes even small differences significant — the hybrid-versus-prefix-5 difference is significant but its effect size is small (*r* = −0.12), so the two methods are practically close at the top of the ranking.
+## 4.5 Future work
 
-## 4.6 Limitations
-
-* **Internal validity.** Parameters were taken from the literature without tuning; tuned parameters might change the ranking of close methods (hybrid vs prefix-5).
-* **External validity.** One dataset and one domain (school-exam questions over Wikipedia); results may differ for university regulations or business documents, and for Russian or mixed-language corpora.
-* **Sample representativeness.** A 100 000-passage sub-corpus was used instead of 825 309 passages, which raises absolute scores; KazQAD judgements may also favour lexical methods if candidate passages were found with lexical search during annotation.
-* **Measurement.** RQ2 measured exposure, not attack success: whether an LLM would follow the injected instruction was not tested. Attack payloads and guardrail patterns were written by the same researcher, and paraphrased payloads were deliberately free of trigger words.
-* **Scope.** No pretrained neural embedding models and no LLM were used, so the study does not show how modern dense retrievers or the full agent loop would behave.
-* **Bias and power.** Power was very high for RQ1 (1 929 paired questions); RQ2 used 40 cases per payload variant, so detection rates per variant have wide confidence intervals; latency was measured on one machine with stdio transport, not over the network.
-
-## 4.7 Future work
-
-Next steps are: (1) add multilingual neural embedding models and a cross-encoder reranker on top of the hybrid candidate pool; (2) repeat the study on the full corpus and on Russian and English university documents; (3) place an LLM in the loop to measure attack *success*, and compare defences such as isolation of untrusted content, least-privilege tools and human approval of actions; (4) replace the pattern guardrail with a learned multilingual injection classifier and evaluate it on independently written attacks; (5) measure MCP overhead over the streamable HTTP transport in a networked deployment.
+Next steps are: add multilingual neural embeddings and a reranker on top of the hybrid candidate list; run the test on the full corpus and on Russian and English university documents; measure the quality of the final answers generated by an LLM with metrics such as faithfulness [@es2024]; and connect the best retriever to the AI platform as a search tool.
 
 ![Figure 8. Logic model of implications – Name_Surname](../experiment/figures/fig8_logic_model.png){width=95%}
 
-**Summary.** The results partly confirm and partly contradict the hypotheses. Morphology-aware prefix truncation is the strongest retriever for Kazakh questions, in line with evidence for Turkish, while fusion with a weaker character n-gram run and unsupervised LSA do not help at the top of the ranking. Lexical retrievers surface attacker passages that imitate the question almost always, so retrieval offers no protection and retrieved content must be treated as untrusted. Pattern-based guardrails catch explicit injections in three languages but not paraphrases, and their false alarms depend on context. MCP integration adds only a few milliseconds per call, supporting it as the platform's integration layer. The main constraints are the single dataset, the reduced corpus, the absence of neural retrievers and of an LLM in the loop, and the researcher-written attacks.
+**Summary.** Three of the four hypotheses were supported: prefix-5 truncation strongly improves BM25, the best methods find over 70 % of relevant passages within twenty results, and BM25 is very fast. The hybrid did not outperform prefix-5 BM25, because fusion with a weaker ranking lowered precision at the top, although it gave the best deep recall. The main explanation of the results is Kazakh morphology, in line with findings for Turkish. LSA should not be confused with modern neural embeddings, which remain to be tested. The main limitations are the reduced corpus, a single domain and the absence of neural models and answer-level evaluation.
