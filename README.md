@@ -6,6 +6,8 @@
 >
 > *Проектирование и оценка агентной AI-платформы с интеграцией агентного цикла (agent loop), инструментов через Model Context Protocol (MCP) и генерации с дополнением извлечённой информацией (RAG).*
 
+Midterm 1 (научная статья) — отдельная тема: как разбиение текста на фрагменты влияет на поиск в RAG (английский датасет SQuAD).
+
 Отчёты написаны на английском (как и задания). Они следуют структуре из лекционных материалов курса (*Writing a Research Report*, *How to Write an Effective Research Report*, *Research Methodology: An Introduction*): Title → Table of Contents → Abstract → основная часть → Conclusion → References → Appendices. Тип исследования классифицирован по Kothari, этапы соотнесены с research process.
 
 ## Структура репозитория
@@ -18,6 +20,7 @@
 | [`pw-04-citation-and-literature-review/`](pw-04-citation-and-literature-review/) | **Practical Work 4.** Citation styles, Zotero, literature review | Задание 1 — источники 10 типов в APA, Chicago, IEEE, MLA; задание 2 — библиотека для Zotero (RIS/BibTeX) и документы с цитатами в 4 стилях; задание 3 — обзор литературы |
 | [`pw-05-research-methodology/`](pw-05-research-methodology/) | **Practical Work 5.** Research plan and methodology | RQ/гипотезы, дизайн исследования, выборка (со скриптом расчёта), методы и инструменты сбора данных, процесс, анализ, summary; приложения: гайд интервью, анкета SUS/TAM, спецификация датасетов, форма согласия |
 | [`pw-06-research-report/`](pw-06-research-report/) | **Practical Work 6.** Writing a research report | Полный отчёт по малому реальному эксперименту про **RAG**: 5 методов поиска для казахского языка на датасете KazQAD (1 929 вопросов ЕНТ); Introduction, Methodology, Results, Discussion, Conclusion, References (IEEE), Appendices; код и графики; имя студента подставляется из `student.json` |
+| [`midterm-1-article/`](midterm-1-article/) | **Midterm 1.** Writing and designing a scientific article | Статья IMRAD (12 стр.) для журнала из списка ККСОН: как размер чанка и перекрытие влияют на поиск в RAG (эксперимент на SQuAD, 9 стратегий, 10 570 вопросов); аннотации на 3 языках, ГОСТ-литература; свои графики, UML (PlantUML), макет, скриншоты кода с исходниками; `explanation.md` и `speech.md` для защиты |
 | [`common/`](common/) | Общие ресурсы | `references.json` — единая база проверенных источников (CSL-JSON); `csl/` — стили APA, Chicago, IEEE, MLA; `reference.docx` — шаблон оформления Word |
 | [`build.sh`](build.sh) | Сборка | Собирает все отчёты в DOCX |
 

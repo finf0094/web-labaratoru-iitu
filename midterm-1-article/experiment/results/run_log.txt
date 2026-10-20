@@ -1,0 +1,17 @@
+490 articles, 10570 dev questions
+Fixed-50                 chunks=  49396 words=  49.8 split=0.023 hit@1=0.551 hit@5=0.735 hit@20=0.822 mrr=0.631 lat=2.05ms build=2.5s
+Fixed-50 +25% overlap    chunks=  64760 words=  49.9 split=0.000 hit@1=0.607 hit@5=0.803 hit@20=0.885 mrr=0.692 lat=2.61ms build=3.0s
+Fixed-100                chunks=  24816 words=  99.0 split=0.012 hit@1=0.623 hit@5=0.809 hit@20=0.888 mrr=0.704 lat=0.81ms build=2.5s
+Fixed-100 +25% overlap   chunks=  32846 words=  99.4 split=0.000 hit@1=0.667 hit@5=0.851 hit@20=0.924 mrr=0.747 lat=1.04ms build=3.1s
+Fixed-200                chunks=  12526 words= 196.2 split=0.006 hit@1=0.662 hit@5=0.849 hit@20=0.924 mrr=0.744 lat=0.38ms build=2.1s
+Fixed-200 +25% overlap   chunks=  16477 words= 197.7 split=0.000 hit@1=0.694 hit@5=0.873 hit@20=0.943 mrr=0.771 lat=0.52ms build=2.3s
+Fixed-400                chunks=   6383 words= 385.0 split=0.004 hit@1=0.681 hit@5=0.878 hit@20=0.946 mrr=0.766 lat=0.18ms build=2.2s
+Fixed-400 +25% overlap   chunks=   8269 words= 391.3 split=0.000 hit@1=0.697 hit@5=0.884 hit@20=0.952 mrr=0.778 lat=0.23ms build=2.3s
+Paragraph                chunks=  20963 words= 117.2 split=0.000 hit@1=0.707 hit@5=0.872 hit@20=0.936 mrr=0.779 lat=0.60ms build=1.8s
+{'a': 'Fixed-50', 'b': 'Fixed-50 +25% overlap', 'metric': 'hit@5', 'p': 5.2714892242220285e-76, 'only_b': 1122, 'only_a': 401, 'p_holm': 3.1628935345332174e-75}
+{'a': 'Fixed-100', 'b': 'Fixed-100 +25% overlap', 'metric': 'hit@5', 'p': 1.0838757412052409e-45, 'only_b': 696, 'only_a': 257, 'p_holm': 4.3355029648209635e-45}
+{'a': 'Fixed-200', 'b': 'Fixed-200 +25% overlap', 'metric': 'hit@5', 'p': 1.358706065764384e-21, 'only_b': 475, 'only_a': 222, 'p_holm': 4.076118197293152e-21}
+{'a': 'Fixed-400', 'b': 'Fixed-400 +25% overlap', 'metric': 'hit@5', 'p': 0.016275148572433704, 'only_b': 290, 'only_a': 234, 'p_holm': 0.016275148572433704}
+{'a': 'Paragraph', 'b': 'Fixed-100', 'metric': 'hit@5', 'p': 1.7232812479191193e-90, 'only_b': 207, 'only_a': 870, 'p_holm': 1.2062968735433835e-89}
+{'a': 'Paragraph', 'b': 'Fixed-200', 'metric': 'hit@5', 'p': 7.142252316541009e-17, 'only_b': 302, 'only_a': 546, 'p_holm': 1.4284504633082018e-16}
+{'a': 'Fixed-100', 'b': 'Fixed-200', 'metric': 'hit@5', 'p': 1.206930244555942e-47, 'only_b': 625, 'only_a': 206, 'p_holm': 6.03465122277971e-47}

@@ -60,3 +60,8 @@ for dir in lab-* pw-*; do
     -o "$out"
   echo "built $out"
 done
+
+# Midterm 1: the journal article has its own build (figures, diagrams, screenshots, GOST references).
+if [ -z "$FILTER" ] || [[ "midterm-1" == "$FILTER"* ]]; then
+  bash midterm-1-article/build_article.sh --docx-only
+fi

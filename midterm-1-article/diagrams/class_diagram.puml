@@ -1,0 +1,50 @@
+@startuml
+!include style.iuml
+title Class diagram of the experimental code
+hide empty members
+class Article <<dataclass>> {
+  +title: str
+  +text: str
+  +paragraph_spans: list[tuple]
+  +split: str
+}
+class Chunk <<dataclass>> {
+  +article: int
+  +start: int
+  +end: int
+  +text: str
+  +n_words: int
+}
+interface ChunkingStrategy {
+  +__call__(articles): list[Chunk]
+}
+class FixedChunker {
+  +size: int
+  +overlap: int
+  +step = size - overlap
+}
+class ParagraphChunker
+class BM25 {
+  +k1 = 0.9
+  +b = 0.4
+  -vec: CountVectorizer
+  -matrix: csr_matrix
+  +fit(texts): BM25
+  +search(queries, k): ndarray
+}
+class Evaluator <<run_experiment.py>> {
+  +DEPTH = 40
+  +BUDGETS = [100..1600]
+  +bootstrap(values): [lo, hi]
+  +mcnemar(a, b): (p, n01, n10)
+  +main()
+}
+ChunkingStrategy <|.. FixedChunker
+ChunkingStrategy <|.. ParagraphChunker
+Article "1" *-- "many" Chunk : split into >
+ChunkingStrategy ..> Article : reads
+ChunkingStrategy ..> Chunk : creates
+Evaluator --> ChunkingStrategy : uses 9 strategies
+Evaluator --> BM25 : indexes chunks
+Evaluator ..> Article : load_squad()
+@enduml

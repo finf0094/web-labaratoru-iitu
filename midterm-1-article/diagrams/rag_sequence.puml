@@ -1,0 +1,28 @@
+@startuml
+!include style.iuml
+title Question answering in a RAG assistant with a chunked index
+actor User
+participant "RAG service" as App
+participant "Chunker" as Ch
+participant "BM25 retriever" as R
+database "Chunk index" as Idx
+participant "LLM" as LLM
+== Offline indexing ==
+App -> Ch : documents, size, overlap
+Ch --> App : chunks
+App -> R : fit(chunks)
+R -> Idx : store BM25 weights
+== Online question ==
+User -> App : question
+App -> R : search(question, k)
+R -> Idx : score chunks
+Idx --> R : top-k chunk ids
+R --> App : k chunks (k x size words)
+note right of App
+  Context budget B words:
+  k = floor(B / chunk size)
+end note
+App -> LLM : prompt = instructions + k chunks + question
+LLM --> App : answer with citations
+App --> User : answer + source chunks
+@enduml

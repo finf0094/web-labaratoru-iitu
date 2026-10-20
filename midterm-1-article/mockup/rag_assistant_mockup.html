@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>RAG Assistant mockup</title>
+<style>
+  :root { --ink:#0b0b0b; --muted:#52514e; --line:#e4e3df; --blue:#2a78d6; --green:#1baf7a; --orange:#eb6834; --bg:#ffffff; --panel:#f7f7f5; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:"DejaVu Sans", Arial, sans-serif; color:var(--ink); background:var(--bg); width:1200px; }
+  header { display:flex; align-items:center; gap:12px; padding:14px 24px; border-bottom:1px solid var(--line); }
+  header .logo { width:28px; height:28px; border-radius:6px; background:var(--blue); }
+  header h1 { font-size:18px; margin:0; }
+  header .tag { margin-left:auto; font-size:12px; color:var(--muted); }
+  main { display:grid; grid-template-columns:330px 1fr; min-height:640px; }
+  aside { background:var(--panel); border-right:1px solid var(--line); padding:20px; }
+  aside h2 { font-size:14px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); margin:0 0 14px; }
+  .field { margin-bottom:18px; }
+  .field label { display:block; font-size:13px; font-weight:bold; margin-bottom:6px; }
+  select, .input { width:100%; padding:8px 10px; border:1px solid #cfcdc7; border-radius:6px; background:#fff; font-size:13px; }
+  .range { display:flex; align-items:center; gap:10px; }
+  .track { flex:1; height:6px; border-radius:3px; background:#dcdad4; position:relative; }
+  .track span { position:absolute; left:0; top:0; bottom:0; border-radius:3px; background:var(--blue); }
+  .track i { position:absolute; top:-5px; width:16px; height:16px; border-radius:50%; background:#fff; border:2px solid var(--blue); }
+  .val { font-size:13px; width:58px; text-align:right; }
+  .budget { background:#fff; border:1px solid var(--line); border-radius:8px; padding:12px; font-size:13px; }
+  .bar { height:10px; border-radius:5px; background:#ecebe7; margin:8px 0 6px; overflow:hidden; }
+  .bar span { display:block; height:100%; width:62%; background:var(--green); }
+  .hint { font-size:12px; color:var(--muted); line-height:1.4; }
+  .btn { display:inline-block; padding:9px 14px; border-radius:6px; background:var(--blue); color:#fff; font-size:13px; font-weight:bold; }
+  section { padding:20px 28px; }
+  .msg { max-width:760px; margin-bottom:16px; padding:12px 14px; border-radius:10px; font-size:14px; line-height:1.5; }
+  .user { background:#eef4fc; margin-left:auto; }
+  .bot { border:1px solid var(--line); }
+  .cite { display:inline-block; font-size:11px; padding:1px 6px; border-radius:4px; background:#e9f7f1; color:#0f7a54; font-weight:bold; }
+  .chunks h3 { font-size:14px; margin:22px 0 10px; }
+  .chunk { border:1px solid var(--line); border-left:4px solid var(--green); border-radius:6px; padding:10px 12px; margin-bottom:10px; font-size:13px; line-height:1.45; max-width:760px; }
+  .chunk.dim { border-left-color:#cfcdc7; color:var(--muted); }
+  .meta { font-size:11px; color:var(--muted); margin-bottom:4px; }
+  mark { background:#fde9b0; }
+  .ask { display:flex; gap:10px; max-width:760px; margin-top:18px; }
+  .ask .input { flex:1; }
+</style>
+</head>
+<body>
+<header><div class="logo"></div><h1>RAG Assistant — chunking settings</h1><div class="tag">Prototype UI · illustrative example texts · Kulush A.</div></header>
+<main>
+<aside>
+  <h2>Index settings</h2>
+  <div class="field"><label>Chunking strategy</label><select><option>Fixed-size window (words)</option></select></div>
+  <div class="field"><label>Chunk size</label><div class="range"><div class="track"><span style="width:28%"></span><i style="left:26%"></i></div><div class="val">100 w</div></div></div>
+  <div class="field"><label>Overlap</label><div class="range"><div class="track"><span style="width:25%"></span><i style="left:23%"></i></div><div class="val">25 %</div></div></div>
+  <div class="field"><label>Retriever</label><select><option>BM25 (k1 = 0.9, b = 0.4)</option></select></div>
+  <h2 style="margin-top:26px">Context for the LLM</h2>
+  <div class="field"><label>Context budget</label><input class="input" value="800 words"></div>
+  <div class="budget"><b>k = 8 chunks</b> × 99 words = 795 words
+    <div class="bar"><span></span></div>
+    <div class="hint">Expected Hit within budget on SQuAD dev: <b>0.881</b> (Fixed-100 +25% overlap). Paragraph chunking: 0.883 with k = 6.</div>
+  </div>
+  <p style="margin-top:18px"><span class="btn">Rebuild index</span></p>
+  <div class="hint">32,846 chunks · build 3.0 s · 1.0 ms per query</div>
+</aside>
+<section>
+  <div class="msg user">In what year did the Normans conquer England?</div>
+  <div class="msg bot">The Norman conquest of England took place in <b>1066</b>, led by William the Conqueror <span class="cite">[1]</span>.</div>
+  <div class="chunks">
+    <h3>Retrieved chunks (top 3 of 8)</h3>
+    <div class="chunk"><div class="meta">[1] Normans · chunk 14 · words 325–424 · BM25 18.7 · contains answer</div>… The Norman conquest of England in <mark>1066</mark> by William the Conqueror established Norman rule, and the Anglo-Norman aristocracy soon replaced the old English elite …</div>
+    <div class="chunk dim"><div class="meta">[2] Normans · chunk 15 · words 400–499 · BM25 15.2</div>… overlap region: the last 25 words of chunk 14 are repeated here, so a sentence cut at a boundary is still complete in one of the two chunks …</div>
+    <div class="chunk dim"><div class="meta">[3] Norman conquest of England · chunk 2 · words 75–174 · BM25 12.9</div>… Harold Godwinson was killed at the Battle of Hastings, and William was crowned king on Christmas Day …</div>
+  </div>
+  <div class="ask"><input class="input" value="Ask a question about the indexed documents…"><span class="btn">Send</span></div>
+</section>
+</main>
+</body>
+</html>

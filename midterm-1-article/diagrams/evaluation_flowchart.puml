@@ -1,0 +1,30 @@
+@startuml
+!include style.iuml
+title Evaluation algorithm for one chunking strategy
+start
+:Load SQuAD v1.1 (train + dev):
+490 Wikipedia articles, 10,570 dev questions;
+:Join paragraphs of each article into one document,
+keep gold answer offsets (start, end);
+:Split every document into chunks
+(Fixed-N with step N - overlap, or Paragraph);
+:Build BM25 index over "title. chunk text"
+(k1 = 0.9, b = 0.4);
+repeat :Take next dev question q;
+  :Mark chunks of the same article that fully
+  contain a gold answer span as relevant;
+  if (Any relevant chunk?) then (no)
+    :Count q as "answer split";
+  else (yes)
+  endif
+  :Retrieve top-40 chunks by BM25 score;
+  :rank(q) = position of first relevant chunk (0 if none);
+repeat while (More questions?) is (yes)
+->no;
+:Compute Hit@k, MRR@10, budget-Hit,
+bootstrap 95% CI;
+:Paired McNemar tests on Hit@5,
+Holm correction;
+:Write summary.json and per_question.csv;
+stop
+@enduml

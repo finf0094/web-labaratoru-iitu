@@ -1,0 +1,24 @@
+@startuml
+!include style.iuml
+title Components and files of the reproducible experiment
+node "Researcher's machine (Python 3.13)" {
+  component "chunking.py\n(load_squad, fixed_chunks,\nparagraph_chunks)" as C
+  component "retrieval.py\n(BM25)" as R
+  component "run_experiment.py\n(metrics, tests)" as E
+  component "make_figures.py\n(matplotlib)" as F
+  database "results/\nsummary.json\nper_question.csv" as Res
+  folder "figures/*.png" as Fig
+}
+cloud "GitHub\nrajpurkar/SQuAD-explorer" as GH
+database "data/SQuAD-explorer\n(train/dev v1.1 JSON)" as D
+GH --> D : git clone
+D --> C
+C --> E
+R --> E
+E --> Res
+Res --> F
+F --> Fig
+component "pandoc + citeproc\n(GOST CSL)" as P
+Fig --> P
+P --> [article .docx]
+@enduml

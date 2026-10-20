@@ -446,6 +446,57 @@
   "URL": "https://purl.stanford.edu/gd576xb1833"
  },
  {
+  "id": "chen2024densex",
+  "type": "paper-conference",
+  "title": "Dense X retrieval: What retrieval granularity should we use?",
+  "author": [
+   {
+    "family": "Chen",
+    "given": "Tong"
+   },
+   {
+    "family": "Wang",
+    "given": "Hongwei"
+   },
+   {
+    "family": "Chen",
+    "given": "Sihao"
+   },
+   {
+    "family": "Yu",
+    "given": "Wenhao"
+   },
+   {
+    "family": "Ma",
+    "given": "Kaixin"
+   },
+   {
+    "family": "Zhao",
+    "given": "Xinran"
+   },
+   {
+    "family": "Zhang",
+    "given": "Hongming"
+   },
+   {
+    "family": "Yu",
+    "given": "Dong"
+   }
+  ],
+  "container-title": "Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing",
+  "publisher": "Association for Computational Linguistics",
+  "publisher-place": "Miami, Florida",
+  "page": "15159-15177",
+  "issued": {
+   "date-parts": [
+    [
+     2024
+    ]
+   ]
+  },
+  "DOI": "10.18653/v1/2024.emnlp-main.845"
+ },
+ {
   "id": "cochran1977",
   "type": "book",
   "author": [
@@ -611,6 +662,29 @@
   "DOI": "10.1002/(SICI)1097-4571(199009)41:6<391::AID-ASI1>3.0.CO;2-9"
  },
  {
+  "id": "dietterich1998",
+  "type": "article-journal",
+  "title": "Approximate statistical tests for comparing supervised classification learning algorithms",
+  "author": [
+   {
+    "family": "Dietterich",
+    "given": "Thomas G."
+   }
+  ],
+  "container-title": "Neural Computation",
+  "volume": "10",
+  "issue": "7",
+  "page": "1895-1923",
+  "issued": {
+   "date-parts": [
+    [
+     1998
+    ]
+   ]
+  },
+  "DOI": "10.1162/089976698300017197"
+ },
+ {
   "id": "dify2025mcp",
   "type": "webpage",
   "author": [
@@ -738,6 +812,32 @@
   "number": "arXiv:2404.16130",
   "publisher": "arXiv",
   "URL": "https://arxiv.org/abs/2404.16130"
+ },
+ {
+  "id": "efron1993",
+  "type": "book",
+  "title": "An introduction to the bootstrap",
+  "author": [
+   {
+    "family": "Efron",
+    "given": "Bradley"
+   },
+   {
+    "family": "Tibshirani",
+    "given": "Robert J."
+   }
+  ],
+  "publisher": "Chapman & Hall",
+  "publisher-place": "New York",
+  "number-of-pages": "436",
+  "issued": {
+   "date-parts": [
+    [
+     1993
+    ]
+   ]
+  },
+  "DOI": "10.1007/978-1-4899-4541-9"
  },
  {
   "id": "eleti2026patent",
@@ -1167,6 +1267,28 @@
      2026,
      10,
      12
+    ]
+   ]
+  }
+ },
+ {
+  "id": "holm1979",
+  "type": "article-journal",
+  "title": "A simple sequentially rejective multiple test procedure",
+  "author": [
+   {
+    "family": "Holm",
+    "given": "Sture"
+   }
+  ],
+  "container-title": "Scandinavian Journal of Statistics",
+  "volume": "6",
+  "issue": "2",
+  "page": "65-70",
+  "issued": {
+   "date-parts": [
+    [
+     1979
     ]
    ]
   }
@@ -2175,6 +2297,29 @@
   "URL": "https://hai.stanford.edu/ai-index/2025-ai-index-report"
  },
  {
+  "id": "mcnemar1947",
+  "type": "article-journal",
+  "title": "Note on the sampling error of the difference between correlated proportions or percentages",
+  "author": [
+   {
+    "family": "McNemar",
+    "given": "Quinn"
+   }
+  ],
+  "container-title": "Psychometrika",
+  "volume": "12",
+  "issue": "2",
+  "page": "153-157",
+  "issued": {
+   "date-parts": [
+    [
+     1947
+    ]
+   ]
+  },
+  "DOI": "10.1007/BF02295996"
+ },
+ {
   "id": "mcp_python_sdk",
   "type": "webpage",
   "author": [
@@ -2967,6 +3112,35 @@
   "URL": "https://arxiv.org/abs/2307.16789"
  },
  {
+  "id": "qu2024semantic",
+  "type": "article",
+  "title": "Is semantic chunking worth the computational cost?",
+  "author": [
+   {
+    "family": "Qu",
+    "given": "Renyi"
+   },
+   {
+    "family": "Tu",
+    "given": "Ruixuan"
+   },
+   {
+    "family": "Bao",
+    "given": "Forrest"
+   }
+  ],
+  "publisher": "arXiv",
+  "number": "arXiv:2410.13070",
+  "issued": {
+   "date-parts": [
+    [
+     2024
+    ]
+   ]
+  },
+  "DOI": "10.48550/arXiv.2410.13070"
+ },
+ {
   "id": "radosevich2025",
   "type": "article",
   "author": [
@@ -2990,6 +3164,41 @@
   "number": "arXiv:2504.03767",
   "publisher": "arXiv",
   "URL": "https://arxiv.org/abs/2504.03767"
+ },
+ {
+  "id": "rajpurkar2016",
+  "type": "paper-conference",
+  "title": "SQuAD: 100,000+ questions for machine comprehension of text",
+  "author": [
+   {
+    "family": "Rajpurkar",
+    "given": "Pranav"
+   },
+   {
+    "family": "Zhang",
+    "given": "Jian"
+   },
+   {
+    "family": "Lopyrev",
+    "given": "Konstantin"
+   },
+   {
+    "family": "Liang",
+    "given": "Percy"
+   }
+  ],
+  "container-title": "Proceedings of the 2016 Conference on Empirical Methods in Natural Language Processing",
+  "publisher": "Association for Computational Linguistics",
+  "publisher-place": "Austin, Texas",
+  "page": "2383-2392",
+  "issued": {
+   "date-parts": [
+    [
+     2016
+    ]
+   ]
+  },
+  "DOI": "10.18653/v1/D16-1264"
  },
  {
   "id": "reimers2019",
@@ -3068,6 +3277,46 @@
   "edition": "4",
   "publisher": "Pearson",
   "publisher-place": "Hoboken, NJ"
+ },
+ {
+  "id": "sarthi2024raptor",
+  "type": "paper-conference",
+  "title": "RAPTOR: Recursive abstractive processing for tree-organized retrieval",
+  "author": [
+   {
+    "family": "Sarthi",
+    "given": "Parth"
+   },
+   {
+    "family": "Abdullah",
+    "given": "Salman"
+   },
+   {
+    "family": "Tuli",
+    "given": "Aditi"
+   },
+   {
+    "family": "Khanna",
+    "given": "Shubh"
+   },
+   {
+    "family": "Goldie",
+    "given": "Anna"
+   },
+   {
+    "family": "Manning",
+    "given": "Christopher D."
+   }
+  ],
+  "container-title": "The Twelfth International Conference on Learning Representations (ICLR 2024)",
+  "publisher-place": "Vienna, Austria",
+  "issued": {
+   "date-parts": [
+    [
+     2024
+    ]
+   ]
+  }
  },
  {
   "id": "schick2022phd",

@@ -20,6 +20,9 @@ FONT = "Times New Roman"
 PROFILES = {
     "default": {"out": "reference.docx", "margins_cm": (2, 2, 3, 1.5), "line": 1.5, "h1": 14, "h2": 13},
     "pw6": {"out": "reference-pw6.docx", "margins_cm": (2, 2, 2, 2), "line": 1.0, "h1": 14, "h2": 12},
+    # "article": Midterm 1 journal article (A4, 2 cm margins, 12 pt, single spacing,
+    # centred figure captions and the article header styles used via custom-style divs).
+    "article": {"out": "reference-article.docx", "margins_cm": (2, 2, 2, 2), "line": 1.0, "h1": 12, "h2": 12},
 }
 
 
@@ -60,6 +63,43 @@ def table_borders(style):
         el.set(qn("w:color"), "000000")
         borders.append(el)
     tblpr.append(borders)
+
+
+def article_styles(doc, styles):
+    """Header and caption styles of the journal article (used as ::: {custom-style=...})."""
+    from docx.enum.style import WD_STYLE_TYPE
+    for name in ("Image Caption", "Table Caption"):
+        st = styles[name]
+        set_font(st, 11, bold=False, italic=False)
+        st.paragraph_format.alignment = (WD_ALIGN_PARAGRAPH.CENTER if name == "Image Caption"
+                                         else WD_ALIGN_PARAGRAPH.LEFT)
+        st.paragraph_format.space_before, st.paragraph_format.space_after = Pt(2), Pt(8)
+        st.paragraph_format.keep_with_next = name == "Table Caption"
+    st = styles["Captioned Figure"] if "Captioned Figure" in styles else None
+    if st is not None:
+        st.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        st.paragraph_format.keep_with_next = True
+    # name: (size, bold, italic, alignment, all caps)
+    custom = {
+        "IRSTI": (12, False, False, WD_ALIGN_PARAGRAPH.LEFT, False),
+        "Article Title": (13, True, False, WD_ALIGN_PARAGRAPH.CENTER, True),
+        "Author Line": (12, True, False, WD_ALIGN_PARAGRAPH.CENTER, False),
+        "Affiliation": (11, False, True, WD_ALIGN_PARAGRAPH.CENTER, False),
+        "Abstract Text": (11, False, False, WD_ALIGN_PARAGRAPH.JUSTIFY, False),
+        "Figure Block": (12, False, False, WD_ALIGN_PARAGRAPH.CENTER, False),
+    }
+    for name, (size, bold, italic, align, caps) in custom.items():
+        st = styles.get(name) or doc.styles.add_style(name, WD_STYLE_TYPE.PARAGRAPH)
+        st.base_style = styles["Normal"]
+        set_font(st, size, bold=bold, italic=italic)
+        st.font.all_caps = caps
+        pf = st.paragraph_format
+        pf.alignment, pf.line_spacing, pf.first_line_indent = align, 1.0, Cm(0)
+        pf.space_before, pf.space_after = Pt(0), Pt(4)
+        styles[name] = st
+    styles["Abstract Text"].paragraph_format.first_line_indent = Cm(1)
+    styles["Article Title"].paragraph_format.space_before = Pt(10)
+    styles["Article Title"].paragraph_format.space_after = Pt(10)
 
 
 def main():
@@ -126,6 +166,9 @@ def main():
     for name in ("Source Code", "Verbatim Char"):
         if name in styles:
             styles[name].font.size = Pt(10)
+
+    if profile["out"] == "reference-article.docx":
+        article_styles(doc, styles)
 
     doc.save(str(OUT))
     print(f"written {OUT}")
