@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+<h1>{{ title }}</h1>
+<p class="hint">
+  {% if browser_validation %}<span class="badge">HTML validation ON</span> the browser checks the fields before sending; the server checks them again.
+  {% else %}<span class="badge off">HTML validation OFF</span> any values reach the server, which validates every field.{% endif %}
+</p>
+{% if errors %}<div class="error">{% for e in errors %}<p>{{ e }}</p>{% endfor %}</div>{% endif %}
+{% if valid %}
+  <div class="success">Registration data is valid!</div>
+  <div class="info">Full Name: {{ valid.student }} · Email: {{ valid.email }} · Age: {{ valid.age }}</div>
+{% endif %}
+<form method="POST" action="{{ url_for(endpoint) }}">
+  <label for="student">Full Name:</label>
+  <input id="student" name="student" {% if browser_validation %}type="text" required{% endif %} value="{{ form.student or '' }}">
+  <label for="email">Email:</label>
+  <input id="email" name="email" {% if browser_validation %}type="email" required{% endif %} value="{{ form.email or '' }}">
+  <label for="age">Age:</label>
+  <input id="age" name="age" {% if browser_validation %}type="number" min="18" max="100" required{% endif %} value="{{ form.age or '' }}">
+  <button type="submit">Register</button>
+</form>
+{% if browser_validation %}
+<p class="hint">HTML attributes used on this page:</p>
+<pre class="attrs">&lt;input type="text" name="student" required&gt;
+&lt;input type="email" name="email" required&gt;
+&lt;input type="number" name="age" min="18" max="100" required&gt;</pre>
+{% endif %}
+{% endblock %}
