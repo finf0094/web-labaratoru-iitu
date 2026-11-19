@@ -84,3 +84,13 @@ python3 common/make_reference_docx.py
 ## Об источниках
 
 Все источники в `common/references.json` — реальные публикации. Авторы, годы, названия, издания и DOI проверены по страницам издателей, ACL Anthology, NeurIPS/OpenReview, arXiv, Google Patents и репозиториев университетов. Ссылки на онлайн-ресурсы ведут на конкретные страницы. Если преподаватель требует только рецензируемые источники, препринты arXiv помечены в списке литературы (тип `article`, издатель arXiv) и их легко заменить.
+
+## Web Programming — практические работы 7, 9, 10
+
+| Папка | Работа | Запуск |
+|---|---|---|
+| [`web-pw-07-operators-conditions-loops/`](web-pw-07-operators-conditions-loops/) | **PW7.** Operators, conditions and loops — 10 консольных программ на Python | `python3 tasks/task01_even_odd.py` |
+| [`web-pw-09-get-post-forms/`](web-pw-09-get-post-forms/) | **PW9.** HTML forms with GET and POST — Flask | `pip install flask && python3 app.py` |
+| [`web-pw-10-form-validation/`](web-pw-10-form-validation/) | **PW10.** Form validation and data processing — Flask | `pip install flask && python3 app.py` |
+
+В каждой папке есть `README.md` (как запустить, что сдавать, как защищать), автотесты (`python3 -m unittest discover tests`), а в PW9 и PW10 ещё скриншоты и `ANSWERS.md`.
