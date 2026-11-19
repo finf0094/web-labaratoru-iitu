@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}PW9 — GET and POST{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header>
+  <span class="brand">PW9 · HTML Forms</span>
+  <a href="{{ url_for('index') }}">Home</a>
+  <a href="{{ url_for('student_search_form') }}">1. Search</a>
+  <a href="{{ url_for('register') }}">2. Registration</a>
+  <a href="{{ url_for('calculator_form') }}">3. Calculator</a>
+  <a href="{{ url_for('contact') }}">4. Contact</a>
+  <a href="{{ url_for('demo') }}">5. GET &amp; POST demo</a>
+</header>
+<main>
+{% block content %}{% endblock %}
+{% if info %}
+  <div class="info">
+    Request method: <code>{{ info.method }}</code> · URL: <code>{{ info.url }}</code><br>
+    Form values were sent in the {{ info.location }}.
+  </div>
+{% endif %}
+</main>
+</body>
+</html>

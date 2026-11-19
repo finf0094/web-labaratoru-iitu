@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Contact Teacher{% endblock %}
+{% block content %}
+<h1>Contact Teacher <span class="method post">POST</span></h1>
+<p class="hint">Empty fields are rejected by the server. No real email is sent.</p>
+{% if errors %}<div class="error">{% for e in errors %}<p>{{ e }}</p>{% endfor %}</div>{% endif %}
+{% if received %}
+  <div class="result">
+    <h2>Message received!</h2>
+    <p>From: {{ received.name }}</p>
+    <p>Message: {{ received.message }}</p>
+  </div>
+{% else %}
+<form method="POST" action="{{ url_for('contact') }}">
+  <label for="name">Your name:</label>
+  <input id="name" name="name" value="{{ form.name if form else '' }}">
+  <label for="message">Your message:</label>
+  <textarea id="message" name="message">{{ form.message if form else '' }}</textarea>
+  <button type="submit">Send Message</button>
+</form>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}HTTP Methods Demo{% endblock %}
+{% block content %}
+<h1>HTTP Methods Demo</h1>
+<p class="hint">Two independent forms. Submit each one and compare the address bar.</p>
+{% if get_result %}
+  <div class="result"><h2>GET form received</h2><p>Course: {{ get_result }}</p>
+  <p>The value is visible in the URL, so the page can be bookmarked or shared.</p></div>
+{% endif %}
+{% if post_result %}
+  <div class="result"><h2>POST form received</h2><p>Login: {{ post_result }}</p>
+  <p>Password received: {{ password_length }} characters (not displayed). The URL has no form values.</p></div>
+{% endif %}
+<div class="grid">
+  <form method="GET" action="{{ url_for('demo_get') }}">
+    <h2><span class="method">GET</span> Search a course</h2>
+    <label for="course">Course name:</label>
+    <input id="course" name="course" placeholder="Web Programming">
+    <button type="submit">Search</button>
+  </form>
+  <form method="POST" action="{{ url_for('demo_post') }}">
+    <h2><span class="method post">POST</span> Sign in</h2>
+    <label for="login">Login:</label>
+    <input id="login" name="login" placeholder="student01">
+    <label for="password">Password:</label>
+    <input id="password" name="password" type="password">
+    <button type="submit">Sign in</button>
+  </form>
+</div>
+<table>
+  <tr><th></th><th>GET</th><th>POST</th></tr>
+  <tr><td>Purpose</td><td>Retrieve information (search, filter)</td><td>Send data for processing (register, send, log in)</td></tr>
+  <tr><td>Where values go</td><td>URL query string: <code>?course=Web</code></td><td>Request body (form data)</td></tr>
+  <tr><td>Visible in address bar / history</td><td>Yes</td><td>No</td></tr>
+  <tr><td>Bookmark / share</td><td>Yes</td><td>No</td></tr>
+  <tr><td>Size</td><td>Limited by URL length</td><td>Larger data is fine</td></tr>
+  <tr><td>Confidential?</td><td>No</td><td>No — only HTTPS encrypts data in transit</td></tr>
+</table>
+{% endblock %}
