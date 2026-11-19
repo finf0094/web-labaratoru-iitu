@@ -1,0 +1,30 @@
+:root { --ink:#0b0b0b; --muted:#52514e; --line:#e4e3df; --blue:#2a78d6; --green:#1baf7a; --red:#d03b3b; --panel:#f7f7f5; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "DejaVu Sans", Arial, sans-serif; color: var(--ink); background: #fff; }
+header { padding: 14px 24px; border-bottom: 1px solid var(--line); display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
+header a { color: var(--blue); text-decoration: none; font-size: 14px; }
+header .brand { font-weight: bold; color: var(--ink); font-size: 16px; margin-right: 8px; }
+main { max-width: 760px; margin: 0 auto; padding: 24px 16px 40px; }
+h1 { font-size: 24px; margin: 0 0 6px; }
+.hint { color: var(--muted); font-size: 14px; margin: 0 0 18px; }
+form { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 18px; margin-bottom: 18px; }
+label { display: block; font-weight: bold; font-size: 14px; margin: 10px 0 6px; }
+input, select, textarea { width: 100%; padding: 9px 10px; border: 1px solid #cfcdc7; border-radius: 6px; font-size: 15px; font-family: inherit; background: #fff; }
+textarea { min-height: 90px; }
+button { margin-top: 14px; padding: 9px 18px; border: 0; border-radius: 6px; background: var(--blue); color: #fff; font-size: 15px; font-weight: bold; cursor: pointer; }
+.method { display: inline-block; font-size: 12px; font-weight: bold; padding: 2px 8px; border-radius: 4px; color: #fff; background: var(--blue); vertical-align: middle; }
+.method.post { background: var(--green); }
+.result { border: 1px solid var(--line); border-left: 5px solid var(--green); border-radius: 8px; padding: 14px 16px; margin-bottom: 16px; }
+.result h2 { font-size: 18px; margin: 0 0 8px; }
+.result p { margin: 4px 0; }
+.error { border: 1px solid #f1c5c5; border-left: 5px solid var(--red); background: #fdf3f3; border-radius: 8px; padding: 12px 16px; margin-bottom: 16px; color: #8f1f1f; }
+.error p { margin: 3px 0; }
+.info { margin-top: 16px; font-size: 13px; color: var(--muted); background: #fff; border: 1px dashed var(--line); border-radius: 8px; padding: 10px 14px; }
+.info code { color: var(--ink); background: var(--panel); padding: 1px 5px; border-radius: 4px; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.grid form { margin: 0; }
+@media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
+table { border-collapse: collapse; width: 100%; font-size: 14px; margin-top: 10px; }
+th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
+th { background: var(--panel); }
+ul.tasks { padding-left: 18px; line-height: 1.9; }

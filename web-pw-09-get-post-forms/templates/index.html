@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Processing HTML Forms with GET and POST</h1>
+<p class="hint">Every form below is processed on the server by Flask (Python).</p>
+<ul class="tasks">
+  <li><span class="method">GET</span> <a href="{{ url_for('student_search_form') }}">Task 1. Student Search</a></li>
+  <li><span class="method post">POST</span> <a href="{{ url_for('register') }}">Task 2. Student Registration</a></li>
+  <li><span class="method">GET</span> <a href="{{ url_for('calculator_form') }}">Task 3. Simple Calculator</a></li>
+  <li><span class="method post">POST</span> <a href="{{ url_for('contact') }}">Task 4. Contact Teacher</a></li>
+  <li><span class="method">GET</span> + <span class="method post">POST</span> <a href="{{ url_for('demo') }}">Task 5. HTTP Methods Demo</a></li>
+</ul>
+{% endblock %}

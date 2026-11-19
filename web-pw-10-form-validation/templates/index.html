@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Form Validation and Data Processing</h1>
+<p class="hint">All forms use POST and are validated on the server (Flask, <code>validators.py</code>).</p>
+<ul class="tasks">
+  {% for number, task in tasks.items() %}
+    <li><a href="{{ url_for('single_field_task', number=number) }}">{{ task.title }}</a></li>
+  {% endfor %}
+  <li><a href="{{ url_for('task4') }}">Task 4. Complete Student Registration Form</a></li>
+  <li><a href="{{ url_for('task5') }}">Task 5A. Form with HTML validation attributes</a></li>
+  <li><a href="{{ url_for('task5_without_html') }}">Task 5B. Same form without attributes (server only)</a></li>
+</ul>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Simple Calculator{% endblock %}
+{% block content %}
+<h1>Simple Calculator <span class="method">GET</span></h1>
+<p class="hint">The numbers and the operation go to the URL; the server calculates the result.</p>
+{% if error %}<div class="error"><p>{{ error }}</p></div>{% endif %}
+{% if result is defined %}<div class="result"><h2>Result: {{ result }}</h2></div>{% endif %}
+<form method="GET" action="{{ url_for('calculate_view') }}">
+  <label for="a">First number:</label>
+  <input id="a" name="a" value="{{ form.a if form else '' }}">
+  <label for="operation">Operation:</label>
+  <select id="operation" name="operation">
+    {% for sign, title in operations.items() %}
+      <option value="{{ sign }}" {% if form and form.operation == sign %}selected{% endif %}>{{ sign }} ({{ title }})</option>
+    {% endfor %}
+  </select>
+  <label for="b">Second number:</label>
+  <input id="b" name="b" value="{{ form.b if form else '' }}">
+  <button type="submit">Calculate</button>
+</form>
+{% endblock %}

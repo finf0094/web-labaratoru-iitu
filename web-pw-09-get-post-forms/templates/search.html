@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Student Search{% endblock %}
+{% block content %}
+<h1>Student Search <span class="method">GET</span></h1>
+<p class="hint">The name is added to the URL: <code>/search?student=…</code></p>
+{% if error %}<div class="error"><p>{{ error }}</p></div>{% endif %}
+{% if student %}
+  <div class="result"><h2>You searched for: {{ student }}</h2></div>
+{% endif %}
+<form method="GET" action="{{ url_for('search') }}">
+  <label for="student">Enter student name:</label>
+  <input id="student" name="student" value="{{ student or '' }}">
+  <button type="submit">Search</button>
+</form>
+{% endblock %}

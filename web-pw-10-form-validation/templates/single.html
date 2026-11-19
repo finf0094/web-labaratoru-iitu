@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}{{ task.title }}{% endblock %}
+{% block content %}
+<h1>{{ task.title }}</h1>
+<p class="hint">POST · validated on the server · no HTML validation attributes</p>
+{% if error %}<div class="error"><p>{{ error }}</p></div>{% endif %}
+{% if success %}<div class="success">{{ success }}</div>{% endif %}
+<form method="POST" action="{{ url_for('single_field_task', number=number) }}">
+  <label for="{{ task.field }}">{{ task.label }}:</label>
+  <input id="{{ task.field }}" name="{{ task.field }}" type="{{ task.type }}" value="{{ raw or '' }}">
+  <button type="submit">Submit</button>
+</form>
+{% endblock %}
